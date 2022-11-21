@@ -1,0 +1,212 @@
+{
+    "items": {
+        "properties": {
+            "_id": {
+                "type": "string"
+            },
+            "event": {
+                "items": {
+                    "properties": {
+                        "eventCode": {
+                            "type": "string"
+                        },
+                        "eventPromChannelStores": {
+                            "items": {
+                                "properties": {
+                                    "orderSubmitPromID": {
+                                        "type": "string"
+                                    },
+                                    "promCode": {
+                                        "type": "string"
+                                    },
+                                    "promPrefSeq": {
+                                        "type": "integer"
+                                    },
+                                    "storeList": {
+                                        "items": {
+                                            "properties": {
+                                                "storeID": {
+                                                    "type": "string"
+                                                },
+                                                "visible": {
+                                                    "type": "string"
+                                                }
+                                            },
+                                            "required": [
+                                                "storeID",
+                                                "visible"
+                                            ],
+                                            "type": "object"
+                                        },
+                                        "type": "array"
+                                    }
+                                },
+                                "required": [
+                                    "promCode",
+                                    "orderSubmitPromID",
+                                    "promPrefSeq",
+                                    "storeList"
+                                ],
+                                "type": "object"
+                            },
+                            "type": "array"
+                        },
+                        "itemList": {
+                            "items": {
+                                "properties": {
+                                    "itemID": {
+                                        "type": "string"
+                                    },
+                                    "itemPromChannels": {
+                                        "items": {
+                                            "properties": {
+                                                "itemPromRegions": {
+                                                    "items": {
+                                                        "properties": {
+                                                            "region": {
+                                                                "type": "string"
+                                                            },
+                                                            "storeOrderMin": {
+                                                                "type": "integer"
+                                                            },
+                                                            "storeOrderMult": {
+                                                                "type": "integer"
+                                                            }
+                                                            ,
+                                                            "salesUOM": {
+                                                                "type": "string"
+                                                            },
+                                                            "supplierID": {
+                                                                "type": "string"
+                                                            },
+                                                            "promSource": {
+                                                                "type": "string"
+                                                            }
+                                                        },
+                                                        "required": [
+                                                            "storeOrderMin",
+                                                            "storeOrderMult",
+                                                            "region",
+                                                            "salesUOM",
+                                                            "supplierID",
+                                                            "promSource"
+                                                        ],
+                                                        "type": "object"
+                                                    },
+                                                    "type": "array"
+                                                },
+                                                "itemPromPricing": {
+                                                    "items": {
+                                                        "properties": {
+                                                            "promPriceLUKey": {
+                                                                "type": "string"
+                                                            },
+                                                            "promSRP": {
+                                                                "type": "number"
+                                                            },
+                                                            "promCost1_AT": {
+                                                                "type": "number"
+                                                            }
+                                                            ,
+                                                            "promCost2_AT": {
+                                                                "type": "number"
+                                                            },
+                                                            "promCost3_AT": {
+                                                                "type": "number"
+                                                            }
+                                                            ,
+                                                            "promCost1_BT": {
+                                                                "type": "number"
+                                                            }
+                                                            ,
+                                                            "promCost2_BT": {
+                                                                "type": "number"
+                                                            },
+                                                            "promCost3_BT": {
+                                                                "type": "number"
+                                                            },
+                                                            "promBreak1_Qty": {
+                                                                "type": "integer"
+                                                            }
+                                                            ,
+                                                            "promBreak2_Qty": {
+                                                                "type": "integer"
+                                                            },
+                                                            "promBreak3_Qty": {
+                                                                "type": "integer"
+                                                            }
+                                                        },
+                                                        "required": [
+                                                            "promPriceLUKey",
+                                                            "promSRP",
+                                                            "promCost1_AT",
+                                                            "promCost2_AT",
+                                                            "promCost3_AT",
+                                                            "promCost1_BT",
+                                                            "promCost2_BT",
+                                                            "promCost3_BT",
+                                                            "promBreak1_Qty",
+                                                            "promBreak2_Qty",
+                                                            "promBreak3_Qty"
+                                                        ],
+                                                        "type": "object"
+                                                    },
+                                                    "type": "array"
+                                                },
+                                                "promCode": {
+                                                    "type": "string"
+                                                }
+                                            },
+                                            "required": [
+                                                "promCode",
+                                                "itemPromRegions",
+                                                "itemPromPricing"
+                                            ],
+                                            "type": "object"
+                                        },
+                                        "type": "array"
+                                    }
+                                },
+                                "required": [
+                                    "itemID",
+                                    "itemPromChannels"
+                                ],
+                                "type": "object"
+                            },
+                            "type": "array"
+                        },
+                        "saleType": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "eventCode",
+                        "saleType",
+                        "eventPromChannelStores",
+                        "itemList"
+                    ],
+                    "type": "object"
+                },
+                "type": "array"
+            },
+            "orderCloseDate": {
+                "type": "string"
+            },
+            "orderOpenDate": {
+                "type": "string"
+            },
+            "targetBackend": {
+                "type": "string"
+            }
+        },
+        "required": [
+            "_id",
+            "targetBackend",
+            "orderOpenDate",
+            "orderCloseDate",
+            "event"
+        ],
+        "type": "object"
+    },
+    "type": "array"
+}

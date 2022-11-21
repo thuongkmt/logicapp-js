@@ -1,0 +1,171 @@
+[
+    {
+        "targetBackend": "AX",
+        "apn": "9300611074157",
+        "nationalRetailSrp": 16,
+        "productCost": {
+            "priceLUKey": "CB:NSW",
+            "suppliers": {
+                "supplierId": "1174",
+                "ProductCostBreaks": [
+                    {
+                        "Break1": {
+                            "validFrom": "20220601",
+                            "validTo": "",
+                            "baseUom": "EA",
+                            "eligibleQuantity": 1,
+                            "costBT": 8.85,
+                            "CostAT": 9.74
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "targetBackend": "AX",
+        "apn": "9300611074089",
+        "nationalRetailSrp": 16,
+        "productCost": {
+            "priceLUKey": "CB:NSW",
+            "suppliers": {
+                "supplierId": "1174",
+                "ProductCostBreaks": [
+                    {
+                        "Break1": {
+                            "validFrom": "20220601",
+                            "validTo": "",
+                            "baseUom": "EA",
+                            "eligibleQuantity": 1,
+                            "costBT": 8.85,
+                            "CostAT": 9.74
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "targetBackend": "AX",
+        "apn": "9300611074133",
+        "nationalRetailSrp": 16,
+        "productCost": {
+            "priceLUKey": "CB:NSW",
+            "suppliers": {
+                "supplierId": "1174",
+                "ProductCostBreaks": [
+                    {
+                        "Break1": {
+                            "validFrom": "20220601",
+                            "validTo": "",
+                            "baseUom": "EA",
+                            "eligibleQuantity": 1,
+                            "costBT": 8.85,
+                            "CostAT": 9.74
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "targetBackend": "AX",
+        "apn": "9300611329301",
+        "nationalRetailSrp": 15.6,
+        "productCost": {
+            "priceLUKey": "CB:NSW",
+            "suppliers": {
+                "supplierId": "1174",
+                "ProductCostBreaks": [
+                    {
+                        "Break1": {
+                            "validFrom": "20220601",
+                            "validTo": "",
+                            "baseUom": "EA",
+                            "eligibleQuantity": 1,
+                            "costBT": 9.09,
+                            "CostAT": 10
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "targetBackend": "AX",
+        "apn": "93355759",
+        "nationalRetailSrp": 10.7,
+        "productCost": {
+            "priceLUKey": "CB:NSW",
+            "suppliers": {
+                "supplierId": "1174",
+                "ProductCostBreaks": [
+                    {
+                        "Break1": {
+                            "validFrom": "20220601",
+                            "validTo": "",
+                            "baseUom": "EA",
+                            "eligibleQuantity": 1,
+                            "costBT": 5.8,
+                            "CostAT": 6.38
+                        },
+                        "Break2": {
+                            "validFrom": "20220601",
+                            "validTo": "",
+                            "baseUom": "EA",
+                            "eligibleQuantity": 5,
+                            "costBT": 6,
+                            "CostAT": 7
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "targetBackend": "AX",
+        "apn": "93355766",
+        "nationalRetailSrp": 10.7,
+        "productCost": {
+            "priceLUKey": "CB:NSW",
+            "suppliers": {
+                "supplierId": "1174",
+                "ProductCostBreaks": [
+                    {
+                        "Break1": {
+                            "validFrom": "20220601",
+                            "validTo": "",
+                            "baseUom": "EA",
+                            "eligibleQuantity": 1,
+                            "costBT": 5.8,
+                            "CostAT": 6.38
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "targetBackend": "AX",
+        "apn": "9300611074119",
+        "nationalRetailSrp": 16,
+        "productCost": {
+            "priceLUKey": "CB:NSW",
+            "suppliers": {
+                "supplierId": "1174",
+                "ProductCostBreaks": [
+                    {
+                        "Break1": {
+                            "validFrom": "20220601",
+                            "validTo": "",
+                            "baseUom": "EA",
+                            "eligibleQuantity": 1,
+                            "costBT": 8.85,
+                            "CostAT": 9.74
+                        }
+                    }
+                ]
+            }
+        }
+    }
+]
