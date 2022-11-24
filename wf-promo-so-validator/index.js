@@ -38,13 +38,15 @@ fs.readFile("./data-test-kit/events-gus.json", "utf8", (err, jsonString) => {
             
             var orderLines = JSON.parse(jsonString);
     
-            orderLines.map(orderLine => {
+            orderLines.map(orderLine => { 
                 if(orderLine.status == "05"){
                     orderLine.promSource = ""
                 }
                 else{
                     isBreakLoop = false;
+                    let loopEventsCount = 0 
                     events.forEach(event => {
+                        loopEventsCount ++
                         //1.check itemID is equal to itemCode
                         if(!isBreakLoop){
                             let loopItemIdCount = 0
@@ -62,14 +64,15 @@ fs.readFile("./data-test-kit/events-gus.json", "utf8", (err, jsonString) => {
                                             case "GUS":
                                                 //In case: sourceSystem comes from GUS, we already had the promotion value
                                                 loopPromCodeCount ++
-                                                console.log("ipc.promCode == orderLine.promotion", `${ipc.promCode}, ${orderLine.promotion}`)
-                                                console.log("loopPromCodeCount", `${loopPromCodeCount}`)
-                                                if(ipc.promCode == orderLine.promotion){                                       
+                                                if(ipc.promCode == orderLine.promotion){      
+                                                    console.log("orderLine.productCode", `${orderLine.productCode}`)       
+                                                    console.log("orderLine.promotion", `${orderLine.promotion}`)                              
                                                     //map  quantityOrderedAdjusted/status/statusComment
                                                     orderLine.quantityOrderedAdjusted = orderLine.quantityOrdered
                                                     orderLine.status = "01"
                                                     orderLine.statusComment = "Fully Supplied"
-                                                    
+                                                    console.log("orderLine.promSource", `${orderLine.promSource}`)                    
+
                                                     isPromCodeExist = true
                                                     isBreakLoop =true
                                                     let itemPromPrcing = ipc.itemPromPricing
@@ -290,7 +293,7 @@ fs.readFile("./data-test-kit/events-gus.json", "utf8", (err, jsonString) => {
                                     })
                                 }
                                 else{
-                                    if(loopItemIdCount === event.itemList.length){
+                                    if(loopItemIdCount === event.itemList.length && loopEventsCount === events.length){
                                         if(!isItemIdExist){
                                             orderLine.status = "97"
                                             orderLine.statusComment = "Not On Promotion"
@@ -307,7 +310,7 @@ fs.readFile("./data-test-kit/events-gus.json", "utf8", (err, jsonString) => {
                 return orderLine
             });
             
-            console.log("orderLines", JSON.stringify(orderLines))
+            console.log("orderLines", JSON.stringify(orderLines[0]))
         })
     })
 });

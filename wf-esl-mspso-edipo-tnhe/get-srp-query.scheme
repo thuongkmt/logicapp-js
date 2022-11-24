@@ -1,0 +1,41 @@
+{
+  "aggregate": [
+    {
+      "$match": {
+        "apn": {
+          "$in": @{outputs('ExeJavaScriptCode_getUniqueApn')}
+        },
+        "targetBackend": "@{triggerBody()?['targetBackend']}"
+      }
+    },
+    {
+      "$project": {
+        "_id": 0,
+        "apn": 1,
+        "nationalRetailSrp": 1,
+        "productCost.priceLUKey": 1,
+        "productCost.suppliers.ProductCostBreaks": 1,
+        "productCost.suppliers.supplierId": 1,
+        "targetBackend": 1
+      }
+    },
+    {
+        "$unwind": "$productCost"
+    },
+    {
+         "$match": {
+            "productCost.priceLUKey": "WH:BRI:BRI"
+        }
+    },
+    {
+        "$unwind": "$productCost.suppliers"
+    },
+    {
+         "$match": {
+            "productCost.suppliers.supplierId": "0"
+        }
+    }
+  ],
+  "collection": "products",
+  "database": "@{parameters('eslDatabase')}"
+}
