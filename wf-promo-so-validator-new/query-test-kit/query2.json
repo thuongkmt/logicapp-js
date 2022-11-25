@@ -1,0 +1,6 @@
+{
+    "targetBackend":"AX",
+    "event.eventPromChannelStores.orderSubmitPromID":"PL003",
+    "event.eventPromChannelStores.storeList.storeID":"335422",
+    "event.eventPromChannelStores.storeList.visible":"Y"
+}
