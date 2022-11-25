@@ -2,7 +2,7 @@
     "_id" : {
         "targetBackend" : "AX",
         "orderOpenDate" : "2022-09-07T00:00:00",
-        "orderCloseDate" : "2022-09-29T23:30:00"
+        "orderCloseDate" : "2022-09-29T12:30:00"
     },
     "events" : [
         {
@@ -17,7 +17,7 @@
                         "storeID" : "104836",
                         "myChannel" : "Y",
                         "visible" : "Y",
-                        "orderCloseDateOverride" : "2022-06-23T15:15:00"
+                        "orderCloseDateOverride" : "2022-06-23T15:16:00"
                     }
                 }
             },
@@ -279,7 +279,7 @@
                         "storeID" : "104836",
                         "myChannel" : "Y",
                         "visible" : "Y",
-                        "orderCloseDateOverride" : "2022-06-23T15:15:00"
+                        "orderCloseDateOverride" : "2022-06-23T15:16:00"
                     }
                 }
             },
