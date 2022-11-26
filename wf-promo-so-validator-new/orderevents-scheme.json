@@ -1,0 +1,161 @@
+{
+    "type": "array",
+    "items": {
+      "type": "object",
+      "properties": {
+        "_id": {
+          "type": "object",
+          "properties": {
+            "orderCloseDate": {
+              "type": "string"
+            },
+            "orderOpenDate": {
+              "type": "string"
+            },
+            "targetBackend": {
+              "type": "string"
+            }
+          }
+        },
+        "events": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "event": {
+                "type": "object",
+                "properties": {
+                  "eventCode": {
+                    "type": "string"
+                  },
+                  "eventPromChannelStores": {
+                    "type": "object",
+                    "properties": {
+                      "orderSubmitPromID": {
+                        "type": "string"
+                      },
+                      "promCode": {
+                        "type": "string"
+                      },
+                      "promPrefSeq": {
+                        "type": "integer"
+                      },
+                      "storeList": {
+                        "type": "object",
+                        "properties": {
+                          "myChannel": {
+                            "type": "string"
+                          },
+                          "storeID": {
+                            "type": "string"
+                          },
+                          "visible": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "saleType": {
+                    "type": "string"
+                  }
+                }
+              },
+              "itemLists": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "itemID": {
+                      "type": "string"
+                    },
+                    "itemPromChannels": {
+                      "type": "object",
+                      "properties": {
+                        "itemPromPricing": {
+                          "type": "object",
+                          "properties": {
+                            "promBreak1_Qty": {
+                              "type": "number"
+                            },
+                            "promBreak2_Qty": {
+                              "type": "number"
+                            },
+                            "promBreak3_Qty": {
+                              "type": "number"
+                            },
+                            "promCost1_AT": {
+                              "type": "number"
+                            },
+                            "promCost1_BT": {
+                              "type": "number"
+                            },
+                            "promCost2_AT": {
+                              "type": "number"
+                            },
+                            "promCost2_BT": {
+                              "type": "number"
+                            },
+                            "promCost3_AT": {
+                              "type": "number"
+                            },
+                            "promCost3_BT": {
+                              "type": "number"
+                            },
+                            "promPriceLUKey": {
+                              "type": "string"
+                            },
+                            "promSRP": {
+                              "type": "number"
+                            }
+                          }
+                        },
+                        "itemPromRegions": {
+                          "type": "object",
+                          "properties": {
+                            "promSource": {
+                              "type": "string"
+                            },
+                            "region": {
+                              "type": "string"
+                            },
+                            "salesUOM": {
+                              "type": "string"
+                            },
+                            "storeOrderMin": {
+                              "type": "integer"
+                            },
+                            "storeOrderMult": {
+                              "type": "integer"
+                            },
+                            "supplierID": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "promCode": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  },
+                  "required": [
+                    "itemID",
+                    "itemPromChannels"
+                  ]
+                }
+              }
+            },
+            "required": [
+              "event",
+              "itemLists"
+            ]
+          }
+        }
+      },
+      "required": [
+        "_id",
+        "events"
+      ]
+    }
+  }

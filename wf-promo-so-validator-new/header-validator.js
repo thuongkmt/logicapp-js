@@ -5,8 +5,7 @@ fs.readFile("./data-test-kit/events-gus.json","utf8",(err, data) =>{
         console.log("File read failed:", err);
         return;
     }
-
-    var orderEvents  = JSON.parse(data)
+    var orderEvents  = JSON.parse(data)[0]
 
     const orderCloseDateTimeStamp = isNaN(Date.parse(orderEvents._id.orderCloseDate)) == true ? 0 : Date.parse(orderEvents._id.orderCloseDate)
     let orderCloseDateOverride = orderEvents._id.orderCloseDate
