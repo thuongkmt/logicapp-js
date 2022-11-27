@@ -1,6 +1,6 @@
 const fs = require("fs")
 
-fs.readFile("./data-test-kit/events-gus.json","utf8",(err, data) =>{
+fs.readFile("./data-test-kit/events-gus-full.json","utf8",(err, data) =>{
     if(err){
         console.log("File read failed:", err);
         return;
@@ -25,7 +25,11 @@ fs.readFile("./data-test-kit/events-gus.json","utf8",(err, data) =>{
         }
     }
 
-    console.log("orderEvents", JSON.stringify(orderEvents))
+    fs.writeFile("./data-test-kit/order-events-sorted.json", JSON.stringify(orderEvents), (err) =>{
+        if(!err){
+            console.log("order-events-sorted", "saved in file")        
+        }
+    })
 })
 
   
