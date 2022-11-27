@@ -1,6 +1,7 @@
 const orderEvents = workflowContext.actions.ExeJavaScriptCode_getOrderCloseDateOverride.outputs.orderEvents
 const sourceSystem = workflowContext.trigger.outputs.body.sourceSystem
 const createdTime = workflowContext.trigger.outputs.body.createdTime
+const orderLines = workflowContext.trigger.outputs.body.orderLines
 
 var isBreakLoop = false
 var quantityOrderedAdjusted = 0;
