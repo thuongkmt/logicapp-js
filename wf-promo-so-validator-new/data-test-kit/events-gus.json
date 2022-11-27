@@ -3,9 +3,25 @@
         "_id" : {
             "targetBackend" : "AX",
             "orderOpenDate" : "2022-09-07T00:00:00",
-            "orderCloseDate" : "2022-09-29T12:30:00"
+            "orderCloseDate" : "2022-09-28T01:30:00"
         },
         "events" : [
+            {
+                "event" : {
+                    "eventCode" : "102119",
+                    "saleType" : "P",
+                    "eventPromChannelStores" : {
+                        "promCode" : "22108202",
+                        "orderSubmitPromID" : "PL910",
+                        "promPrefSeq" : 4,
+                        "storeList" : {
+                            "storeID" : "104836",
+                            "myChannel" : "Y",
+                            "visible" : "Y"
+                        }
+                    }
+                }
+            },
             {
                 "event" : {
                     "eventCode" : "102121",
@@ -42,7 +58,7 @@
             },
             {
                 "event" : {
-                    "eventCode" : "102121",
+                    "eventCode" : "102123",
                     "saleType" : "P",
                     "eventPromChannelStores" : {
                         "promCode" : "22108202",
@@ -55,11 +71,10 @@
                         }
                     }
                 }
-            }
-            ,
+            },
             {
                 "event" : {
-                    "eventCode" : "102121",
+                    "eventCode" : "102124",
                     "saleType" : "P",
                     "eventPromChannelStores" : {
                         "promCode" : "22108203",

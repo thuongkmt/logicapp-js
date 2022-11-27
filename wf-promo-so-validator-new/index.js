@@ -1,24 +1,47 @@
 const fs = require('fs')
 const sourceSystem = "NOT-GUS";
+const createdTime = "2022-09-28T02:07:51"
 
-//const events = workflowContext.actions.ExeJavaCode_eventItems.outputs
-//const orderLines = workflowContext.actions.Compose_PromoSalesOrder.outputs.orderLines
-//const promRegions = workflowContext.actions.Get_stores_from_ESL.outputs.body
 var promRegions = [];
 var isBreakLoop = false
 var promCode = "";
-var quantityOrderAdjusted = 0;
-var storeOrderMult = 0;
-var events = [];
+var orderEvents = [];
 
 fs.readFile("./data-test-kit/events-gus.json", "utf8", (err, jsonString) => {
     if (err) {
       console.log("File read failed:", err);
       return;
     }
-    events = JSON.parse(jsonString);
-    //SORTED EVENT
-    events.sort(function(a, b) {return a.eventPromChannelStores[0].promPrefSeq - b.eventPromChannelStores[0].promPrefSeq} )
+    orderEvents = JSON.parse(jsonString)[0];
+    
+    //differentiate which event is out of date
+    let createdTimeTimestamp = isNaN(Date.parse(createdTime)) == true ? 0 : Date.parse(createdTime)
+    let orderCloseDateTimestamp = isNaN(Date.parse(orderEvents._id.orderCloseDate)) == true ? 0 : Date.parse(orderEvents._id.orderCloseDate)
+    
+    orderEvents.events.map(item => {
+        if(item.event.eventPromChannelStores.storeList.hasOwnProperty("orderCloseDateOverride")){
+            const orderCloseDateOverride = item.event.eventPromChannelStores.storeList.orderCloseDateOverride
+            var orderCloseDateOverrideTimestamp = isNaN(Date.parse(orderCloseDateOverride)) == true ? 0 : Date.parse(orderCloseDateOverride)
+            if(createdTimeTimestamp <= orderCloseDateOverrideTimestamp){
+                item.event.status = "Open"
+            }
+            else{
+                item.event.status = "Close"
+            }
+        }
+        else{
+            if(createdTimeTimestamp <= orderCloseDateTimestamp){
+                item.event.status = "Open"
+            }
+            else{
+                item.event.status = "Close"
+            }
+        }
+
+        return item
+    })
+
+    console.log("orderEvents", JSON.stringify(orderEvents))
 
     fs.readFile("./data-test-kit/orderLines-gus.json", "utf8", (err, jsonString) => {
         if (err) {
@@ -26,6 +49,7 @@ fs.readFile("./data-test-kit/events-gus.json", "utf8", (err, jsonString) => {
         return;
         }
         
+
         var orderLines = JSON.parse(jsonString);
         orderLines.map(orderLine => { 
             if(orderLine.status == "05"){
@@ -299,7 +323,7 @@ fs.readFile("./data-test-kit/events-gus.json", "utf8", (err, jsonString) => {
             return orderLine
         });
         
-        console.log("orderLines", JSON.stringify(orderLines[0]))
+        //console.log("orderLines", JSON.stringify(orderLines[0]))
     })
 });
 
