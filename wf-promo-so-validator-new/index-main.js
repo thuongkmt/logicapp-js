@@ -1,4 +1,4 @@
-const events = workflowContext.actions.ExeJavaScriptCode_getOrderCloseDateOverride.outputs.orderEvents
+const orderEvents = workflowContext.actions.ExeJavaScriptCode_getOrderCloseDateOverride.outputs.orderEvents
 const sourceSystem = workflowContext.trigger.outputs.body.sourceSystem
 const createdTime = workflowContext.trigger.outputs.body.createdTime
 
@@ -17,6 +17,7 @@ orderEvents.events.map(item => {
     else{
         item.event.status = "Close"
     }
+
     return item
 })
 //sorted by promPrefSeq but status is "Open"
