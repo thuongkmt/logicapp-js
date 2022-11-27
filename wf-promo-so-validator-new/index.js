@@ -7,41 +7,33 @@ var isBreakLoop = false
 var promCode = "";
 var orderEvents = [];
 
-fs.readFile("./data-test-kit/events-gus.json", "utf8", (err, jsonString) => {
+fs.readFile("./data-test-kit/order-events-sorted.json", "utf8", (err, jsonString) => {
     if (err) {
       console.log("File read failed:", err);
       return;
     }
-    orderEvents = JSON.parse(jsonString)[0];
+    orderEvents = JSON.parse(jsonString);
     
     //differentiate which event is out of date
     let createdTimeTimestamp = isNaN(Date.parse(createdTime)) == true ? 0 : Date.parse(createdTime)
-    let orderCloseDateTimestamp = isNaN(Date.parse(orderEvents._id.orderCloseDate)) == true ? 0 : Date.parse(orderEvents._id.orderCloseDate)
-    
     orderEvents.events.map(item => {
-        if(item.event.eventPromChannelStores.storeList.hasOwnProperty("orderCloseDateOverride")){
-            const orderCloseDateOverride = item.event.eventPromChannelStores.storeList.orderCloseDateOverride
-            var orderCloseDateOverrideTimestamp = isNaN(Date.parse(orderCloseDateOverride)) == true ? 0 : Date.parse(orderCloseDateOverride)
-            if(createdTimeTimestamp <= orderCloseDateOverrideTimestamp){
-                item.event.status = "Open"
-            }
-            else{
-                item.event.status = "Close"
-            }
+        const orderCloseDateOverride = item.event.eventPromChannelStores.storeList.orderCloseDateOverride
+        var orderCloseDateOverrideTimestamp = isNaN(Date.parse(orderCloseDateOverride)) == true ? 0 : Date.parse(orderCloseDateOverride)
+        if(createdTimeTimestamp <= orderCloseDateOverrideTimestamp){
+            item.event.status = "Open"
         }
         else{
-            if(createdTimeTimestamp <= orderCloseDateTimestamp){
-                item.event.status = "Open"
-            }
-            else{
-                item.event.status = "Close"
-            }
+            item.event.status = "Close"
         }
-
         return item
     })
-
-    console.log("orderEvents", JSON.stringify(orderEvents))
+    //sorted by promPrefSeq but status is "Open"
+    orderEvents.events.sort((a, b) => {
+        if(a.event.status === "Open"){
+            return a.event.eventPromChannelStores.promPrefSeq - b.event.eventPromChannelStores.promPrefSeq
+        }
+    })
+    console.log("orderEvents-sorted", JSON.stringify(orderEvents))
 
     fs.readFile("./data-test-kit/orderLines-gus.json", "utf8", (err, jsonString) => {
         if (err) {

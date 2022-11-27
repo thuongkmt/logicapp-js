@@ -1,0 +1,94 @@
+{
+    "_id": {
+      "targetBackend": "AX",
+      "orderOpenDate": "2022-09-07T00:00:00",
+      "orderCloseDate": "2022-09-28T01:30:00"
+    },
+    "events": [
+      {
+        "event": {
+          "eventCode": "102122",
+          "saleType": "A",
+          "eventPromChannelStores": {
+            "promCode": "22108901",
+            "orderSubmitPromID": "PL910",
+            "promPrefSeq": 4,
+            "storeList": {
+              "storeID": "104836",
+              "myChannel": "Y",
+              "visible": "Y",
+              "orderCloseDateOverride": "2022-09-29T23:40:00"
+            }
+          }
+        }
+      },
+      {
+        "event": {
+          "eventCode": "102121",
+          "saleType": "P",
+          "eventPromChannelStores": {
+            "promCode": "22108201",
+            "orderSubmitPromID": "PL910",
+            "promPrefSeq": 1,
+            "storeList": {
+              "storeID": "104836",
+              "myChannel": "Y",
+              "visible": "Y",
+              "orderCloseDateOverride": "2022-09-29T23:30:00"
+            }
+          }
+        }
+      },
+      {
+        "event": {
+          "eventCode": "102119",
+          "saleType": "P",
+          "eventPromChannelStores": {
+            "promCode": "22108202",
+            "orderSubmitPromID": "PL910",
+            "promPrefSeq": 3,
+            "storeList": {
+              "storeID": "104836",
+              "myChannel": "Y",
+              "visible": "Y",
+              "orderCloseDateOverride": "2022-09-28T01:30:00"
+            }
+          }
+        }
+      },
+      {
+        "event": {
+          "eventCode": "102123",
+          "saleType": "P",
+          "eventPromChannelStores": {
+            "promCode": "22108202",
+            "orderSubmitPromID": "PL910",
+            "promPrefSeq": 1,
+            "storeList": {
+              "storeID": "104836",
+              "myChannel": "Y",
+              "visible": "Y",
+              "orderCloseDateOverride": "2022-09-28T01:30:00"
+            }
+          }
+        }
+      },
+      {
+        "event": {
+          "eventCode": "102124",
+          "saleType": "P",
+          "eventPromChannelStores": {
+            "promCode": "22108203",
+            "orderSubmitPromID": "PL910",
+            "promPrefSeq": 2,
+            "storeList": {
+              "storeID": "104836",
+              "myChannel": "Y",
+              "visible": "Y",
+              "orderCloseDateOverride": "2022-09-28T01:30:00"
+            }
+          }
+        }
+      }
+    ]
+  }
