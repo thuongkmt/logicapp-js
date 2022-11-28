@@ -1,0 +1,124 @@
+{
+    "aggregate": [
+      {
+        "$match": {
+          "apn": {
+            "$in": @{outputs('Get_unique_productAPNs_from_orderLines')}
+          },
+          "productCost.priceLUKey": "CB:@{first(outputs('Look_up_stores_cbPriceLuKey')?['body'])?['cbPriceLuKey']}",
+          "productCost.suppliers.supplierId": "@{triggerBody()?['mspSupplierNumber']}",
+          "targetBackend": "@{triggerBody()?['targetBackend']}"
+        }
+      },
+      {
+        "$unwind": "$productCost"
+      },
+      {
+        "$unwind": "$productCost.suppliers"
+      },
+      {
+        "$unwind": "$productCost.suppliers.ProductCostBreaks"
+      },
+      {
+        "$match": {
+          "productCost.priceLUKey": "CB:@{first(outputs('Look_up_stores_cbPriceLuKey')?['body'])?['cbPriceLuKey']}",
+          "productCost.suppliers.supplierId": "@{triggerBody()?['mspSupplierNumber']}"
+        }
+      },
+      {
+        "$project": {
+          "_id": 0,
+          "productApn": "$apn",
+          "productCostBreaks": {
+            "$objectToArray": "$productCost.suppliers.ProductCostBreaks"
+          }
+        }
+      },
+      {
+        "$unwind": "$productCostBreaks"
+      },
+      {
+        "$group": {
+          "_id": {
+            "eligibleQuantity": "$productCostBreaks.v.eligibleQuantity",
+            "productApn": "$productApn"
+          },
+          "costBT": {
+            "$max": "$productCostBreaks.v.costBT"
+          }
+        }
+      },
+      {
+        "$project": {
+          "_id": 0,
+          "costBT": 1,
+          "eligibleQuantity": "$_id.eligibleQuantity",
+          "orderItems": @{triggerBody()?['orderLines']},
+          "productApn": "$_id.productApn"
+        }
+      },
+      {
+        "$project": {
+          "costBT": 1,
+          "eligibleQuantity": 1,
+          "orderItem": {
+            "$filter": {
+              "as": "item",
+              "cond": {
+                "$and": [
+                  {
+                    "$eq": [
+                      "$$item.productApn",
+                      "$productApn"
+                    ]
+                  },
+                  {
+                    "$gte": [
+                      "$$item.quantityOrdered",
+                      "$eligibleQuantity"
+                    ]
+                  }
+                ]
+              },
+              "input": "$orderItems"
+            }
+          },
+          "productApn": 1
+        }
+      },
+      {
+        "$unwind": "$orderItem"
+      },
+      {
+        "$sort": {
+          "eligibleQuantity": -1,
+          "productApn": 1
+        }
+      },
+      {
+        "$group": {
+          "_id": "$productApn",
+          "expectedCostPrice": {
+            "$first": "$costBT"
+          }
+        }
+      },
+      {
+        "$project": {
+          "_id": 0,
+          "expectedCostPrice": {
+            "$round": [
+              "$expectedCostPrice",
+              3
+            ]
+          },
+          "mspSupplierNumber": "@{triggerBody()?['mspSupplierNumber']}",
+          "productApn": "$_id",
+          "storeNumber": "@{triggerBody()?['storeNumber']}",
+          "targetBackend": "@{triggerBody()?['targetBackend']}"
+        }
+      }
+    ],
+    "collection": "products",
+    "database": "@{parameters('eslDatabase')}"
+  }

@@ -1,0 +1,1 @@
+if(or(equals(triggerBody()?['requiredDate'], ''), startsWith(dateDifference(utcNow(), triggerBody()?['requiredDate']), '-')), utcNow(), triggerBody()?['requiredDate'])
