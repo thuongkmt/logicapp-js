@@ -142,10 +142,9 @@ return orderLines.map(orderLine => {
                                             if(ipr.region === promRegions[0]["promRegion"]) {
                                                 isBreakLoop = true
                                                 isPromRegionExist = true
-                                                promCode = epcs.promCode
     
                                                 //map promotion data
-                                                orderLine.promotion = promCode
+                                                orderLine.promotion = item.event.eventPromChannelStores.promCode
                                                 
                                                 //map quantityOrderedAdjusted with minimum quantity - Set value of "orderItem.quantityOrderedAdjusted" to be value of "orderItem.quantityOrdered"
                                                 if(orderLine.quantityOrdered >= ipr.storeOrderMin)
