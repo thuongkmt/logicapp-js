@@ -45,31 +45,37 @@ fs.readFile("./data/orderLines.json", "utf8", (err, jsonString) => {
                         orderLine.totalLinesAmountAfterTax = (orderLine.costAfterTax * orderLine.quantityOrdered).toFixed(2)
                         orderLine.revisedListCost = orderLine.costBeforeTax
                         break
+
                     default:
                         //select the Break where quantityOrdered ≥ eligibleQuantity, and the eligibleQuantity is the biggest qualified value
                         //order the array desc
-                        products.filter(product => {
-                            if(product.apn === orderLine.productApn){
-                                let productCostBreaks = product.productCost.suppliers.ProductCostBreaks[0]
-                                let productCostBreaksOrdered = []
-                                for(let i=1; i<=Object.keys(productCostBreaks).length; i++){
-                                    productCostBreaksOrdered.push(productCostBreaks[`Break${i}`])
-                                }
-                                productCostBreaksOrdered.sort(function(a, b){return b.eligibleQuantity - a.eligibleQuantity});
-                                
-                                productCostBreaksOrdered.every(productCostBreak => {
-                                    if(orderLine.quantityOrdered >= productCostBreak.eligibleQuantity){
-                                        orderLine.totalLinesAmountAfterTax = (productCostBreak.CostAT * orderLine.quantityOrdered).toFixed(2)
-                                        orderLine.costBeforeTax = productCostBreak.costBT
-                                        return false
+                        if(products.length > 0){
+                            products.filter(product => {
+                                if(product.apn === orderLine.productApn){
+                                    let productCostBreaks = product.productCost.suppliers.ProductCostBreaks[0]
+                                    let productCostBreaksOrdered = []
+                                    for(let i=1; i<=Object.keys(productCostBreaks).length; i++){
+                                        productCostBreaksOrdered.push(productCostBreaks[`Break${i}`])
                                     }
-                                    return true
-                                })
-                            }
+                                    productCostBreaksOrdered.sort(function(a, b){return b.eligibleQuantity - a.eligibleQuantity});
+                                    
+                                    productCostBreaksOrdered.every(productCostBreak => {
+                                        if(orderLine.quantityOrdered >= productCostBreak.eligibleQuantity){
+                                            orderLine.totalLinesAmountAfterTax = (productCostBreak.CostAT * orderLine.quantityOrdered).toFixed(2)
+                                            orderLine.costBeforeTax = productCostBreak.costBT
+                                            return false
+                                        }
+                                        return true
+                                    })
+                                }
+                                orderLine.revisedListCost = orderLine.costBeforeTax
+                            })
+                        }
+                        else{
                             orderLine.revisedListCost = orderLine.costBeforeTax
-                        })
-                        
+                        }
                         break
+
                 } 
             }
             
