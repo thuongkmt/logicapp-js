@@ -22,7 +22,7 @@ fs.readFile("./data/orderLines.json", "utf8", (err, jsonString) => {
             //check status of orderLine
             if(orderLine.status ==="05"){
                 orderLine.statusComment = "Unrecognised Product sent to Supplier"
-                if(orderLine.revisedListCost ===""){
+                if(orderLine.revisedListCost === 0){
                     orderLine.revisedListCost = orderLine.costBeforeTax
                 }
             }
@@ -76,7 +76,7 @@ fs.readFile("./data/orderLines.json", "utf8", (err, jsonString) => {
             return orderLine
         });
 
-        //console.log("orderLines", JSON.stringify(orderLines))
+        console.log("orderLines", JSON.stringify(orderLines))
     });
 });
 
