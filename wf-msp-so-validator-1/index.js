@@ -65,8 +65,8 @@ fs.readFile("./data/orderLines.json", "utf8", (err, jsonString) => {
                                     }
                                     return true
                                 })
-                                orderLine.revisedListCost = orderLine.costBeforeTax
                             }
+                            orderLine.revisedListCost = orderLine.costBeforeTax
                         })
                         
                         break
