@@ -37,7 +37,6 @@ fs.readFile("./data/orderLines.json", "utf8", (err, jsonString) => {
                             productApns.every(product =>{
                                 productCount ++
                                 if(product.apn === orderLine.productCode){
-                                    console.log("Found-A", orderLine.productCode)
                                     orderLine.itemCode = product._id
                                     orderLine.productApn = orderLine.productCode
                                     if(orderLine.productDescription === ""){
@@ -47,22 +46,27 @@ fs.readFile("./data/orderLines.json", "utf8", (err, jsonString) => {
                                 }
                                 else{
                                     if(productCount === productApns.length){
-                                        console.log("Not-Found-A", orderLine.productCode)
                                         orderLine.status = "05"
                                         orderLine.statusComment = "Invalid Item"
+                                        orderLine.productApn = orderLine.productCode
                                     }
                                     return true
                                 }
                             })
                         }
+                        else {
+                            orderLine.status = "05"
+                            orderLine.statusComment = "Invalid Item"
+                            orderLine.productApn = orderLine.productCode
+                        }      
                         break
+
                     default: //R or W
                         if(productIds.length>0){
                             let productCount = 0
                             productIds.every(product =>{
                                 productCount ++
                                 if(product._id === orderLine.productCode){
-                                    console.log("Found-R", orderLine.productCode)
                                     orderLine.itemCode = product._id
                                     orderLine.productApn = product.apn
                                     if(orderLine.productDescription === ""){
@@ -72,14 +76,19 @@ fs.readFile("./data/orderLines.json", "utf8", (err, jsonString) => {
                                 }
                                 else{
                                     if(productCount === productIds.length){
-                                        console.log("Not-Found-R", orderLine.productCode)
                                         orderLine.status = "05"
                                         orderLine.statusComment = "Invalid Item"
+                                        orderLine.itemCode = orderLine.productCode
                                     }
                                     return true
                                 }
                             })
                         }
+                        else {
+                            orderLine.status = "05"
+                            orderLine.statusComment = "Invalid Item"
+                            orderLine.itemCode = orderLine.productCode
+                        }    
                         break
                 }
 
