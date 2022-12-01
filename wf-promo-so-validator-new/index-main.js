@@ -1,5 +1,5 @@
 const orderEvents = workflowContext.actions.ExeJavaScriptCode_getOrderCloseDateOverride.outputs.orderEvents
-const promRegions = ""
+const promRegions = workflowContext.actions.Get_stores_from_ESL.outputs.body
 const sourceSystem = workflowContext.trigger.outputs.body.sourceSystem
 const createdTime = workflowContext.trigger.outputs.body.createdTime
 const orderLines = workflowContext.trigger.outputs.body.orderLines
