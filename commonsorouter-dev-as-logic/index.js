@@ -39,7 +39,7 @@ fs.readFile("./data/orderLines.json", "utf8", (err, jsonString) => {
                                 if(product.apn === orderLine.productCode){
                                     orderLine.itemCode = product._id
                                     orderLine.productApn = orderLine.productCode
-                                    if(orderLine.productDescription === ""){
+                                    if(orderLine.productDescription === "" || orderLine.productDescription === undefined){
                                         orderLine.productDescription = product.name
                                     }
                                     return false
@@ -69,7 +69,7 @@ fs.readFile("./data/orderLines.json", "utf8", (err, jsonString) => {
                                 if(product._id === orderLine.productCode){
                                     orderLine.itemCode = product._id
                                     orderLine.productApn = product.apn
-                                    if(orderLine.productDescription === ""){
+                                    if(orderLine.productDescription === "" || orderLine.productDescription === undefined){
                                         orderLine.productDescription = product.name
                                     }
                                     return false
