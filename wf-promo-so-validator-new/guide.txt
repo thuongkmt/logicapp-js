@@ -1,0 +1,2 @@
+1. Run header-validator.js file, the result will be saved in the /data/result/order-events-sorted.json
+2. Run the index file, the result will be saved in the /data-result/orderLines.json

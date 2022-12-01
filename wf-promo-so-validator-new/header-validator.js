@@ -25,7 +25,7 @@ fs.readFile("./data-test-kit/events-gus-full.json","utf8",(err, data) =>{
         }
     }
 
-    fs.writeFile("./data-test-kit/order-events-sorted.json", JSON.stringify(orderEvents), (err) =>{
+    fs.writeFile("./data-result/order-events-sorted.json", JSON.stringify(orderEvents), (err) =>{
         if(!err){
             console.log("order-events-sorted", "saved in file")        
         }
