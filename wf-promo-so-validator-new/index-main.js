@@ -276,8 +276,8 @@ return orderLines.map(orderLine => {
                                         else{
                                             //UPDATE WHEN STATUS IS CLOSE
                                             isBreakLoop = true
-                                            orderLine.status = "010"
-                                            orderLine.statusComment = "Order validation is expired"
+                                            orderLine.status = "97"
+                                            orderLine.statusComment = "Not On Promotion"
                                         }
                                         
                                     }

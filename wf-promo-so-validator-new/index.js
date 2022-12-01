@@ -1,6 +1,6 @@
 const fs = require('fs')
 const sourceSystem = "NOT-GUS";
-const createdTime = "2022-09-28T02:07:51"
+const createdTime = "2022-05-15T00:00:00"
 
 var promRegions = [
     {
