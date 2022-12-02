@@ -12,6 +12,7 @@ var promRegions = [
 var isBreakLoop = false
 var promCode = "";
 var orderEvents = [];
+var salesOrderStatus = false;
 
 fs.readFile("./data-result/order-events-sorted.json", "utf8", (err, jsonString) => {
     if (err) {
@@ -334,12 +335,29 @@ fs.readFile("./data-result/order-events-sorted.json", "utf8", (err, jsonString) 
         
             return orderLine
         });
-        
+
+        //checking if at least one of the status in orderline is not matched to C, then reupdate the status of SalesOrder
+        orderLines.every(orderLine => {
+            if(orderLine.status === "01" || orderLine.status === "04" || orderLine.status === "33"){
+                salesOrderStatus = true;
+                return false
+            }
+            else{
+                return true
+            }
+        })
+
         fs.writeFile("./data-result/orderLines.json", JSON.stringify(orderLines), (err) =>{
             if(!err){
                 console.log("orderLines", "saved in file")
             }
         })
+
+        //rerurn data
+        return {
+            salesOrderStatus,
+            orderLines
+        }
     })
 });
 
