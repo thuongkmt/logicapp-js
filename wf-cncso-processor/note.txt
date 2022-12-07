@@ -1,0 +1,3 @@
+#FLOW OF CONTROL
+1. Get all the unique itemcode from orderline.itemcode that orderline.status is not equal to "05"
+2. using the itemcode above, getting all the itemlist from orderevents table that match with condition itemcode == itemlist.itemID
