@@ -1,0 +1,17 @@
+<set-body template="Liquid">
+
+  orderid: {{body.order.id}}
+
+  date: {{body.order.orderdate}}
+
+  customer:
+  id: {{body.order.customer.id}}
+
+  name: {{body.order.customer.name}}
+
+  items:
+
+  {%for item in body.order.items %}
+    - {{ item.description }}{% endfor %}
+
+</set-body>
