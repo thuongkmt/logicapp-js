@@ -5,24 +5,24 @@ const WAREHOUSE  = "W"
 const CHARGEBACK = "C"
 let isPromotion = false;
 
-fs.readFile("./data-test-kid/orderevents.json", "utf8", (error, data) =>{
+fs.readFile("./data-test-kit/orderevents.json", "utf8", (error, data) =>{
     if(error){
-        console.log("File reading", "Failed!")
-        return false
+        console.log("File reading for orderevents", "Failed!")
+        throw(error)
     }
     const orderEvents = JSON.parse(data)[0]
 
-    fs.readFile("./data-test-kid/stores.json", "utf8", (error, data) =>{
+    fs.readFile("./data-test-kit/stores.json", "utf8", (error, data) =>{
         if(error){
-            console.log("File reading", "Failed!")
-            return false
+            console.log("File reading for stores", "Failed!")
+            throw(error)
         }
         const stores = JSON.parse(data)[0]
 
-        fs.readFile("./data-test-kit", "utf8", (error, data) =>{
+        fs.readFile("./data-test-kit/orderlines.json", "utf8", (error, data) =>{
             if(error){
-                console.log("File reading", "Failed!")
-                return false
+                console.log("File reading for orderlines", "Failed!")
+                throw(error)
             }
             const orderLines = JSON.parse(data)
 
@@ -37,25 +37,33 @@ fs.readFile("./data-test-kid/orderevents.json", "utf8", (error, data) =>{
                     orderEvents.itemLists.every(item =>{
                         itemLoopCount ++
                         if(orderLine.itemCode === item.itemID){
-                            //check promSource
-                            if(stores.promRegion === item.itemPromRegions.region){
-                                orderLine.promSource = item.itemPromRegions.promSource
-                                //check a least one item.itemPromRegions.promSource equal to promSource of W
+                            orderLine.promSource = item.itemPromRegions.promSource
+                                //check at least one item.itemPromRegions.promSource equal to promSource of W
                                 switch(item.itemPromRegions.promSource){
                                     case WAREHOUSE: 
                                         isPromotion = true
                                         break
 
                                     case CHARGEBACK:
+                                        orderLine.warehouseId = item.itemPromRegions.supplierID
+                                        orderLine.uom = item.itemPromRegions.salesUOM
+                                        
+                                        //get the promBreak#_Qty data
+                                        let promBreaks_Qty = []
+                                        for(let i=1; i<=6; i++){
+                                            promBreaks_Qty.push(item.itemPromPricing[`promBreak${i}_Qty`] !== undefined ? item.itemPromPricing[`promBreak${i}_Qty`] : 0)
+                                        }
+                                        promBreaks_Qty.sort((a,b) => {return b-a});
+                                        console.log("promBreaks_Qty", promBreaks_Qty)
 
                                         break
+
                                     default: 
                                         break
                                 }
                                 if(item.itemPromRegions.promSource === WAREHOUSE){
                                     isPromotion = true
                                 }
-                            }
 
                             return false
                         }

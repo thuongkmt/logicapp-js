@@ -44,7 +44,7 @@
                     "promCost2_BT" : 0,
                     "promCost2_AT" : 0,
                     "promSRP" : 7.5,
-                    "promBreak3_Qty" : 0,
+                    "promBreak3_Qty" : 10,
                     "promCost3_BT" : 0,
                     "promCost3_AT" : 0
                 }
