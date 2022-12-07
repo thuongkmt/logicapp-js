@@ -1,0 +1,73 @@
+[
+    {
+        "status": "05",
+        "recordType": "L",
+        "quantityOrdered": 5,
+        "productCodeType": "R",
+        "storeComment": "",
+        "srpIncTax": 28,
+        "productCode": "1205145",
+        "costBeforeTax": 22,
+        "backOrderRequired": "",
+        "promSource": "W",
+        "itemCode": "2023349",
+        "productApn": "9337103580124",
+        "productDescription": "Snip Aviation Tin Left Cut Red 248mm Wiss"
+    },
+    {
+        "recordType": "L",
+        "quantityOrdered": 5,
+        "productCodeType": "R",
+        "storeComment": "",
+        "srpIncTax": 28,
+        "productCode": "1205145",
+        "costBeforeTax": 22,
+        "backOrderRequired": "",
+        "promSource": "W",
+        "itemCode": "2023372",
+        "productApn": "9337103580124",
+        "productDescription": "Snip Aviation Tin Left Cut Red 248mm Wiss"
+    },
+    {
+        "recordType": "L",
+        "quantityOrdered": 5,
+        "productCodeType": "R",
+        "storeComment": "",
+        "srpIncTax": 28,
+        "productCode": "1205145",
+        "costBeforeTax": 22,
+        "backOrderRequired": "",
+        "promSource": "W",
+        "itemCode": "2023398",
+        "productApn": "9337103580124",
+        "productDescription": "Snip Aviation Tin Left Cut Red 248mm Wiss"
+    },
+    {
+        "recordType": "L",
+        "quantityOrdered": 5,
+        "productCodeType": "R",
+        "storeComment": "",
+        "srpIncTax": 28,
+        "productCode": "1205145",
+        "costBeforeTax": 22,
+        "backOrderRequired": "",
+        "promSource": "W",
+        "itemCode": "2023406",
+        "productApn": "9337103580124",
+        "productDescription": "Snip Aviation Tin Left Cut Red 248mm Wiss"
+    },
+    {
+        "recordType": "L",
+        "quantityOrdered": 5,
+        "productCodeType": "R",
+        "storeComment": "",
+        "srpIncTax": 28,
+        "productCode": "1205145",
+        "costBeforeTax": 22,
+        "backOrderRequired": "",
+        "promSource": "W",
+        "itemCode": "2023406",
+        "productApn": "9337103580124",
+        "productDescription": "Snip Aviation Tin Left Cut Red 248mm Wiss"
+    }
+]
