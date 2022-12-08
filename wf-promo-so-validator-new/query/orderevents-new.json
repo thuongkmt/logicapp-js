@@ -88,19 +88,19 @@
             }
         },
         {
-        "$group": {
-            "_id": {
-                "targetBackend":"$$ROOT._id.targetBackend",
-                "orderOpenDate":"$$ROOT._id.orderOpenDate",
-                "orderCloseDate":"$$ROOT._id.orderCloseDate"
-            },
-            "events": {
-                "$push": {
-                    "event":"$$ROOT._id.event",
-                    "itemLists":"$$ROOT.itemLists"
+            "$group": {
+                "_id": {
+                    "targetBackend":"$$ROOT._id.targetBackend",
+                    "orderOpenDate":"$$ROOT._id.orderOpenDate",
+                    "orderCloseDate":"$$ROOT._id.orderCloseDate"
+                },
+                "events": {
+                    "$push": {
+                        "event":"$$ROOT._id.event",
+                        "itemLists":"$$ROOT.itemLists"
+                    }
                 }
             }
         }
-    }
     ]
 }

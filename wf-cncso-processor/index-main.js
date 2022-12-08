@@ -1,11 +1,13 @@
-const orderLines = []
-const orderEvents = []
-const stores = []
+const orderLines = workflowContext.trigger.outputs.body.orderLines || []
+const orderEvents = workflowContext.actions.Get_OrderEvents_From_ESL.outputs.body[0] || []
+const stores = workflowContext.actions.Get_Stores_From_ESL.outputs.body[0] || []
 
 const STATUS_05  = "05"
 const WAREHOUSE  = "W"
 const CHARGEBACK = "C"
 let isPromotion = false;
+let chargeBackOrderLines = []
+let warehouseOrderLines = []
 
 orderLines.map(orderLine =>{
     //set this quantityOederAdjusted equal to quantityOrdered for later flow service
@@ -24,6 +26,7 @@ orderLines.map(orderLine =>{
                     //check at least one item.itemPromRegions.promSource equal to promSource of W
                     switch(item.itemPromRegions.promSource){
                         case WAREHOUSE: 
+                            warehouseOrderLines.push(orderLine)
                             isPromotion = true
                             break
 
@@ -57,6 +60,8 @@ orderLines.map(orderLine =>{
 
                                 return true
                             })
+
+                            chargeBackOrderLines.push(orderLine)
                             break
 
                         default: 
@@ -79,6 +84,7 @@ orderLines.map(orderLine =>{
 })
 
 return {
-    orderLines,
+    warehouseOrderLines,
+    chargeBackOrderLines,
     isPromotion
 }
