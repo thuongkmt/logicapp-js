@@ -19,6 +19,9 @@ fs.readFile("./data/orderLines.json", "utf8", (err, jsonString) => {
         
         //START PROCESSING
         orderLines.map(orderLine => {
+            //force the quantityOrderedAdjusted equal to quantityOrdered to use for later flow service
+            orderLine.quantityOrderedAdjusted = orderLine.quantityOrdered 
+
             //check status of orderLine
             if(orderLine.status ==="05"){
                 orderLine.statusComment = "Unrecognised Product sent to Supplier"
