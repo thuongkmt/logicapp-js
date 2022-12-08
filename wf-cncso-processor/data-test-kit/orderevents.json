@@ -14,16 +14,28 @@
                     "promSource" : "W",
                     "region" : "NSW"
                 },
-                "itemPromPricing" : {
-                    "promBreak1_Qty" : 25,
-                    "promCost1_BT" : 6.24,
-                    "promPriceLUKey" : "BRI",
-                    "promCost1_AT" : 6.88,
-                    "promBreak2_Qty" : 100,
-                    "promCost2_BT" : 6,
-                    "promCost2_AT" : 6.6,
-                    "promSRP" : 10
-                }
+                "itemPromPricing" : [
+                    {
+                        "promBreak1_Qty" : 25,
+                        "promCost1_BT" : 6.23,
+                        "promPriceLUKey" : "MEL",
+                        "promCost1_AT" : 6.88,
+                        "promBreak2_Qty" : 100,
+                        "promCost2_BT" : 6,
+                        "promCost2_AT" : 6.6,
+                        "promSRP" : 9.99
+                    },
+                    {
+                        "promBreak1_Qty" : 25,
+                        "promCost1_BT" : 6.24,
+                        "promPriceLUKey" : "BRI",
+                        "promCost1_AT" : 6.88,
+                        "promBreak2_Qty" : 100,
+                        "promCost2_BT" : 6,
+                        "promCost2_AT" : 6.6,
+                        "promSRP" : 10
+                    }
+                ]
             },
             {
                 "itemID" : "2485100",
@@ -35,20 +47,30 @@
                     "promSource" : "C",
                     "region" : "NSW"
                 },
-                "itemPromPricing" : {
-                    "promBreak1_Qty" : 1,
-                    "promCost1_BT" : 3.27,
-                    "promPriceLUKey" : "BRI",
-                    "promCost1_AT" : 3.6,
-                    "promBreak2_Qty" : 0,
-                    "promCost2_BT" : 0,
-                    "promCost2_AT" : 0,
-                    "promSRP" : 7.5,
-                    "promBreak3_Qty" : 10,
-                    "promCost3_BT" : 0,
-                    "promCost3_AT" : 0
-                }
+                "itemPromPricing" : [
+                    {
+                        "promBreak1_Qty" : 1,
+                        "promCost1_BT" : 3.27,
+                        "promPriceLUKey" : "MEL",
+                        "promCost1_AT" : 3.6,
+                        "promSRP" : 7.5
+                    },
+                    {
+                        "promBreak1_Qty" : 1,
+                        "promCost1_BT" : 3.27,
+                        "promPriceLUKey" : "BRI",
+                        "promCost1_AT" : 3.6,
+                        "promBreak2_Qty" : 0,
+                        "promCost2_BT" : 0,
+                        "promCost2_AT" : 0,
+                        "promSRP" : 7.5,
+                        "promBreak3_Qty" : 0,
+                        "promCost3_BT" : 0,
+                        "promCost3_AT" : 0
+                    }
+                ]
             }
         ]
-    }    
+    }
+    
 ]

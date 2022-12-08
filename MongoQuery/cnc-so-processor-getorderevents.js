@@ -52,14 +52,6 @@ db.getCollection("orderevents").aggregate([
         }
     },
     {
-        "$unwind": "$event.itemList.itemPromChannels.itemPromPricing"
-    },
-    {
-        "$match": {
-            "event.itemList.itemPromChannels.itemPromPricing.promPriceLUKey": "BRI"
-        }
-    },
-    {
         "$project" : {
             "event.itemList.itemPromChannels.promProdNo": 0,
             "event.itemList.itemPromChannels.catSubGroup": 0,
