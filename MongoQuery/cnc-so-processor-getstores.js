@@ -1,6 +1,6 @@
 db.getCollection("stores").find(
     {
-        "id": "483941"
+        "id": "475319"
     },
     {
         "_id": 0,
