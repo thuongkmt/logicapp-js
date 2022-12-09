@@ -1,12 +1,18 @@
-db.getCollection("supplier").find(
+db.getCollection("supplier").aggregate([
     {
-        "id":"5598"
+        "$match": {
+            "id": {
+                "$in": ["5598","5603","8717","5593","7693","1050","1437"]
+            }
+        }
     },
     {
-        "_id": 0,
-        "name": 1,
-        "supplierContactName": 1,
-        "supplierContactPhone": 1,
-        "supplierContactEmail": 1
+        "$project":{
+            "_id": 0,
+            "name": 1,
+            "supplierContactName": 1,
+            "supplierContactPhone": 1,
+            "supplierContactEmail": 1
+        }
     }
-)
+])
