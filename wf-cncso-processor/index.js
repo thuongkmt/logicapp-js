@@ -60,13 +60,13 @@ fs.readFile("./data-test-kit/orderevents.json", "utf8", (error, data) =>{
                                                     promBreaks_Qty.push(itemPromPrice[`promBreak${i}_Qty`] !== undefined ? itemPromPrice[`promBreak${i}_Qty`] : 0)
                                                 }
                                                 promBreaks_Qty.sort((a,b) => {return b-a});
-                                                
+                                    
                                                 //compare the orderLine.quantityOrdered vs the biggest promBreak#_Qty
                                                 if(orderLine.quantityOrdered >= promBreaks_Qty[0]){
                                                     for(let i=1; i<=6; i++){
                                                         if(itemPromPrice[`promBreak${i}_Qty`] === promBreaks_Qty[0]){
-                                                            orderLines.totalLinesAmountAfterTax = (itemPromPrice[`promCost${i}_AT`] * orderLine.quantityOrdered).toFixed(2)
-                                                            orderLines.costBeforeTax = itemPromPrice[`promCost${i}_BT`] 
+                                                            orderLine.totalLinesAmountAfterTax = (itemPromPrice[`promCost${i}_AT`] * orderLine.quantityOrdered).toFixed(2)
+                                                            orderLine.costBeforeTax = itemPromPrice[`promCost${i}_BT`] 
                                                             return false;
                                                         }
                                                     }
@@ -96,6 +96,9 @@ fs.readFile("./data-test-kit/orderevents.json", "utf8", (error, data) =>{
                         return true
                     })
                 }
+            })
+            fs.writeFile("./data-result/orderlines.json", JSON.stringify(orderLines), (error) => {
+                if(error) throw error
             })
             //END PROCESSING
         })
