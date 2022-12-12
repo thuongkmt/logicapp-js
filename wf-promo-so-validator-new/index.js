@@ -1,12 +1,12 @@
 const fs = require('fs')
 const sourceSystem = "NOT-GUS";
-const createdTime = "2022-05-15T00:00:00"
+const createdTime = "2022-12-12T01:07:51"
 
 var promRegions = [
     {
-        "_id": "035634",
-        "promRegion": "WA",
-        "promPriceLUKey": "WA"
+      "_id": "364919",
+      "promRegion": "NSW",
+      "promPriceLUKey": "BRI"
     }
   ];
 var isBreakLoop = false
@@ -43,7 +43,7 @@ fs.readFile("./data-result/order-events-sorted.json", "utf8", (err, jsonString) 
             return item
         })
     }
-    
+
     //sorted by promPrefSeq but status is "Open"
     orderEvents.events.sort((a, b) => {
         if(a.event.status === "Open"){
@@ -65,6 +65,7 @@ fs.readFile("./data-result/order-events-sorted.json", "utf8", (err, jsonString) 
         var orderLines = JSON.parse(jsonString);
         orderLines.map(orderLine => { 
             if(orderLine.status == "05"){
+                console.log("IAMHERE", "^^")
                 orderLine.promSource = ""
             }
             else{
@@ -153,6 +154,7 @@ fs.readFile("./data-result/order-events-sorted.json", "utf8", (err, jsonString) 
                                             else{
                                                 if(itemPromChannels.length === loopPromCodeCount) {
                                                     if(!isPromCodeExist){
+                                                        console.log("IAMHERE", "^^")
                                                         orderLine.status = "97"
                                                         orderLine.statusComment = "Not On Promotion"
                                                         orderLine.promSource = ""
@@ -288,6 +290,7 @@ fs.readFile("./data-result/order-events-sorted.json", "utf8", (err, jsonString) 
                                                         else{
                                                             if(itemPromRegions.length === loopPromRegionCount) {
                                                                 if(!isPromRegionExist){
+                                                                    console.log("IAMHERE", "^^")
                                                                     orderLine.status = "97"
                                                                     orderLine.statusComment = "Not On Promotion"
                                                                     orderLine.promSource = ""
@@ -298,6 +301,7 @@ fs.readFile("./data-result/order-events-sorted.json", "utf8", (err, jsonString) 
                                                 }
                                                 else{
                                                     //UPDATE WHEN STATUS IS CLOSE
+                                                    console.log("IAMHERE", "^^")
                                                     isBreakLoop = true
                                                     orderLine.status = "010"
                                                     orderLine.statusComment = "Order validation is expired"
@@ -306,6 +310,7 @@ fs.readFile("./data-result/order-events-sorted.json", "utf8", (err, jsonString) 
                                             else{
                                                 if(itemPromChannels.length === loopPromCodeCount) {
                                                     if(!isPromCodeExist){
+                                                        console.log("IAMHERE", "^^")
                                                         orderLine.status = "97"
                                                         orderLine.statusComment = "Not On Promotion"
                                                         orderLine.promSource = ""
@@ -320,11 +325,11 @@ fs.readFile("./data-result/order-events-sorted.json", "utf8", (err, jsonString) 
                             else{
                                 if(loopItemIdCount === item.itemLists.length && loopEventsCount === orderEvents.events.length){
                                     if(!isItemIdExist){
+                                        console.log("IAMHERE", "^^")
                                         orderLine.status = "97"
                                         orderLine.statusComment = "Not On Promotion"
                                         orderLine.promSource = ""
                                     }
-                                    
                                 }
                             }
                         })
@@ -338,6 +343,7 @@ fs.readFile("./data-result/order-events-sorted.json", "utf8", (err, jsonString) 
 
         //checking if at least one of the status in orderline is not matched to C, then reupdate the status of SalesOrder
         orderLines.every(orderLine => {
+            console.log("orderLine.status", orderLine.status)
             if(orderLine.status === "01" || orderLine.status === "04" || orderLine.status === "33"){
                 salesOrderStatus = true;
                 return false

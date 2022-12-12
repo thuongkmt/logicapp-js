@@ -317,6 +317,7 @@ orderLines.map(orderLine => {
 orderLines.every(orderLine => {
     if(orderLine.status === "01" || orderLine.status === "04" || orderLine.status === "33"){
         salesOrderStatus = true;
+        
         return false
     }
     else{

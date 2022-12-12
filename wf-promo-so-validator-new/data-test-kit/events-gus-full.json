@@ -1,936 +1,335 @@
 [
-    {
-    "_id": {
-      "targetBackend": "AX",
-      "orderOpenDate": "2022-05-01T00:00:00",
-      "orderCloseDate": "2022-05-09T23:30:00"
-    },
-    "events": [
-      {
-        "event": {
-          "eventCode": "102121",
-          "saleType": "P",
-          "eventPromChannelStores": {
-            "promCode": "22108201",
-            "orderSubmitPromID": "PL906",
-            "promPrefSeq": 4,
-            "storeList": {
-              "storeID": "104836",
-              "myChannel": "Y",
-              "visible": "Y",
-              "orderCloseDateOverride": "2022-05-19T23:15:00"
-            }
-          }
-        },
-        "itemLists": [
-          {
-            "itemID": "1791631",
-            "itemPromChannels": [
-              {
-                "promCode": "22108201",
-                "itemPromRegions": [
-                  {
-                    "storeOrderMin": 1,
-                    "storeOrderMult": 6,
-                    "salesUOM": "EA",
-                    "supplierID": "1170",
-                    "promSource": "W",
-                    "region": "BRI"
-                  },
-                  {
-                    "storeOrderMin": 1,
-                    "storeOrderMult": 6,
-                    "salesUOM": "EA",
-                    "supplierID": "1170",
-                    "promSource": "W",
-                    "region": "MEL"
-                  },
-                  {
-                    "storeOrderMin": 1,
-                    "storeOrderMult": 6,
-                    "salesUOM": "EA",
-                    "supplierID": "1170",
-                    "promSource": "W",
-                    "region": "VIC"
-                  }
-                ],
-                "itemPromPricing": [
-                  {
-                    "promBreak1_Qty": 1,
-                    "promCost1_BT": 5.45,
-                    "promPriceLUKey": "BRI",
-                    "promCost1_AT": 6,
-                    "promBreak2_Qty": 6,
-                    "promCost2_BT": 5.25,
-                    "promCost2_AT": 5.78,
-                    "promSRP": 8,
-                    "promBreak3_Qty": 0,
-                    "promCost3_BT": 0,
-                    "promCost3_AT": 0
-                  },
-                  {
-                    "promBreak1_Qty": 1,
-                    "promCost1_BT": 5.45,
-                    "promPriceLUKey": "MEL",
-                    "promCost1_AT": 6,
-                    "promBreak2_Qty": 6,
-                    "promCost2_BT": 5.25,
-                    "promCost2_AT": 5.78,
-                    "promSRP": 8,
-                    "promBreak3_Qty": 0,
-                    "promCost3_BT": 0,
-                    "promCost3_AT": 0
-                  },
-                  {
-                    "promBreak1_Qty": 1,
-                    "promCost1_BT": 5.45,
-                    "promPriceLUKey": "PTH",
-                    "promCost1_AT": 6,
-                    "promBreak2_Qty": 6,
-                    "promCost2_BT": 5.25,
-                    "promCost2_AT": 5.78,
-                    "promSRP": 8,
-                    "promBreak3_Qty": 0,
-                    "promCost3_BT": 0,
-                    "promCost3_AT": 0
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "itemID": "1033422",
-            "itemPromChannels": [
-              {
-                "promCode": "22108101",
-                "itemPromRegions": [
-                  {
-                    "storeOrderMin": 1,
-                    "storeOrderMult": 6,
-                    "salesUOM": "EA",
-                    "supplierID": "1232",
-                    "promSource": "W",
-                    "region": "BRI"
-                  },
-                  {
-                    "storeOrderMin": 1,
-                    "storeOrderMult": 6,
-                    "salesUOM": "EA",
-                    "supplierID": "1232",
-                    "promSource": "W",
-                    "region": "MEL"
-                  }
-                ],
-                "itemPromPricing": [
-                  {
-                    "promBreak1_Qty": 1,
-                    "promCost1_BT": 23.34,
-                    "promPriceLUKey": "BRI",
-                    "promCost1_AT": 25.68,
-                    "promBreak2_Qty": 6,
-                    "promCost2_BT": 22.51,
-                    "promCost2_AT": 24.76,
-                    "promSRP": 49,
-                    "promBreak3_Qty": 0,
-                    "promCost3_BT": 0,
-                    "promCost3_AT": 0
-                  },
-                  {
-                    "promBreak1_Qty": 1,
-                    "promCost1_BT": 23.99,
-                    "promPriceLUKey": "MEL",
-                    "promCost1_AT": 26.38,
-                    "promBreak2_Qty": 6,
-                    "promCost2_BT": 23.13,
-                    "promCost2_AT": 25.45,
-                    "promSRP": 49,
-                    "promBreak3_Qty": 0,
-                    "promCost3_BT": 0,
-                    "promCost3_AT": 0
-                  }
-                ]
-              },
-              {
-                "promCode": "22108201",
-                "itemPromRegions": [
-                  {
-                    "storeOrderMin": 1,
-                    "storeOrderMult": 6,
-                    "salesUOM": "EA",
-                    "supplierID": "1232",
-                    "promSource": "W",
-                    "region": "BRI"
-                  },
-                  {
-                    "storeOrderMin": 1,
-                    "storeOrderMult": 6,
-                    "salesUOM": "EA",
-                    "supplierID": "1232",
-                    "promSource": "W",
-                    "region": "MEL"
-                  },
-                  {
-                    "storeOrderMin": 1,
-                    "storeOrderMult": 6,
-                    "salesUOM": "EA",
-                    "supplierID": "1232",
-                    "promSource": "W",
-                    "region": "VIC"
-                  }
-                ],
-                "itemPromPricing": [
-                  {
-                    "promBreak1_Qty": 1,
-                    "promCost1_BT": 31.1,
-                    "promPriceLUKey": "BRI",
-                    "promCost1_AT": 34.21,
-                    "promBreak2_Qty": 6,
-                    "promCost2_BT": 29.99,
-                    "promCost2_AT": 32.99,
-                    "promSRP": 49,
-                    "promBreak3_Qty": 0,
-                    "promCost3_BT": 0,
-                    "promCost3_AT": 0
-                  },
-                  {
-                    "promBreak1_Qty": 1,
-                    "promCost1_BT": 31.1,
-                    "promPriceLUKey": "MEL",
-                    "promCost1_AT": 34.21,
-                    "promBreak2_Qty": 6,
-                    "promCost2_BT": 29.99,
-                    "promCost2_AT": 32.99,
-                    "promSRP": 49,
-                    "promBreak3_Qty": 0,
-                    "promCost3_BT": 0,
-                    "promCost3_AT": 0
-                  },
-                  {
-                    "promBreak1_Qty": 1,
-                    "promCost1_BT": 31.1,
-                    "promPriceLUKey": "PTH",
-                    "promCost1_AT": 34.21,
-                    "promBreak2_Qty": 6,
-                    "promCost2_BT": 29.99,
-                    "promCost2_AT": 32.99,
-                    "promSRP": 49,
-                    "promBreak3_Qty": 0,
-                    "promCost3_BT": 0,
-                    "promCost3_AT": 0
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "itemID": "1033455",
-            "itemPromChannels": [
-              {
-                "promCode": "22108101",
-                "itemPromRegions": [
-                  {
-                    "storeOrderMin": 1,
-                    "storeOrderMult": 6,
-                    "salesUOM": "EA",
-                    "supplierID": "1232",
-                    "promSource": "W",
-                    "region": "BRI"
-                  },
-                  {
-                    "storeOrderMin": 1,
-                    "storeOrderMult": 6,
-                    "salesUOM": "EA",
-                    "supplierID": "1232",
-                    "promSource": "W",
-                    "region": "MEL"
-                  }
-                ],
-                "itemPromPricing": [
-                  {
-                    "promBreak1_Qty": 1,
-                    "promCost1_BT": 24.79,
-                    "promPriceLUKey": "BRI",
-                    "promCost1_AT": 27.26,
-                    "promBreak2_Qty": 6,
-                    "promCost2_BT": 23.91,
-                    "promCost2_AT": 26.3,
-                    "promSRP": 49,
-                    "promBreak3_Qty": 0,
-                    "promCost3_BT": 0,
-                    "promCost3_AT": 0
-                  },
-                  {
-                    "promBreak1_Qty": 1,
-                    "promCost1_BT": 25.47,
-                    "promPriceLUKey": "MEL",
-                    "promCost1_AT": 28.01,
-                    "promBreak2_Qty": 6,
-                    "promCost2_BT": 24.56,
-                    "promCost2_AT": 27.02,
-                    "promSRP": 49,
-                    "promBreak3_Qty": 0,
-                    "promCost3_BT": 0,
-                    "promCost3_AT": 0
-                  }
-                ]
-              },
-              {
-                "promCode": "22108201",
-                "itemPromRegions": [
-                  {
-                    "storeOrderMin": 1,
-                    "storeOrderMult": 6,
-                    "salesUOM": "EA",
-                    "supplierID": "1232",
-                    "promSource": "W",
-                    "region": "BRI"
-                  },
-                  {
-                    "storeOrderMin": 1,
-                    "storeOrderMult": 6,
-                    "salesUOM": "EA",
-                    "supplierID": "1232",
-                    "promSource": "W",
-                    "region": "MEL"
-                  },
-                  {
-                    "storeOrderMin": 1,
-                    "storeOrderMult": 6,
-                    "salesUOM": "EA",
-                    "supplierID": "1232",
-                    "promSource": "W",
-                    "region": "VIC"
-                  }
-                ],
-                "itemPromPricing": [
-                  {
-                    "promBreak1_Qty": 1,
-                    "promCost1_BT": 31.1,
-                    "promPriceLUKey": "BRI",
-                    "promCost1_AT": 34.21,
-                    "promBreak2_Qty": 6,
-                    "promCost2_BT": 29.99,
-                    "promCost2_AT": 32.99,
-                    "promSRP": 49,
-                    "promBreak3_Qty": 0,
-                    "promCost3_BT": 0,
-                    "promCost3_AT": 0
-                  },
-                  {
-                    "promBreak1_Qty": 1,
-                    "promCost1_BT": 31.1,
-                    "promPriceLUKey": "MEL",
-                    "promCost1_AT": 34.21,
-                    "promBreak2_Qty": 6,
-                    "promCost2_BT": 29.99,
-                    "promCost2_AT": 32.99,
-                    "promSRP": 49,
-                    "promBreak3_Qty": 0,
-                    "promCost3_BT": 0,
-                    "promCost3_AT": 0
-                  },
-                  {
-                    "promBreak1_Qty": 1,
-                    "promCost1_BT": 31.1,
-                    "promPriceLUKey": "PTH",
-                    "promCost1_AT": 34.21,
-                    "promBreak2_Qty": 6,
-                    "promCost2_BT": 29.99,
-                    "promCost2_AT": 32.99,
-                    "promSRP": 49,
-                    "promBreak3_Qty": 0,
-                    "promCost3_BT": 0,
-                    "promCost3_AT": 0
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "itemID": "1222520",
-            "itemPromChannels": [
-              {
-                "promCode": "22108101",
-                "itemPromRegions": [
-                  {
-                    "storeOrderMin": 1,
-                    "storeOrderMult": 10,
-                    "salesUOM": "EA",
-                    "supplierID": "1119",
-                    "promSource": "W",
-                    "region": "BRI"
-                  },
-                  {
-                    "storeOrderMin": 1,
-                    "storeOrderMult": 10,
-                    "salesUOM": "EA",
-                    "supplierID": "1119",
-                    "promSource": "W",
-                    "region": "MEL"
-                  }
-                ],
-                "itemPromPricing": [
-                  {
-                    "promBreak1_Qty": 1,
-                    "promCost1_BT": 24.84,
-                    "promPriceLUKey": "BRI",
-                    "promCost1_AT": 27.32,
-                    "promBreak2_Qty": 0,
-                    "promCost2_BT": 0,
-                    "promCost2_AT": 0,
-                    "promSRP": 50,
-                    "promBreak3_Qty": 0,
-                    "promCost3_BT": 0,
-                    "promCost3_AT": 0
-                  },
-                  {
-                    "promBreak1_Qty": 1,
-                    "promCost1_BT": 25,
-                    "promPriceLUKey": "MEL",
-                    "promCost1_AT": 27.5,
-                    "promBreak2_Qty": 0,
-                    "promCost2_BT": 0,
-                    "promCost2_AT": 0,
-                    "promSRP": 50,
-                    "promBreak3_Qty": 0,
-                    "promCost3_BT": 0,
-                    "promCost3_AT": 0
-                  }
-                ]
-              },
-              {
-                "promCode": "22108201",
-                "itemPromRegions": [
-                  {
-                    "storeOrderMin": 1,
-                    "storeOrderMult": 10,
-                    "salesUOM": "EA",
-                    "supplierID": "1119",
-                    "promSource": "W",
-                    "region": "BRI"
-                  },
-                  {
-                    "storeOrderMin": 1,
-                    "storeOrderMult": 10,
-                    "salesUOM": "EA",
-                    "supplierID": "1119",
-                    "promSource": "W",
-                    "region": "MEL"
-                  },
-                  {
-                    "storeOrderMin": 1,
-                    "storeOrderMult": 10,
-                    "salesUOM": "EA",
-                    "supplierID": "1119",
-                    "promSource": "W",
-                    "region": "VIC"
-                  }
-                ],
-                "itemPromPricing": [
-                  {
-                    "promBreak1_Qty": 1,
-                    "promCost1_BT": 25,
-                    "promPriceLUKey": "BRI",
-                    "promCost1_AT": 27.5,
-                    "promBreak2_Qty": 0,
-                    "promCost2_BT": 0,
-                    "promCost2_AT": 0,
-                    "promSRP": 50,
-                    "promBreak3_Qty": 0,
-                    "promCost3_BT": 0,
-                    "promCost3_AT": 0
-                  },
-                  {
-                    "promBreak1_Qty": 1,
-                    "promCost1_BT": 25,
-                    "promPriceLUKey": "MEL",
-                    "promCost1_AT": 27.5,
-                    "promBreak2_Qty": 0,
-                    "promCost2_BT": 0,
-                    "promCost2_AT": 0,
-                    "promSRP": 50,
-                    "promBreak3_Qty": 0,
-                    "promCost3_BT": 0,
-                    "promCost3_AT": 0
-                  },
-                  {
-                    "promBreak1_Qty": 1,
-                    "promCost1_BT": 25,
-                    "promPriceLUKey": "PTH",
-                    "promCost1_AT": 27.5,
-                    "promBreak2_Qty": 0,
-                    "promCost2_BT": 0,
-                    "promCost2_AT": 0,
-                    "promSRP": 50,
-                    "promBreak3_Qty": 0,
-                    "promCost3_BT": 0,
-                    "promCost3_AT": 0
-                  }
-                ]
-              },
-              {
-                "promCode": "22108400",
-                "itemPromRegions": [
-                  {
-                    "storeOrderMin": 1,
-                    "storeOrderMult": 10,
-                    "salesUOM": "EA",
-                    "supplierID": "1119",
-                    "promSource": "W",
-                    "region": "BRI"
-                  },
-                  {
-                    "storeOrderMin": 1,
-                    "storeOrderMult": 10,
-                    "salesUOM": "EA",
-                    "supplierID": "1119",
-                    "promSource": "W",
-                    "region": "MEL"
-                  },
-                  {
-                    "storeOrderMin": 1,
-                    "storeOrderMult": 10,
-                    "salesUOM": "EA",
-                    "supplierID": "1119",
-                    "promSource": "W",
-                    "region": "VIC"
-                  }
-                ],
-                "itemPromPricing": [
-                  {
-                    "promBreak1_Qty": 1,
-                    "promCost1_BT": 25,
-                    "promPriceLUKey": "BRI",
-                    "promCost1_AT": 27.5,
-                    "promBreak2_Qty": 0,
-                    "promCost2_BT": 0,
-                    "promCost2_AT": 0,
-                    "promSRP": 50,
-                    "promBreak3_Qty": 0,
-                    "promCost3_BT": 0,
-                    "promCost3_AT": 0
-                  },
-                  {
-                    "promBreak1_Qty": 1,
-                    "promCost1_BT": 25,
-                    "promPriceLUKey": "MEL",
-                    "promCost1_AT": 27.5,
-                    "promBreak2_Qty": 0,
-                    "promCost2_BT": 0,
-                    "promCost2_AT": 0,
-                    "promSRP": 50,
-                    "promBreak3_Qty": 0,
-                    "promCost3_BT": 0,
-                    "promCost3_AT": 0
-                  },
-                  {
-                    "promBreak1_Qty": 1,
-                    "promCost1_BT": 25,
-                    "promPriceLUKey": "PTH",
-                    "promCost1_AT": 27.5,
-                    "promBreak2_Qty": 0,
-                    "promCost2_BT": 0,
-                    "promCost2_AT": 0,
-                    "promSRP": 50,
-                    "promBreak3_Qty": 0,
-                    "promCost3_BT": 0,
-                    "promCost3_AT": 0
-                  }
-                ]
-              },
-              {
-                "promCode": "22108500",
-                "itemPromRegions": [
-                  {
-                    "storeOrderMin": 1,
-                    "storeOrderMult": 10,
-                    "salesUOM": "EA",
-                    "supplierID": "1119",
-                    "promSource": "W",
-                    "region": "BRI"
-                  },
-                  {
-                    "storeOrderMin": 1,
-                    "storeOrderMult": 10,
-                    "salesUOM": "EA",
-                    "supplierID": "1119",
-                    "promSource": "W",
-                    "region": "MEL"
-                  },
-                  {
-                    "storeOrderMin": 1,
-                    "storeOrderMult": 10,
-                    "salesUOM": "EA",
-                    "supplierID": "1119",
-                    "promSource": "W",
-                    "region": "VIC"
-                  }
-                ],
-                "itemPromPricing": [
-                  {
-                    "promBreak1_Qty": 1,
-                    "promCost1_BT": 25,
-                    "promPriceLUKey": "BRI",
-                    "promCost1_AT": 27.5,
-                    "promBreak2_Qty": 0,
-                    "promCost2_BT": 0,
-                    "promCost2_AT": 0,
-                    "promSRP": 50,
-                    "promBreak3_Qty": 0,
-                    "promCost3_BT": 0,
-                    "promCost3_AT": 0
-                  },
-                  {
-                    "promBreak1_Qty": 1,
-                    "promCost1_BT": 25,
-                    "promPriceLUKey": "MEL",
-                    "promCost1_AT": 27.5,
-                    "promBreak2_Qty": 0,
-                    "promCost2_BT": 0,
-                    "promCost2_AT": 0,
-                    "promSRP": 50,
-                    "promBreak3_Qty": 0,
-                    "promCost3_BT": 0,
-                    "promCost3_AT": 0
-                  },
-                  {
-                    "promBreak1_Qty": 1,
-                    "promCost1_BT": 25,
-                    "promPriceLUKey": "PTH",
-                    "promCost1_AT": 27.5,
-                    "promBreak2_Qty": 0,
-                    "promCost2_BT": 0,
-                    "promCost2_AT": 0,
-                    "promSRP": 50,
-                    "promBreak3_Qty": 0,
-                    "promCost3_BT": 0,
-                    "promCost3_AT": 0
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "itemID": "2166353",
-            "itemPromChannels": [
-              {
-                "promCode": "22108500",
-                "itemPromRegions": [
-                  {
-                    "storeOrderMin": 1,
-                    "storeOrderMult": 6,
-                    "salesUOM": "EA",
-                    "supplierID": "1232",
-                    "promSource": "W",
-                    "region": "BRI"
-                  },
-                  {
-                    "storeOrderMin": 1,
-                    "storeOrderMult": 6,
-                    "salesUOM": "EA",
-                    "supplierID": "1232",
-                    "promSource": "W",
-                    "region": "MEL"
-                  },
-                  {
-                    "storeOrderMin": 1,
-                    "storeOrderMult": 6,
-                    "salesUOM": "EA",
-                    "supplierID": "1232",
-                    "promSource": "W",
-                    "region": "VIC"
-                  }
-                ],
-                "itemPromPricing": [
-                  {
-                    "promBreak1_Qty": 1,
-                    "promCost1_BT": 16.6,
-                    "promPriceLUKey": "BRI",
-                    "promCost1_AT": 18.26,
-                    "promBreak2_Qty": 6,
-                    "promCost2_BT": 14.71,
-                    "promCost2_AT": 16.18,
-                    "promSRP": 19.95,
-                    "promBreak3_Qty": 0,
-                    "promCost3_BT": 0,
-                    "promCost3_AT": 0
-                  },
-                  {
-                    "promBreak1_Qty": 1,
-                    "promCost1_BT": 16.6,
-                    "promPriceLUKey": "MEL",
-                    "promCost1_AT": 18.26,
-                    "promBreak2_Qty": 6,
-                    "promCost2_BT": 14.71,
-                    "promCost2_AT": 16.18,
-                    "promSRP": 19.95,
-                    "promBreak3_Qty": 0,
-                    "promCost3_BT": 0,
-                    "promCost3_AT": 0
-                  },
-                  {
-                    "promBreak1_Qty": 1,
-                    "promCost1_BT": 16.6,
-                    "promPriceLUKey": "PTH",
-                    "promCost1_AT": 18.26,
-                    "promBreak2_Qty": 6,
-                    "promCost2_BT": 14.71,
-                    "promCost2_AT": 16.18,
-                    "promSRP": 19.95,
-                    "promBreak3_Qty": 0,
-                    "promCost3_BT": 0,
-                    "promCost3_AT": 0
-                  }
-                ]
-              }
-            ]
-          }
-        ]
+  {
+      "_id": {
+          "orderCloseDate": "2022-12-26T19:30:00",
+          "orderOpenDate": "2022-11-22T00:00:00",
+          "targetBackend": "AX"
       },
-      {
-        "event": {
-          "eventCode": "102122",
-          "saleType": "A",
-          "eventPromChannelStores": {
-            "promCode": "22108901",
-            "orderSubmitPromID": "PL910",
-            "promPrefSeq": 1,
-            "storeList": {
-              "storeID": "104836",
-              "myChannel": "Y",
-              "visible": "Y",
-              "orderCloseDateOverride": "2022-05-19T15:15:00"
-            }
-          }
-        },
-        "itemLists": [
+      "events": [
           {
-            "itemID": "1791631",
-            "itemPromChannels": [
-              {
-                "promCode": "22108901",
-                "itemPromRegions": [
+              "event": {
+                  "eventCode": "2608412",
+                  "eventPromChannelStores": {
+                      "promCode": "26081612",
+                      "orderSubmitPromID": "PL726",
+                      "promPrefSeq": 3,
+                      "storeList": {
+                          "storeID": "364919",
+                          "myChannel": "Y",
+                          "visible": "Y"
+                      }
+                  },
+                  "saleType": "P"
+              },
+              "itemLists": [
                   {
-                    "storeOrderMin": 1,
-                    "storeOrderMult": 6,
-                    "salesUOM": "EA",
-                    "supplierID": "1170",
-                    "promSource": "W",
-                    "region": "BRI"
+                      "itemID": "2023349",
+                      "itemPromChannels": [
+                          {
+                              "promCode": "26081612",
+                              "itemPromRegions": [
+                                  {
+                                      "storeOrderMin": 12,
+                                      "storeOrderMult": 12,
+                                      "salesUOM": "EA",
+                                      "supplierID": "1481",
+                                      "promSource": "W",
+                                      "region": "NSW",
+                                      "supplierOrderMin": 12
+                                  },
+                                  {
+                                      "storeOrderMin": 12,
+                                      "storeOrderMult": 12,
+                                      "salesUOM": "EA",
+                                      "supplierID": "1481",
+                                      "promSource": "W",
+                                      "region": "VIC",
+                                      "supplierOrderMin": 12
+                                  }
+                              ],
+                              "itemPromPricing": [
+                                  {
+                                      "promBreak1_Qty": 25,
+                                      "promCost1_BT": 6.23,
+                                      "promPriceLUKey": "MEL",
+                                      "promCost1_AT": 6.88,
+                                      "promBreak2_Qty": 100,
+                                      "promCost2_BT": 6,
+                                      "promCost2_AT": 6.6,
+                                      "promSRP": 9.99,
+                                      "futureNormBreak1Qty": 10,
+                                      "futureNormCost1BT": 20,
+                                      "futureNormCost1AT": 10,
+                                      "futureNormBreak2Qty": 23,
+                                      "futureNormCost2BT": 28,
+                                      "futureNormCost2AT": 12,
+                                      "futureNormBreak3Qty": 13,
+                                      "futureNormCost3BT": 15,
+                                      "futureNormCost3AT": 16,
+                                      "futureNormSRP": 17,
+                                      "futureNormCostEffDate": "2022-12-26T19:35:00"
+                                  },
+                                  {
+                                      "promBreak1_Qty": 25,
+                                      "promCost1_BT": 6.23,
+                                      "promPriceLUKey": "BRI",
+                                      "promCost1_AT": 6.88,
+                                      "promBreak2_Qty": 100,
+                                      "promCost2_BT": 6,
+                                      "promCost2_AT": 6.6,
+                                      "promSRP": 9.99,
+                                      "futureNormBreak1Qty": 10,
+                                      "futureNormCost1BT": 20,
+                                      "futureNormCost1AT": 10,
+                                      "futureNormBreak2Qty": 23,
+                                      "futureNormCost2BT": 28,
+                                      "futureNormCost2AT": 12,
+                                      "futureNormBreak3Qty": 13,
+                                      "futureNormCost3BT": 15,
+                                      "futureNormCost3AT": 16,
+                                      "futureNormSRP": 17,
+                                      "futureNormCostEffDate": "2022-12-26T19:35:00"
+                                  }
+                              ]
+                          }
+                      ]
                   },
                   {
-                    "storeOrderMin": 1,
-                    "storeOrderMult": 6,
-                    "salesUOM": "EA",
-                    "supplierID": "1170",
-                    "promSource": "W",
-                    "region": "MEL"
-                  },
-                  {
-                    "storeOrderMin": 1,
-                    "storeOrderMult": 6,
-                    "salesUOM": "EA",
-                    "supplierID": "1170",
-                    "promSource": "W",
-                    "region": "VIC"
+                      "itemID": "2023398",
+                      "itemPromChannels": [
+                          {
+                              "promCode": "26081612",
+                              "itemPromRegions": [
+                                  {
+                                      "storeOrderMin": 12,
+                                      "storeOrderMult": 4,
+                                      "salesUOM": "EA",
+                                      "supplierID": "1481",
+                                      "promSource": "W",
+                                      "region": "NSW",
+                                      "supplierOrderMin": 12
+                                  },
+                                  {
+                                      "storeOrderMin": 12,
+                                      "storeOrderMult": 4,
+                                      "salesUOM": "EA",
+                                      "supplierID": "1481",
+                                      "promSource": "W",
+                                      "region": "VIC",
+                                      "supplierOrderMin": 12
+                                  }
+                              ],
+                              "itemPromPricing": [
+                                  {
+                                      "promBreak1_Qty": 25,
+                                      "promCost1_BT": 6.23,
+                                      "promPriceLUKey": "MEL",
+                                      "promCost1_AT": 6.88,
+                                      "promBreak2_Qty": 100,
+                                      "promCost2_BT": 6,
+                                      "promCost2_AT": 6.6,
+                                      "promSRP": 9.99,
+                                      "futureNormBreak1Qty": 10,
+                                      "futureNormCost1BT": 20,
+                                      "futureNormCost1AT": 10,
+                                      "futureNormBreak2Qty": 23,
+                                      "futureNormCost2BT": 28,
+                                      "futureNormCost2AT": 12,
+                                      "futureNormBreak3Qty": 13,
+                                      "futureNormCost3BT": 15,
+                                      "futureNormCost3AT": 16,
+                                      "futureNormSRP": 17,
+                                      "futureNormCostEffDate": "2022-12-26T19:35:00"
+                                  },
+                                  {
+                                      "promBreak1_Qty": 25,
+                                      "promCost1_BT": 6.23,
+                                      "promPriceLUKey": "BRI",
+                                      "promCost1_AT": 6.88,
+                                      "promBreak2_Qty": 100,
+                                      "promCost2_BT": 6,
+                                      "promCost2_AT": 6.6,
+                                      "promSRP": 9.99,
+                                      "futureNormBreak1Qty": 10,
+                                      "futureNormCost1BT": 20,
+                                      "futureNormCost1AT": 10,
+                                      "futureNormBreak2Qty": 23,
+                                      "futureNormCost2BT": 28,
+                                      "futureNormCost2AT": 12,
+                                      "futureNormBreak3Qty": 13,
+                                      "futureNormCost3BT": 15,
+                                      "futureNormCost3AT": 16,
+                                      "futureNormSRP": 17,
+                                      "futureNormCostEffDate": "2022-12-26T19:35:00"
+                                  }
+                              ]
+                          }
+                      ]
                   }
-                ],
-                "itemPromPricing": [
-                  {
-                    "promBreak1_Qty": 1,
-                    "promCost1_BT": 5.45,
-                    "promPriceLUKey": "BRI",
-                    "promCost1_AT": 6,
-                    "promBreak2_Qty": 6,
-                    "promCost2_BT": 5.25,
-                    "promCost2_AT": 5.78,
-                    "promSRP": 8,
-                    "promBreak3_Qty": 0,
-                    "promCost3_BT": 0,
-                    "promCost3_AT": 0
-                  },
-                  {
-                    "promBreak1_Qty": 1,
-                    "promCost1_BT": 5.45,
-                    "promPriceLUKey": "MEL",
-                    "promCost1_AT": 6,
-                    "promBreak2_Qty": 6,
-                    "promCost2_BT": 5.25,
-                    "promCost2_AT": 5.78,
-                    "promSRP": 8,
-                    "promBreak3_Qty": 0,
-                    "promCost3_BT": 0,
-                    "promCost3_AT": 0
-                  },
-                  {
-                    "promBreak1_Qty": 1,
-                    "promCost1_BT": 5.45,
-                    "promPriceLUKey": "PTH",
-                    "promCost1_AT": 6,
-                    "promBreak2_Qty": 6,
-                    "promCost2_BT": 5.25,
-                    "promCost2_AT": 5.78,
-                    "promSRP": 8,
-                    "promBreak3_Qty": 0,
-                    "promCost3_BT": 0,
-                    "promCost3_AT": 0
-                  }
-                ]
-              }
-            ]
+              ]
           },
           {
-            "itemID": "1791656",
-            "itemPromChannels": [
-              {
-                "promCode": "22108901",
-                "itemPromRegions": [
+              "event": {
+                  "eventCode": "2608413",
+                  "eventPromChannelStores": {
+                      "promCode": "26081613",
+                      "orderSubmitPromID": "PL726",
+                      "promPrefSeq": 1,
+                      "storeList": {
+                          "storeID": "364919",
+                          "myChannel": "Y",
+                          "visible": "Y"
+                      }
+                  },
+                  "saleType": "A"
+              },
+              "itemLists": [
                   {
-                    "storeOrderMin": 1,
-                    "storeOrderMult": 6,
-                    "salesUOM": "EA",
-                    "supplierID": "1170",
-                    "promSource": "W",
-                    "region": "BRI"
+                      "itemID": "2485035",
+                      "itemPromChannels": [
+                          {
+                              "promCode": "26081613",
+                              "itemPromRegions": [
+                                  {
+                                      "storeOrderMin": 12,
+                                      "storeOrderMult": 6,
+                                      "salesUOM": "EA",
+                                      "supplierID": "2019",
+                                      "promSource": "C",
+                                      "region": "NSW",
+                                      "supplierOrderMin": 12
+                                  },
+                                  {
+                                      "storeOrderMin": 12,
+                                      "storeOrderMult": 6,
+                                      "salesUOM": "EA",
+                                      "supplierID": "2019",
+                                      "promSource": "C",
+                                      "region": "VIC",
+                                      "supplierOrderMin": 12
+                                  }
+                              ],
+                              "itemPromPricing": [
+                                  {
+                                      "promBreak1_Qty": 25,
+                                      "promCost1_BT": 6.23,
+                                      "promPriceLUKey": "MEL",
+                                      "promCost1_AT": 6.88,
+                                      "promBreak2_Qty": 100,
+                                      "promCost2_BT": 6,
+                                      "promCost2_AT": 6.6,
+                                      "promSRP": 9.99,
+                                      "futureNormBreak1Qty": 10,
+                                      "futureNormCost1BT": 20,
+                                      "futureNormCost1AT": 10,
+                                      "futureNormBreak2Qty": 23,
+                                      "futureNormCost2BT": 28,
+                                      "futureNormCost2AT": 12,
+                                      "futureNormBreak3Qty": 13,
+                                      "futureNormCost3BT": 15,
+                                      "futureNormCost3AT": 16,
+                                      "futureNormSRP": 17,
+                                      "futureNormCostEffDate": "2022-12-26T19:35:00"
+                                  },
+                                  {
+                                      "promBreak1_Qty": 25,
+                                      "promCost1_BT": 6.23,
+                                      "promPriceLUKey": "BRI",
+                                      "promCost1_AT": 6.88,
+                                      "promBreak2_Qty": 100,
+                                      "promCost2_BT": 6,
+                                      "promCost2_AT": 6.6,
+                                      "promSRP": 9.99,
+                                      "futureNormBreak1Qty": 10,
+                                      "futureNormCost1BT": 20,
+                                      "futureNormCost1AT": 10,
+                                      "futureNormBreak2Qty": 23,
+                                      "futureNormCost2BT": 28,
+                                      "futureNormCost2AT": 12,
+                                      "futureNormBreak3Qty": 13,
+                                      "futureNormCost3BT": 15,
+                                      "futureNormCost3AT": 16,
+                                      "futureNormSRP": 17,
+                                      "futureNormCostEffDate": "2022-12-26T19:35:00"
+                                  }
+                              ]
+                          }
+                      ]
                   },
                   {
-                    "storeOrderMin": 1,
-                    "storeOrderMult": 6,
-                    "salesUOM": "EA",
-                    "supplierID": "1170",
-                    "promSource": "W",
-                    "region": "MEL"
-                  },
-                  {
-                    "storeOrderMin": 1,
-                    "storeOrderMult": 6,
-                    "salesUOM": "EA",
-                    "supplierID": "1170",
-                    "promSource": "W",
-                    "region": "VIC"
+                      "itemID": "2642981",
+                      "itemPromChannels": [
+                          {
+                              "promCode": "26081613",
+                              "itemPromRegions": [
+                                  {
+                                      "storeOrderMin": 16,
+                                      "storeOrderMult": 8,
+                                      "salesUOM": "EA",
+                                      "supplierID": "4232",
+                                      "promSource": "W",
+                                      "region": "NSW",
+                                      "supplierOrderMin": 12
+                                  },
+                                  {
+                                      "storeOrderMin": 16,
+                                      "storeOrderMult": 8,
+                                      "salesUOM": "EA",
+                                      "supplierID": "4232",
+                                      "promSource": "W",
+                                      "region": "VIC",
+                                      "supplierOrderMin": 12
+                                  }
+                              ],
+                              "itemPromPricing": [
+                                  {
+                                      "promBreak1_Qty": 25,
+                                      "promCost1_BT": 6.23,
+                                      "promPriceLUKey": "MEL",
+                                      "promCost1_AT": 6.88,
+                                      "promBreak2_Qty": 100,
+                                      "promCost2_BT": 6,
+                                      "promCost2_AT": 6.6,
+                                      "promSRP": 9.99,
+                                      "futureNormBreak1Qty": 10,
+                                      "futureNormCost1BT": 20,
+                                      "futureNormCost1AT": 10,
+                                      "futureNormBreak2Qty": 23,
+                                      "futureNormCost2BT": 28,
+                                      "futureNormCost2AT": 12,
+                                      "futureNormBreak3Qty": 13,
+                                      "futureNormCost3BT": 15,
+                                      "futureNormCost3AT": 16,
+                                      "futureNormSRP": 17,
+                                      "futureNormCostEffDate": "2022-12-26T19:35:00"
+                                  },
+                                  {
+                                      "promBreak1_Qty": 25,
+                                      "promCost1_BT": 6.23,
+                                      "promPriceLUKey": "BRI",
+                                      "promCost1_AT": 6.88,
+                                      "promBreak2_Qty": 100,
+                                      "promCost2_BT": 6,
+                                      "promCost2_AT": 6.6,
+                                      "promSRP": 9.99,
+                                      "futureNormBreak1Qty": 10,
+                                      "futureNormCost1BT": 20,
+                                      "futureNormCost1AT": 10,
+                                      "futureNormBreak2Qty": 23,
+                                      "futureNormCost2BT": 28,
+                                      "futureNormCost2AT": 12,
+                                      "futureNormBreak3Qty": 13,
+                                      "futureNormCost3BT": 15,
+                                      "futureNormCost3AT": 16,
+                                      "futureNormSRP": 17,
+                                      "futureNormCostEffDate": "2022-12-26T19:35:00"
+                                  }
+                              ]
+                          }
+                      ]
                   }
-                ],
-                "itemPromPricing": [
-                  {
-                    "promBreak1_Qty": 1,
-                    "promCost1_BT": 8.5,
-                    "promPriceLUKey": "BRI",
-                    "promCost1_AT": 9.35,
-                    "promBreak2_Qty": 6,
-                    "promCost2_BT": 8.2,
-                    "promCost2_AT": 9.02,
-                    "promSRP": 12,
-                    "promBreak3_Qty": 0,
-                    "promCost3_BT": 0,
-                    "promCost3_AT": 0
-                  },
-                  {
-                    "promBreak1_Qty": 1,
-                    "promCost1_BT": 8.5,
-                    "promPriceLUKey": "MEL",
-                    "promCost1_AT": 9.35,
-                    "promBreak2_Qty": 6,
-                    "promCost2_BT": 8.2,
-                    "promCost2_AT": 9.02,
-                    "promSRP": 12,
-                    "promBreak3_Qty": 0,
-                    "promCost3_BT": 0,
-                    "promCost3_AT": 0
-                  },
-                  {
-                    "promBreak1_Qty": 1,
-                    "promCost1_BT": 8.5,
-                    "promPriceLUKey": "PTH",
-                    "promCost1_AT": 9.35,
-                    "promBreak2_Qty": 6,
-                    "promCost2_BT": 8.2,
-                    "promCost2_AT": 9.02,
-                    "promSRP": 12,
-                    "promBreak3_Qty": 0,
-                    "promCost3_BT": 0,
-                    "promCost3_AT": 0
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "itemID": "2166353",
-            "itemPromChannels": [
-              {
-                "promCode": "22108901",
-                "itemPromRegions": [
-                  {
-                    "storeOrderMin": 1,
-                    "storeOrderMult": 6,
-                    "salesUOM": "EA",
-                    "supplierID": "1232",
-                    "promSource": "W",
-                    "region": "BRI"
-                  },
-                  {
-                    "storeOrderMin": 1,
-                    "storeOrderMult": 6,
-                    "salesUOM": "EA",
-                    "supplierID": "1232",
-                    "promSource": "W",
-                    "region": "MEL"
-                  },
-                  {
-                    "storeOrderMin": 1,
-                    "storeOrderMult": 6,
-                    "salesUOM": "EA",
-                    "supplierID": "1232",
-                    "promSource": "W",
-                    "region": "VIC"
-                  }
-                ],
-                "itemPromPricing": [
-                  {
-                    "promBreak1_Qty": 1,
-                    "promCost1_BT": 16.6,
-                    "promPriceLUKey": "BRI",
-                    "promCost1_AT": 18.26,
-                    "promBreak2_Qty": 6,
-                    "promCost2_BT": 14.71,
-                    "promCost2_AT": 16.18,
-                    "promSRP": 19.95,
-                    "promBreak3_Qty": 0,
-                    "promCost3_BT": 0,
-                    "promCost3_AT": 0
-                  },
-                  {
-                    "promBreak1_Qty": 1,
-                    "promCost1_BT": 16.6,
-                    "promPriceLUKey": "MEL",
-                    "promCost1_AT": 18.26,
-                    "promBreak2_Qty": 6,
-                    "promCost2_BT": 14.71,
-                    "promCost2_AT": 16.18,
-                    "promSRP": 19.95,
-                    "promBreak3_Qty": 0,
-                    "promCost3_BT": 0,
-                    "promCost3_AT": 0
-                  },
-                  {
-                    "promBreak1_Qty": 1,
-                    "promCost1_BT": 16.6,
-                    "promPriceLUKey": "PTH",
-                    "promCost1_AT": 18.26,
-                    "promBreak2_Qty": 6,
-                    "promCost2_BT": 14.71,
-                    "promCost2_AT": 16.18,
-                    "promSRP": 19.95,
-                    "promBreak3_Qty": 0,
-                    "promCost3_BT": 0,
-                    "promCost3_AT": 0
-                  }
-                ]
-              }
-            ]
+              ]
           }
-        ]
-      }
-    ]
+      ]
   }
 ]
