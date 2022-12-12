@@ -8,6 +8,8 @@ db.getCollection("supplier").aggregate([
     },
     {
         "$project":{
+            "_id": 0,
+            "id": 1,
             "name": 1,
             "supplierContactName": 1,
             "supplierContactPhone": 1,

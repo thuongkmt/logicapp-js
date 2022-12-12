@@ -1,48 +1,48 @@
 [
     {
-        "_id" : "5598",
+        "id" : "5598",
         "name" : "Satara Australia Pty Ltd - NSW/ACT",
         "supplierContactName" : "Satara Australia Pty Ltd",
         "supplierContactPhone" : "03 9587 4469",
         "supplierContactEmail" : "info@satara.com.au"
     },
     {
-        "_id" : "5603",
+        "id" : "5603",
         "name" : "Selective Trading P/L - TAS",
         "supplierContactName" : "Selective Trading Pty Ltd",
         "supplierContactPhone" : "03 6424 2903",
         "supplierContactEmail" : "sales@selectivetrading.com.au"
     },
     {
-        "_id" : "8717",
+        "id" : "8717",
         "name" : "Australian Panel Products  Pty Ltd",
         "supplierContactName" : "Australian Panel Pro",
         "supplierContactPhone" : "02 4340 8200",
         "supplierContactEmail" : "APPsales@borgs.com.au"
     },
     {
-        "_id" : "5593",
+        "id" : "5593",
         "name" : "Saddlery Trading Company - TAS",
         "supplierContactName" : "Saddlery Trading Company",
         "supplierContactPhone" : "",
         "supplierContactEmail" : "DSD"
     },
     {
-        "_id" : "7693",
+        "id" : "7693",
         "name" : "Supatank Pty Ltd - NSW/ACT",
         "supplierContactName" : "Supatank Pty Ltd-NSW",
         "supplierContactPhone" : "02 9700 0991",
         "supplierContactEmail" : "sales@supatank.com.au"
     },
     {
-        "_id" : "1050",
+        "id" : "1050",
         "name" : "Ampelite Australia",
         "supplierContactName" : "Ampelite Australia",
         "supplierContactPhone" : "1800 800 094",
         "supplierContactEmail" : "nsworders@ampelite.com.au"
     },
     {
-        "_id" : "1437",
+        "id" : "1437",
         "name" : "Hettich Australia H1",
         "supplierContactName" : "Hettich Australia",
         "supplierContactPhone" : "02 9616 7700",

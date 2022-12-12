@@ -1,11 +1,11 @@
 const fs = require('fs')
 
-fs.readFile('./data-test-kit/orderlines.json', 'utf8', (error, data) =>{
+fs.readFile('./data-test-kit/salesorder.json', 'utf8', (error, data) =>{
     if(error){
         console.log("File reading", "Failed!")
         throw(error)
     }
-    const orderLines = JSON.parse(data);
+    const orderLines = JSON.parse(data)['orderLines'];
     
     //START PROCESSING
     let warehouseIds = []
