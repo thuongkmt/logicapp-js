@@ -1,0 +1,12 @@
+{
+    "storeName" : "Bowen & Pomeroy Pty Ltd",
+    "address" : {
+        "storeAddress1" : "PO Box 1377",
+        "storeAddress2" : "",
+        "storeCity" : "NARRE WARREN",
+        "state" : "VIC",
+        "postCode" : "3805"
+    },
+    "chargebackState" : "VIC",
+    "brand" : "AHW"
+}
