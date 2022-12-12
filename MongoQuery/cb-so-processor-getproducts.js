@@ -3,10 +3,10 @@ db.getCollection("products").aggregate([
          "$match": {
             "targetBackend":"AX",
             "_id": {
-                "$in":["1011451","1013812","1017268","1018076","1018381","1018464"]
+                "$in":["1013812"]
             },
             "productDC.supplierNo": {
-                "$in": ["1827", ]
+                "$in": ["9968"]
             }
         }
      },

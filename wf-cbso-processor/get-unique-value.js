@@ -9,26 +9,26 @@ fs.readFile('./data-test-kit/orderlines.json', 'utf8', (error, data) =>{
     
     //START PROCESSING
     let warehouseIds = []
-    let productApns = []
+    let itemCodes = []
     let promotions = []
 
     orderLines.forEach(orderLine => {
         if(orderLine.warehouseId != ""){
             warehouseIds.push(orderLine.warehouseId)
         }
-        if(orderLine.productApn != ""){
-            productApns.push(orderLine.productApn)
+        if(orderLine.itemCode != ""){
+            itemCodes.push(orderLine.itemCode)
         }
         if(orderLine.promotion != ""){
             promotions.push(orderLine.promotion)
         }
     })
     warehouseIds = [... new Set(warehouseIds)]
-    productApns = [... new Set(productApns)]
+    itemCodes = [... new Set(itemCodes)]
     promotions = [... new Set(promotions)]
 
     console.log("warehouseIds", warehouseIds)
-    console.log("productApns", productApns)
+    console.log("itemCodes", itemCodes)
     console.log("promotions", promotions)
     //END PROCESSING
 })
