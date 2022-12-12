@@ -1,0 +1,38 @@
+{
+    "collection": "orderevents",
+    "database": "@{parameters('ESL_DB_NAME')}",
+    "aggregate": [
+        {
+            "$match": {
+                "targetBackend": "AX",
+                "event.eventPromChannelStores.promCode": {
+                    "$in": @{outputs('ExeJavaScriptCode_Get_UniqueData')['promotions']}
+                }
+            }
+        },
+        {
+            "$project": {
+                "_id": 0,
+                "event.eventPromChannelStores.promCode": 1,
+                "event.eventDescription": 1,
+                "event.eventCode": 1,
+                "event.agencyDeliveryStartDate": 1,
+                "event.agencyDeliveryEndDate": 1,
+                "event.consolidationDate": 1
+            }
+        },
+        {
+            "$unwind": "$event"
+        },
+        {
+            "$unwind": "$event.eventPromChannelStores"
+        },
+        {
+            "$match": {
+                "event.eventPromChannelStores.promCode": {
+                    "$in": @{outputs('ExeJavaScriptCode_Get_UniqueData')['promotions']}
+                }
+            }
+        }
+    ]
+}

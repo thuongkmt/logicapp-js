@@ -1,0 +1,22 @@
+{
+    "collection": "supplier",
+    "database": "@{parameters('ESL_DB_NAME')}",
+    "aggregate": [
+     {
+          "$match": {
+              "id": {
+                  "$in": @{outputs('ExeJavaScriptCode_Get_UniqueData')}
+              }
+          }
+      },
+      {
+          "$project":{
+              "_id": 0,
+              "name": 1,
+              "supplierContactName": 1,
+              "supplierContactPhone": 1,
+              "supplierContactEmail": 1
+          }
+      }
+    ]
+}
