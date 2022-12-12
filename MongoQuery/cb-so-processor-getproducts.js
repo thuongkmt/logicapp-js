@@ -3,19 +3,18 @@ db.getCollection("products").aggregate([
          "$match": {
             "targetBackend":"AX",
             "_id": {
-                "$in":["1013812"]
-            },
-            "productDC.supplierNo": {
-                "$in": ["9968"]
+                "$in":["1013812", "1017268", "1018076", "1018381"]
             }
         }
      },
     {
        "$project": {
-            "_id": 0,
             "departmentName": 1,
             "vpn": {
-                "$arrayElemAt": [ "$productDC.vpn", 0 ]
+                "$arrayElemAt": ["$productDC.vpn", 0 ]
+            },
+            "supplierNo": {
+                "$arrayElemAt": ["$productDC.supplierNo", 0]
             }
        }
     }
