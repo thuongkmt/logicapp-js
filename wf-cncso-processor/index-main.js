@@ -15,6 +15,7 @@ orderLines.map(orderLine =>{
 
     if(orderLine.status === STATUS_05){
         orderLine.promSource = WAREHOUSE
+        warehouseOrderLines.push(orderLine)
     }
     else{
         let itemLoopCount = 0
@@ -48,8 +49,8 @@ orderLines.map(orderLine =>{
                                     if(orderLine.quantityOrdered >= promBreaks_Qty[0]){
                                         for(let i=1; i<=6; i++){
                                             if(itemPromPrice[`promBreak${i}_Qty`] === promBreaks_Qty[0]){
-                                                orderLines.totalLinesAmountAfterTax = (itemPromPrice[`promCost${i}_AT`] * orderLine.quantityOrdered).toFixed(2)
-                                                orderLines.costBeforeTax = itemPromPrice[`promCost${i}_BT`] 
+                                                orderLine.totalLinesAmountAfterTax = (itemPromPrice[`promCost${i}_AT`] * orderLine.quantityOrdered).toFixed(2)
+                                                orderLine.costBeforeTax = itemPromPrice[`promCost${i}_BT`] 
                                                 return false;
                                             }
                                         }
@@ -76,6 +77,7 @@ orderLines.map(orderLine =>{
             else{
                 if(itemLoopCount === orderEvents.itemLists.length){
                     orderLine.promSource = WAREHOUSE
+                    warehouseOrderLines.push(orderLine)
                 }
             }
             return true

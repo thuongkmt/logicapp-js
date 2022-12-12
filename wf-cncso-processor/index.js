@@ -33,6 +33,7 @@ fs.readFile("./data-test-kit/orderevents.json", "utf8", (error, data) =>{
 
                 if(orderLine.status === STATUS_05){
                     orderLine.promSource = WAREHOUSE
+                    warehouseOrderLines.push(orderLine)
                 }
                 else{
                     let itemLoopCount = 0
@@ -91,6 +92,7 @@ fs.readFile("./data-test-kit/orderevents.json", "utf8", (error, data) =>{
                         else{
                             if(itemLoopCount === orderEvents.itemLists.length){
                                 orderLine.promSource = WAREHOUSE
+                                warehouseOrderLines.push(orderLine)
                             }
                         }
                         return true
