@@ -5,8 +5,9 @@ const createdTime = workflowContext.trigger.outputs.body.createdTime
 const orderLines = workflowContext.trigger.outputs.body.orderLines
 
 var isBreakLoop = false
-var quantityOrderedAdjusted = 0;
-var storeOrderMult = 0;
+var quantityOrderedAdjusted = 0
+var storeOrderMult = 0
+var salesOrderStatus = false
 
  //in case sourceSystem equal to GUS default event.status is Open
  if(sourceSystem === "GUS"){
@@ -31,6 +32,7 @@ var storeOrderMult = 0;
         return item
     })
  }
+
 //sorted by promPrefSeq but status is "Open"
 orderEvents.events.sort((a, b) => {
     if(a.event.status === "Open"){
@@ -38,7 +40,7 @@ orderEvents.events.sort((a, b) => {
     }
 })
 
-return orderLines.map(orderLine => { 
+orderLines.map(orderLine => { 
     if(orderLine.status == "05"){
         orderLine.promSource = ""
     }
@@ -310,3 +312,20 @@ return orderLines.map(orderLine => {
 
     return orderLine
 });
+
+//checking if at least one of the status in orderline is not matched to C, then reupdate the status of SalesOrder
+orderLines.every(orderLine => {
+    if(orderLine.status === "01" || orderLine.status === "04" || orderLine.status === "33"){
+        salesOrderStatus = true;
+        return false
+    }
+    else{
+        return true
+    }
+})
+
+//rerurn data
+return {
+    salesOrderStatus,
+    orderLines
+}

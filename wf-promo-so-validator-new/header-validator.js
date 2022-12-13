@@ -6,7 +6,8 @@ fs.readFile("./data-test-kit/events-gus-full.json","utf8",(err, data) =>{
         return;
     }
     var orderEvents  = JSON.parse(data)[0]
-    //sort orderCloseDateOverride
+    
+    //START PROCESSING
     orderEvents.events.map(item =>{
         if(!item.event.eventPromChannelStores.storeList.hasOwnProperty("orderCloseDateOverride")){
             item.event.eventPromChannelStores.storeList.orderCloseDateOverride = orderEvents._id.orderCloseDate
@@ -24,6 +25,7 @@ fs.readFile("./data-test-kit/events-gus-full.json","utf8",(err, data) =>{
             orderCloseDateOverride = currentDateString
         }
     }
+    //END PROCESSING
 
     fs.writeFile("./data-result/order-events-sorted.json", JSON.stringify(orderEvents), (err) =>{
         if(!err){

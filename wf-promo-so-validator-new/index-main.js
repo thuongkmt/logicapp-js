@@ -52,36 +52,30 @@ orderLines.map(orderLine => {
             //1.check itemID is equal to itemCode
             if(!isBreakLoop){
                 let loopItemIdCount = 0
-                let isItemIdExist = false
-                item.itemLists.filter(il => {
+                item.itemLists.every(il => {
                     loopItemIdCount ++
                     if(il.itemID === orderLine.itemCode){
-                        isItemIdExist = true
                         let itemPromChannels = il.itemPromChannels
                         //2. check event.eventPromChannelStores is equal to itemList.itemPromChannels.promCode
                         let loopPromCodeCount = 0
-                        let isPromCodeExist = false
-                        itemPromChannels.filter(ipc => {
+                        itemPromChannels.every(ipc => {
+                            loopPromCodeCount ++
                             switch(sourceSystem){
                                 case "GUS":
                                     //In case: sourceSystem comes from GUS, we already had the promotion value
-                                    loopPromCodeCount ++
                                     if(ipc.promCode == orderLine.promotion){                                  
                                         //map  quantityOrderedAdjusted/status/statusComment
                                         orderLine.quantityOrderedAdjusted = orderLine.quantityOrdered
                                         orderLine.status = "01"
                                         orderLine.statusComment = "Fully Supplied"                  
 
-                                        isPromCodeExist = true
                                         isBreakLoop =true
                                         let itemPromPrcing = ipc.itemPromPricing
                                         let loopPromPriceLUKeyCount = 0
-                                        let isPromPriceLUKeyExist = false
     
-                                        itemPromPrcing.filter(ipp => {
+                                        itemPromPrcing.every(ipp => {
                                             loopPromPriceLUKeyCount++
                                             if(ipp.promPriceLUKey === promRegions[0]["promPriceLUKey"]){
-                                                isPromPriceLUKeyExist = true
                                                 orderLine.srpIncTax = ipp.promSRP
                                                 
                                                 //order the array desc
@@ -116,12 +110,12 @@ orderLines.map(orderLine => {
                                                     }
                                                     else return true
                                                 })
+
+                                                return false
                                             }
                                             else{
                                                 if(itemPromPrcing.length === loopPromPriceLUKeyCount){
-                                                    if(!isPromPriceLUKeyExist){
-                                                        orderLine.srpIncTax = 0
-                                                    }
+                                                    orderLine.srpIncTax = 0
                                                 }
                                                 
                                             }
@@ -129,31 +123,26 @@ orderLines.map(orderLine => {
                                     }
                                     else{
                                         if(itemPromChannels.length === loopPromCodeCount) {
-                                            if(!isPromCodeExist){
-                                                orderLine.status = "97"
-                                                orderLine.statusComment = "Not On Promotion"
-                                                orderLine.promSource = ""
-                                            }
+                                            orderLine.status = "97"
+                                            orderLine.statusComment = "Not On Promotion"
+                                            orderLine.promSource = ""
                                         }
                                     }
+
                                     break
     
                                 default:
-                                    loopPromCodeCount ++
                                     if(ipc.promCode === item.event.eventPromChannelStores.promCode){
                                         let itemPromRegions = ipc.itemPromRegions
                                         let itemPromPrcing = ipc.itemPromPricing
-                                        isPromCodeExist = true
                                         
                                         if(item.event.status === "Open"){
                                             //checking in the itemPromRegions
                                             let loopPromRegionCount = 0
-                                            let isPromRegionExist = false
-                                            itemPromRegions.filter(ipr => {
+                                            itemPromRegions.every(ipr => {
                                                 loopPromRegionCount++
                                                 if(ipr.region === promRegions[0]["promRegion"]) {
                                                     isBreakLoop = true
-                                                    isPromRegionExist = true
         
                                                     //map promotion data
                                                     orderLine.promotion = item.event.eventPromChannelStores.promCode
@@ -213,11 +202,9 @@ orderLines.map(orderLine => {
         
                                                     //map srpIncTax, totalLinesAmountAfterTax, costBeforeTax data
                                                     let loopPromPriceLUKeyCount = 0
-                                                    let isPromPriceLUKeyExist = false
-                                                    itemPromPrcing.filter(ipp =>{
+                                                    itemPromPrcing.every(ipp =>{
                                                         loopPromPriceLUKeyCount++
                                                         if(ipp.promPriceLUKey === promRegions[0]["promPriceLUKey"]){
-                                                            isPromPriceLUKeyExist = true
                                                             orderLine.srpIncTax = ipp.promSRP
 
                                                             //order the array desc
@@ -251,26 +238,30 @@ orderLines.map(orderLine => {
                                                                 }
                                                                 else return true
                                                             })
+
+                                                            return false
                                                         }
                                                         else{
                                                             if(itemPromPrcing.length === loopPromPriceLUKeyCount){
-                                                                if(!isPromPriceLUKeyExist){
-                                                                    orderLine.srpIncTax = 0
-                                                                }
+                                                                orderLine.srpIncTax = 0
                                                             }
                                                             
                                                         }
+
+                                                        return true
                                                     })
+
+                                                    return false
                                                 }
                                                 else{
                                                     if(itemPromRegions.length === loopPromRegionCount) {
-                                                        if(!isPromRegionExist){
-                                                            orderLine.status = "97"
-                                                            orderLine.statusComment = "Not On Promotion"
-                                                            orderLine.promSource = ""
-                                                        }
+                                                        orderLine.status = "97"
+                                                        orderLine.statusComment = "Not On Promotion"
+                                                        orderLine.promSource = ""
                                                     }
                                                 }
+
+                                                return true
                                             })
                                         }
                                         else{
@@ -279,39 +270,42 @@ orderLines.map(orderLine => {
                                             orderLine.status = "97"
                                             orderLine.statusComment = "Not On Promotion"
                                         }
+
+                                        return false
                                         
                                     }
                                     else{
                                         if(itemPromChannels.length === loopPromCodeCount) {
-                                            if(!isPromCodeExist){
-                                                orderLine.status = "97"
-                                                orderLine.statusComment = "Not On Promotion"
-                                                orderLine.promSource = ""
-                                            }
+                                            orderLine.status = "97"
+                                            orderLine.statusComment = "Not On Promotion"
+                                            orderLine.promSource = ""
                                         }
                                     }
                                     
                                     break
                             }
+
+                            return true
                         })
+
+                        return false
                     }
                     else{
                         if(loopItemIdCount === item.itemLists.length && loopEventsCount === orderEvents.events.length){
-                            if(!isItemIdExist){
-                                orderLine.status = "97"
-                                orderLine.statusComment = "Not On Promotion"
-                                orderLine.promSource = ""
-                            }
-                            
+                            orderLine.status = "97"
+                            orderLine.statusComment = "Not On Promotion"
+                            orderLine.promSource = ""
                         }
                     }
+
+                    return true
                 })
             }
         }) 
     }
 
     return orderLine
-});
+})
 
 //checking if at least one of the status in orderline is not matched to C, then reupdate the status of SalesOrder
 orderLines.every(orderLine => {
