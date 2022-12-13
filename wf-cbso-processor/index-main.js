@@ -1,5 +1,6 @@
 const salesOrder = workflowContext.trigger.outputs.body || {}
 const orderEvents = workflowContext.actions.Get_OrderEvents_Data.outputs.body || []
+const orderEventSupplierMinOrders = workflowContext.actions.Get_OrderEvents_For_Supplier_Data.outputs.body || []
 const products = workflowContext.actions.Get_Products_Data.outputs.body || []
 const suppliers = workflowContext.actions.Get_Supplier_Data.outputs.body || []
 const stores = workflowContext.actions.Get_Stores_Data.outputs.body || []
@@ -21,7 +22,9 @@ salesOrder.orderLines.forEach(orderLine => {
         orderBTax: orderLine.costBeforeTax,
         extendedValue: parseFloat(orderLine.totalLinesAmountAfterTax),
         qtyOrdered: orderLine.quantityOrderedAdjusted,
-        uom: orderLine.uom
+        uom: orderLine.uom,
+        inserted: new Date(new Date().toUTCString()),
+        processing: 0
     }
 
     //storeNumber processing
@@ -80,27 +83,78 @@ salesOrder.orderLines.forEach(orderLine => {
         return true
     })
 
-    //orderLines.promotion for event.eventCode 
-    let orderEventCount = 0
-    orderEvents.every(orderEvent => {
-        orderEventCount ++
-        if(orderLine.promotion === orderEvent.event.eventPromChannelStores.promCode){
-            stagingObject.eventCode = orderEvent.event.eventCode
-            stagingObject.eventDesc = orderEvent.event.eventDescription
-            stagingObject.notBeforeDate = orderEvent.event.agencyDeliveryStartDate === undefined ? "" : orderEvent.event.agencyDeliveryStartDate
-            stagingObject.notAfterDate = orderEvent.event.agencyDeliveryEndDate === undefined ? "" : orderEvent.event.agencyDeliveryEndDate
-            stagingObject.consolidationDate = orderEvent.event.consolidationDate === undefined ? "" : orderEvent.event.consolidationDate
-            return false
-        }
-        if(orderEventCount === orderEvents.length){
+    switch(salesOrder.calculatedOrderType){
+        case "Promo":
+            //orderLines.promotion for event.eventCode 
+            let orderEventCount = 0
+            orderEvents.every(orderEvent => {
+                orderEventCount ++
+                if(orderLine.promotion === orderEvent.event.eventPromChannelStores.promCode){
+                    stagingObject.eventCode = orderEvent.event.eventCode
+                    stagingObject.eventDesc = orderEvent.event.eventDescription
+                    
+                    //agencyDeliveryStartDate
+                    let agencyDeliveryStartDateTime = orderEvent.event.agencyDeliveryStartDate === undefined ? "" : orderEvent.event.agencyDeliveryStartDate
+                    let agencyDeliveryStartDate = ""
+                    if(agencyDeliveryStartDateTime!= ""){
+                        agencyDeliveryStartDate = agencyDeliveryStartDateTime.split('T')[0].replaceAll('-','/')
+                    }
+                    stagingObject.notBeforeDate = agencyDeliveryStartDate
+
+                    //agencyDeliveryEndDate
+                    let agencyDeliveryEndDateTime = orderEvent.event.agencyDeliveryEndDate === undefined ? "" : orderEvent.event.agencyDeliveryEndDate
+                    let agencyDeliveryEndDate = ""
+                    if(agencyDeliveryEndDateTime  != ""){
+                        agencyDeliveryEndDate = agencyDeliveryEndDateTime.split('T')[0].replaceAll('-','/')
+                    }
+                    stagingObject.notAfterDate = agencyDeliveryEndDate
+
+                    //consolidationDate convert to UTC time
+                    let consolidationDate = orderEvent.event.consolidationDate === undefined ? "" : orderEvent.event.consolidationDate
+                    let consolidationDateTime = ""
+                    if(consolidationDate!= ""){
+                        consolidationDateTime = new Date(consolidationDate).toISOString()
+                    }
+                    stagingObject.consolidationDate = consolidationDateTime
+                    return false
+                }
+                if(orderEventCount === orderEvents.length){
+                    stagingObject.eventCode = ""
+                    stagingObject.eventDesc = ""
+                    stagingObject.notBeforeDate = ""
+                    stagingObject.notAfterDate = ""
+                    stagingObject.consolidationDate = ""
+                }
+                return true
+            })
+
+            //fill the supplierMinOrder 
+            let orderEventSupplierMinOrderCount = 0
+            orderEventSupplierMinOrders.every(orderEvent => {
+                orderEventSupplierMinOrderCount ++
+                if(orderLine.itemCode === orderEvent.event.itemList.itemID && orderLine.promotion === orderEvent.event.itemList.itemPromChannels.promCode.toString()){
+                    stagingObject.suppMinOrd = orderEvent.event.itemList.itemPromChannels.itemPromRegions.supplierMinOrder
+                    return false
+                }
+
+                if(orderEventSupplierMinOrderCount === orderEventSupplierMinOrders.length){
+                    stagingObject.suppMinOrd = 0
+                }
+                return true
+            })
+            break
+
+        default: 
             stagingObject.eventCode = ""
+            stagingObject.promId = ""
             stagingObject.eventDesc = ""
             stagingObject.notBeforeDate = ""
             stagingObject.notAfterDate = ""
             stagingObject.consolidationDate = ""
-        }
-        return true
-    })
+            stagingObject.suppMinOrd = 0
+            break
+    }
+
 
     stagingObjectArray.push(stagingObject)
 })

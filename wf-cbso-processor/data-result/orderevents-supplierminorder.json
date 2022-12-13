@@ -1,0 +1,29 @@
+[
+    {
+        "event" : {
+            "itemList" : {
+                "itemID" : "5350624",
+                "itemPromChannels" : {
+                    "promCode" : 22222900,
+                    "itemPromRegions" : {
+                        "supplierMinOrder": 1
+                    }
+                }
+            }
+        }
+    },
+    {
+        "event" : {
+            "itemList" : {
+                "itemID" : "1201722",
+                "itemPromChannels" : {
+                    "promCode" : 22151900,
+                    "itemPromRegions" : {
+                        "supplierMinOrder": 2
+                    }
+                }
+            }
+        }
+    }
+    
+]

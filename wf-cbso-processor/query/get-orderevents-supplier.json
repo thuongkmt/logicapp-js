@@ -1,0 +1,61 @@
+{
+    "collection": "orderevents",
+    "database": "@{parameters('ESL_DB_NAME')}",
+    "aggregate": [
+        {
+            "$match": {
+                "targetBackend": "AX",
+                "event.itemList.itemID": {
+                    "$in": @{outputs('ExeJavaScriptCode_Get_UniqueData')['itemCodes']}
+                },
+                "event.itemList.itemPromChannels.promCode": {
+                    "$in": @{outputs('ExeJavaScriptCode_Get_UniqueData')['promotions']}
+                }
+            }
+        },
+        {
+            "$project": {
+                "_id": 0,
+                "event.itemList": 1
+            }
+        },
+        {
+            "$unwind": "$event"
+        },
+        {
+            "$unwind": "$event.itemList"
+        },
+        {
+            "$match": {
+                "event.itemList.itemID": {
+                    "$in": @{outputs('ExeJavaScriptCode_Get_UniqueData')['itemCodes']}
+                }
+            }
+        },
+        {
+            "$unwind": "$event.itemList.itemPromChannels"
+        },
+        {
+             "$match": {
+                "event.itemList.itemPromChannels.promCode": {
+                    "$in": @{outputs('ExeJavaScriptCode_Get_UniqueData')['promotions']}
+                }
+            }
+        },
+        {
+            "$unwind": "$event.itemList.itemPromChannels.itemPromRegions"
+        },
+        {
+            "$match": {
+                "event.itemList.itemPromChannels.itemPromRegions.region":"BRI"
+            }
+        }, 
+        {
+            "$project": {
+                "event.itemList.itemID": 1,
+                "event.itemList.itemPromChannels.promCode": 1,
+                "event.itemList.itemPromChannels.itemPromRegions.supplierMinOrder": 1
+            }
+        }
+    ]
+}
