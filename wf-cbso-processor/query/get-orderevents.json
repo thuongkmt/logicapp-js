@@ -1,5 +1,5 @@
 {
-    "collection": "orderevents",
+    "collection": "orderevents16",
     "database": "@{parameters('ESL_DB_NAME')}",
     "aggregate": [
         {
