@@ -13,13 +13,13 @@ salesOrder.orderLines.forEach(orderLine => {
         orderType: salesOrder.calculatedOrderType,
         orderCreated: salesOrder.createdTime,
         storeNumber: salesOrder.storeNumber,
-        productSEQ: salesOrder.orderLines.length,
+        productSEQ: salesOrder.orderLines.length, // the sequence of origional record ???
         promId: salesOrder.promotionId,
-        upc: orderLine.productAPN,
+        upc: orderLine.productApn,
         itemCode: orderLine.itemCode,
         skuDesc: orderLine.productDescription,
         orderBTax: orderLine.costBeforeTax,
-        extendedValue: orderLine.totalLinesAmountAfterTax,
+        extendedValue: parseFloat(orderLine.totalLinesAmountAfterTax),
         qtyOrdered: orderLine.quantityOrderedAdjusted,
         uom: orderLine.uom
     }
@@ -33,8 +33,8 @@ salesOrder.orderLines.forEach(orderLine => {
         stagingObject.storeCity = store.address.storeCity
         stagingObject.state = store.address.state
         stagingObject.storePCode = store.address.postCode
-        stagingObject.storeBrand = store.chargebackState
-        stagingObject.cbState = store.brand
+        stagingObject.storeBrand = store.brand
+        stagingObject.cbState = store.chargebackState
         stagingObject.primarySupplier = orderLine.warehouseId
     }
 

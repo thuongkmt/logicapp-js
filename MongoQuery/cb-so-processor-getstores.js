@@ -7,6 +7,7 @@ db.getCollection("stores").find(
         "storeName": 1,
         "address": 1,
         "brand":"",
-        "chargebackState": 1
+        "chargebackState": 1,
+        "promRegion": 1
     }
 )

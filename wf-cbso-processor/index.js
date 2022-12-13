@@ -39,9 +39,9 @@ fs.readFile('./data-test-kit/salesorder.json', 'utf8', (error, data) =>{
                         console.log("Reading file", "Failed!")
                         throw error
                     }
+                    stores = JSON.parse(data)
 
                     /////////START PROCESSING/////////
-                    stores = JSON.parse(data)
                     let stagingObjectArray = []
                     
                     salesOrder.orderLines.forEach(orderLine => {
@@ -51,13 +51,13 @@ fs.readFile('./data-test-kit/salesorder.json', 'utf8', (error, data) =>{
                             orderType: salesOrder.calculatedOrderType,
                             orderCreated: salesOrder.createdTime,
                             storeNumber: salesOrder.storeNumber,
-                            productSEQ: salesOrder.orderLines.length,
+                            productSEQ: salesOrder.orderLines.length, // the sequence of origional record ???
                             promId: salesOrder.promotionId,
-                            upc: orderLine.productAPN,
+                            upc: orderLine.productApn,
                             itemCode: orderLine.itemCode,
                             skuDesc: orderLine.productDescription,
                             orderBTax: orderLine.costBeforeTax,
-                            extendedValue: orderLine.totalLinesAmountAfterTax,
+                            extendedValue: parseFloat(orderLine.totalLinesAmountAfterTax),
                             qtyOrdered: orderLine.quantityOrderedAdjusted,
                             uom: orderLine.uom
                         }
@@ -71,8 +71,8 @@ fs.readFile('./data-test-kit/salesorder.json', 'utf8', (error, data) =>{
                             stagingObject.storeCity = store.address.storeCity
                             stagingObject.state = store.address.state
                             stagingObject.storePCode = store.address.postCode
-                            stagingObject.storeBrand = store.chargebackState
-                            stagingObject.cbState = store.brand
+                            stagingObject.storeBrand = store.brand
+                            stagingObject.cbState = store.chargebackState
                             stagingObject.primarySupplier = orderLine.warehouseId
                         }
 
@@ -142,11 +142,12 @@ fs.readFile('./data-test-kit/salesorder.json', 'utf8', (error, data) =>{
 
                         stagingObjectArray.push(stagingObject)
                     })
+                    /////////END PROCESSING/////////
 
                     fs.writeFile("./data-result/index-result.json", JSON.stringify(stagingObjectArray), (error) =>{
                         if(error) throw(error)
                     })
-                    /////////END PROCESSING/////////
+                    
                 })
             })
 
