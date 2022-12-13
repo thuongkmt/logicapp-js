@@ -69,7 +69,9 @@ fs.readFile('./data-test-kit/salesorder.json', 'utf8', (error, data) =>{
                                 qtyOrdered: orderLine.quantityOrderedAdjusted,
                                 uom: orderLine.uom,
                                 inserted: new Date(new Date().toUTCString()),
-                                processing: 0
+                                processing: 0,
+                                processedDate: "",
+                                docNo:""
                             }
 
                             //storeNumber processing
@@ -141,18 +143,20 @@ fs.readFile('./data-test-kit/salesorder.json', 'utf8', (error, data) =>{
                                             //agencyDeliveryStartDate
                                             let agencyDeliveryStartDateTime = orderEvent.event.agencyDeliveryStartDate === undefined ? "" : orderEvent.event.agencyDeliveryStartDate
                                             let agencyDeliveryStartDate = ""
-                                            if(agencyDeliveryStartDateTime!= ""){
-                                                agencyDeliveryStartDate = agencyDeliveryStartDateTime.split('T')[0].replaceAll('-','/')
+                                            if(agencyDeliveryStartDateTime != ""){
+                                                agencyDeliveryStartDate = agencyDeliveryStartDateTime.split(/[-T:]/)
+                                                stagingObject.notBeforeDate = `${agencyDeliveryStartDate[0]}/${agencyDeliveryStartDate[1]}/${agencyDeliveryStartDate[2]}`
                                             }
-                                            stagingObject.notBeforeDate = agencyDeliveryStartDate
+                                            else stagingObject.notBeforeDate = ""
 
                                             //agencyDeliveryEndDate
                                             let agencyDeliveryEndDateTime = orderEvent.event.agencyDeliveryEndDate === undefined ? "" : orderEvent.event.agencyDeliveryEndDate
                                             let agencyDeliveryEndDate = ""
                                             if(agencyDeliveryEndDateTime  != ""){
-                                                agencyDeliveryEndDate = agencyDeliveryEndDateTime.split('T')[0].replaceAll('-','/')
+                                                agencyDeliveryEndDate = agencyDeliveryEndDateTime.split(/[-T:]/)
+                                                stagingObject.notAfterDate = `${agencyDeliveryEndDate[0]}/${agencyDeliveryEndDate[1]}/${agencyDeliveryEndDate[2]}`
                                             }
-                                            stagingObject.notAfterDate = agencyDeliveryEndDate
+                                            else  stagingObject.notAfterDate = ""
 
                                             //consolidationDate convert to UTC time
                                             let consolidationDate = orderEvent.event.consolidationDate === undefined ? "" : orderEvent.event.consolidationDate

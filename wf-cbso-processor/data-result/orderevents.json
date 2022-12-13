@@ -1,25 +1,14 @@
 [
     {
-        "event" : {
-            "eventCode" : 102258,
-            "eventDescription" : "2022 JUNE EOFY ONLINE DEALS",
-            "consolidationDate" : "2022-06-17T14:15:00",
-            "eventPromChannelStores" : {
-                "promCode" : 22151900
-            }
-        }
-    },
-    {
-        "event" : {
-            "eventCode" : "102235",
-            "eventDescription" : "2022 WEBER DROP 1 GROUP",
-            "consolidationDate" : "2022-10-23T15:00:00",
-            "eventPromChannelStores" : {
-                "promCode" : "22312900"
+        "event": {
+            "eventCode": "2608413",
+            "eventDescription": "2022 OCT 726",
+            "consolidationDate": "2022-08-26T14:15:00",
+            "eventPromChannelStores": {
+                "promCode": "26081613"
             },
-            "agencyDeliveryStartDate" : "2022-11-14T00:00:00",
-            "agencyDeliveryEndDate" : "2022-12-02T00:00:00"
+            "agencyDeliveryStartDate": "2022-12-26T19:35:00",
+            "agencyDeliveryEndDate": "2022-12-26T19:35:00"
         }
     }
-    
 ]

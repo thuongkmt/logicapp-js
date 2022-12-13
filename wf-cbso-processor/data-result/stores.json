@@ -1,14 +1,15 @@
 [
     {
-        "storeName" : "Bowen & Pomeroy Pty Ltd",
-        "address" : {
-            "storeAddress1" : "PO Box 1377",
-            "storeAddress2" : "",
-            "storeCity" : "NARRE WARREN",
-            "state" : "VIC",
-            "postCode" : "3805"
+        "storeName": "Ison & Co Pty Ltd Sanctuary Point",
+        "address": {
+            "storeAddress1": "Sanctuary Point Road",
+            "storeAddress2": "",
+            "storeCity": "SANCTUARY POINT",
+            "state": "NSW",
+            "postCode": "2540"
         },
-        "chargebackState" : "VIC",
-        "brand" : "AHW"
+        "chargebackState": "NSW",
+        "promRegion": "NSW",
+        "brand": "Home"
     }
 ]
