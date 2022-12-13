@@ -5,7 +5,7 @@ const STATUS_97 = "97"
 let chargeBackOrderLines = []
 let warehouseOrderLines = []
 
-orderLines.foreach(orderLine =>{
+orderLines.foreEach(orderLine =>{
     //exclude the order line that status equal to 05 and 97
     if(orderLine.status !== STATUS_05 || orderLine.status !== STATUS_97){
         switch(orderLine.promSource){
