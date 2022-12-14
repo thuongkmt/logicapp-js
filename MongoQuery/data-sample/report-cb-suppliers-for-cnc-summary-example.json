@@ -1,0 +1,42 @@
+[
+    {
+        "vpn" : "0.600.803.240",
+        "productDesc" : "",
+        "qty" : 31,
+        "unitCostExcGST" : 610.86,
+        "totalValueExcGST" : 18936.66,
+        "extendedValue" : 20830.45
+    },
+    {
+        "vpn" : "P-33370",
+        "productDesc" : "Disc Sander White 100G 125mm Pk10 P-33370",
+        "qty" : 31,
+        "unitCostExcGST" : 5.16,
+        "totalValueExcGST" : 159.96,
+        "extendedValue" : 176.08
+    },
+    {
+        "vpn" : "CLX224",
+        "productDesc" : "Combo Kit 2Pce 12V Max CLX224",
+        "qty" : 6,
+        "unitCostExcGST" : 176.5,
+        "totalValueExcGST" : 1059,
+        "extendedValue" : 1164.9
+    },
+    {
+        "vpn" : "DWHT83853",
+        "productDesc" : "Clamp 90 Degree Corner Dewalt",
+        "qty" : 12,
+        "unitCostExcGST" : 0,
+        "totalValueExcGST" : 0,
+        "extendedValue" : 0
+    },
+    {
+        "vpn" : "0.600.8B3.101",
+        "productDesc" : "Saw Chain Pole 18V Skin",
+        "qty" : 7,
+        "unitCostExcGST" : 184.1,
+        "totalValueExcGST" : 1288.7,
+        "extendedValue" : 1417.57
+    }
+]
