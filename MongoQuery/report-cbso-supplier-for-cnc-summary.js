@@ -2,7 +2,9 @@ db.getCollection("staging").aggregate([
     {
         "$match": {
             "processing": 0,
-            "orderType": "CNC"
+            "orderType": "CNC",
+            "primarySupplier": "1133",
+            "cbState":"VIC"
         }
     },
     {
