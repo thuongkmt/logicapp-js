@@ -1,7 +1,7 @@
 db.getCollection("staging").aggregate([
     {
         "$match": {
-            "processing": 0,
+            "processing": 1,
             "orderType": "CNC"
         }
     },
@@ -54,7 +54,6 @@ db.getCollection("staging").aggregate([
             "data.stores.storeNumberGroup.itemCode": 0,
             "data.stores.storeNumberGroup.orderCreated": 0,
             "data.stores.storeNumberGroup.inserted": 0,
-            "data.stores.storeNumberGroup.processing": 0,
             "data.stores.storeNumberGroup.storePCode": 0,
             "data.stores.storeNumberGroup.storeBrand": 0,
             "data.stores.storeNumberGroup.cbState": 0,
