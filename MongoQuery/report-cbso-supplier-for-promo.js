@@ -52,7 +52,6 @@ db.getCollection("staging").aggregate([
     },
     {
         "$project":{
-            "data.stores.storeNumberGroup._id": 0,
             "data.stores.storeNumberGroup.orderCreated": 0,
             "data.stores.storeNumberGroup.productSEQ": 0,
             "data.stores.storeNumberGroup.itemCode": 0,
