@@ -46,5 +46,20 @@ db.getCollection("staging").aggregate([
                 }
             }
         }
+    },
+    {
+        "$project":{
+            "stores.storeNumberGroups.poNumberGroups.orderCreated": 0,
+            "stores.storeNumberGroups.poNumberGroups.productSEQ": 0,
+            "stores.storeNumberGroups.poNumberGroups.itemCode": 0,
+            "stores.storeNumberGroups.poNumberGroups.orderCreated": 0,
+            "stores.storeNumberGroups.poNumberGroups.inserted": 0,
+            "stores.storeNumberGroups.poNumberGroups.storePCode": 0,
+            "stores.storeNumberGroups.poNumberGroups.storeBrand": 0,
+            "stores.storeNumberGroups.poNumberGroups.cbState": 0,
+            "stores.storeNumberGroups.poNumberGroups.skuCategory": 0,
+            "stores.storeNumberGroups.poNumberGroups.consolidationDate": 0,
+            "stores.storeNumberGroups.poNumberGroups.suppMinOrd": 0        
+        }
     }
 ])
