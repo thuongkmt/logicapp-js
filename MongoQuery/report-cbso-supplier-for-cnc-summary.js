@@ -1,7 +1,7 @@
 db.getCollection("staging").aggregate([
     {
         "$match": {
-            "processing": 0,
+            "processing": 1,
             "orderType": "CNC",
             "primarySupplier": "1133",
             "cbState":"VIC"
@@ -30,6 +30,9 @@ db.getCollection("staging").aggregate([
             "qty": {
                 "$sum": "$qtyOrdered"
             },
+            "uom": {
+                "$first": "$uom"
+            },
             "unitCostExcGST": {
                 "$first": "$orderBTax"
             },
@@ -52,6 +55,7 @@ db.getCollection("staging").aggregate([
             },
             "productDesc": 1,
             "qty": 1,
+            "uom": 1,
             "unitCostExcGST": 1,
             "extendedValue": {
                 "$trunc": ["$extendedValue", 2]
