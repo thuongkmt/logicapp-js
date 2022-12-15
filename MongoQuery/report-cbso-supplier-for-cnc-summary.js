@@ -37,7 +37,6 @@ db.getCollection("staging").aggregate([
     },
     {
         "$project": {
-            "_id": 0,
             "vpn": 1,
             "productDesc": 1,
             "qty": 1,
@@ -59,11 +58,11 @@ db.getCollection("staging").aggregate([
                         "_id": "Total",
                         "vpn": {"$sum": ""},
                         "productDesc": {"$sum": ""},
-                        "totalQty": {"$sum": "$$ROOT.qty"},
+                        "totalQty": {"$sum": "$qty"},
                         "uom": {"$sum": ""},
                         "unitCostExcGST": {"$sum": ""},
-                        "totalValueExcGST": {"$sum": "$$ROOT.totalValueExcGST"},
-                        "totalValueIncl": {"$sum": "$$ROOT.totalValueIncl"}
+                        "totalValueExcGST": {"$sum": "$totalValueExcGST"},
+                        "totalValueIncl": {"$sum": "$totalValueIncl"}
                     }
                 }
             ],
@@ -72,7 +71,7 @@ db.getCollection("staging").aggregate([
     },
     { 
         "$project": {
-            "data": {
+            "summary": {
               "$concatArrays": ["$data", "$total"]
             }
          }
