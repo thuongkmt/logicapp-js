@@ -71,7 +71,7 @@ fs.readFile('./data-test-kit/salesorder.json', 'utf8', (error, data) =>{
                                 inserted: new Date(new Date().toUTCString()),
                                 processing: 0,
                                 processedDate: "",
-                                docNo:""
+                                docNo: 0
                             }
 
                             //storeNumber processing

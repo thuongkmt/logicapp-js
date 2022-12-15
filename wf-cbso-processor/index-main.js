@@ -26,7 +26,7 @@ salesOrder.orderLines.forEach(orderLine => {
         inserted: new Date(new Date().toUTCString()),
         processing: 0,
         processedDate: "",
-        docNo:""
+        docNo: 0
     }
 
     //storeNumber processing
