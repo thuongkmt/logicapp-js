@@ -1,7 +1,7 @@
 db.getCollection("staging").aggregate([
     {
         "$match": {
-            "processing": 1,
+            "processing": 0,
             "orderType": "CNC"
         }
     },
@@ -69,7 +69,6 @@ db.getCollection("staging").aggregate([
             "stores.storeNumberGroups.poNumberGroups.orderCreated": 0,
             "stores.storeNumberGroups.poNumberGroups.productSEQ": 0,
             "stores.storeNumberGroups.poNumberGroups.itemCode": 0,
-            "stores.storeNumberGroups.poNumberGroups.orderCreated": 0,
             "stores.storeNumberGroups.poNumberGroups.inserted": 0,
             "stores.storeNumberGroups.poNumberGroups.storePCode": 0,
             "stores.storeNumberGroups.poNumberGroups.storeBrand": 0,

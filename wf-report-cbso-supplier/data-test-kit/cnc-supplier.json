@@ -1,0 +1,553 @@
+[
+    {
+        "_id" : {
+            "orderType" : "CNC",
+            "primarySupplier" : "1133",
+            "cbState" : "VIC"
+        },
+        "stores" : [
+            {
+                "storeNumber" : "939256",
+                "storeNumberGroups" : [
+                    {
+                        "poNumber" : "CNC5056trang1",
+                        "poNumberGroups" : [
+                            {
+                                "_id" : "63982c08510191ece582debe",
+                                "poNumber" : "CNC5056trang1",
+                                "orderType" : "CNC",
+                                "storeNumber" : "939256",
+                                "promId" : "",
+                                "upc" : "3165140666572",
+                                "skuDesc" : "",
+                                "orderBTax" : 610.86,
+                                "extendedValue" : 671.95,
+                                "qtyOrdered" : 1,
+                                "uom" : "EA",
+                                "processing" : 1,
+                                "storeName" : "Terang Co-Op Mitre 10",
+                                "storeAdd1" : "Cnr Thompson & Bayne Sts",
+                                "storeAdd2" : "",
+                                "storeCity" : "TERANG",
+                                "state" : "VIC",
+                                "primarySupplier" : "1133",
+                                "supName" : "Robert Bosch (Aust Pty Ltd",
+                                "contactName" : "Robert Bosch (Aust",
+                                "contactPhone" : "1300 369 744",
+                                "contactEmail" : "CustomerService.PT@au.bosch.com",
+                                "vpn" : "0.600.803.240",
+                                "eventCode" : "",
+                                "eventDesc" : "",
+                                "notBeforeDate" : "",
+                                "notAfterDate" : "",
+                                "totalValueExcGST" : 610.86
+                            }
+                        ]
+                    },
+                    {
+                        "poNumber" : "CNC5057trang3",
+                        "poNumberGroups" : [
+                            {
+                                "_id" : "6398506b510191ece582dec5",
+                                "poNumber" : "CNC5057trang3",
+                                "orderType" : "CNC",
+                                "storeNumber" : "939256",
+                                "promId" : "",
+                                "upc" : "3165140666572",
+                                "skuDesc" : "Bosch Turbine Shredder AXT 23 TC",
+                                "orderBTax" : 610.86,
+                                "extendedValue" : 8735.35,
+                                "qtyOrdered" : 13,
+                                "uom" : "EA",
+                                "processing" : 1,
+                                "processedDate" : "",
+                                "docNo" : "",
+                                "storeName" : "Terang Co-Op Mitre 10",
+                                "storeAdd1" : "Cnr Thompson & Bayne Sts",
+                                "storeAdd2" : "",
+                                "storeCity" : "TERANG",
+                                "state" : "VIC",
+                                "primarySupplier" : "1133",
+                                "supName" : "Robert Bosch (Aust Pty Ltd",
+                                "contactName" : "Robert Bosch (Aust",
+                                "contactPhone" : "1300 369 744",
+                                "contactEmail" : "CustomerService.PT@au.bosch.com",
+                                "vpn" : "0.600.803.240",
+                                "eventCode" : "",
+                                "eventDesc" : "",
+                                "notBeforeDate" : "",
+                                "notAfterDate" : "",
+                                "totalValueExcGST" : 7941.18
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "storeNumber" : "549055",
+                "storeNumberGroups" : [
+                    {
+                        "poNumber" : "CNC5056trang2",
+                        "poNumberGroups" : [
+                            {
+                                "_id" : "63984ee8510191ece582dec2",
+                                "poNumber" : "CNC5056trang2",
+                                "orderType" : "CNC",
+                                "storeNumber" : "549055",
+                                "promId" : "",
+                                "upc" : "3165140666572",
+                                "skuDesc" : "Bosch Turbine Shredder AXT 23 TC",
+                                "orderBTax" : 610.86,
+                                "extendedValue" : 2015.85,
+                                "qtyOrdered" : 3,
+                                "uom" : "EA",
+                                "processing" : 1,
+                                "processedDate" : "",
+                                "docNo" : "",
+                                "storeName" : "Bowen & Pomeroy Pty Ltd",
+                                "storeAdd1" : "PO Box 1377",
+                                "storeAdd2" : "",
+                                "storeCity" : "NARRE WARREN",
+                                "state" : "VIC",
+                                "primarySupplier" : "1133",
+                                "supName" : "Robert Bosch (Aust Pty Ltd",
+                                "contactName" : "Robert Bosch (Aust",
+                                "contactPhone" : "1300 369 744",
+                                "contactEmail" : "CustomerService.PT@au.bosch.com",
+                                "vpn" : "0.600.803.240",
+                                "eventCode" : "",
+                                "eventDesc" : "",
+                                "notBeforeDate" : "",
+                                "notAfterDate" : "",
+                                "totalValueExcGST" : 1832.58
+                            }
+                        ]
+                    },
+                    {
+                        "poNumber" : "CNC5055trang4",
+                        "poNumberGroups" : [
+                            {
+                                "_id" : "63995297510191ece582ded0",
+                                "poNumber" : "CNC5055trang4",
+                                "orderType" : "CNC",
+                                "storeNumber" : "549055",
+                                "promId" : "",
+                                "upc" : "3165140666572",
+                                "skuDesc" : "Bosch Turbine Shredder AXT 23 TC",
+                                "orderBTax" : 610.86,
+                                "extendedValue" : 4703.65,
+                                "qtyOrdered" : 7,
+                                "uom" : "EA",
+                                "processing" : 1,
+                                "processedDate" : "",
+                                "docNo" : "",
+                                "storeName" : "Bowen & Pomeroy Pty Ltd",
+                                "storeAdd1" : "PO Box 1377",
+                                "storeAdd2" : "",
+                                "storeCity" : "NARRE WARREN",
+                                "state" : "VIC",
+                                "primarySupplier" : "1133",
+                                "supName" : "Robert Bosch (Aust Pty Ltd",
+                                "contactName" : "Robert Bosch (Aust",
+                                "contactPhone" : "1300 369 744",
+                                "contactEmail" : "CustomerService.PT@au.bosch.com",
+                                "vpn" : "0.600.803.240",
+                                "eventCode" : "",
+                                "eventDesc" : "",
+                                "notBeforeDate" : "",
+                                "notAfterDate" : "",
+                                "totalValueExcGST" : 4276.02
+                            }
+                        ]
+                    },
+                    {
+                        "poNumber" : "CNC5055trang5",
+                        "poNumberGroups" : [
+                            {
+                                "_id" : "63997b78510191ece582ded3",
+                                "poNumber" : "CNC5055trang5",
+                                "orderType" : "CNC",
+                                "storeNumber" : "549055",
+                                "promId" : "",
+                                "upc" : "3165140666572",
+                                "skuDesc" : "Bosch Turbine Shredder AXT 23 TC",
+                                "orderBTax" : 610.86,
+                                "extendedValue" : 4703.65,
+                                "qtyOrdered" : 7,
+                                "uom" : "EA",
+                                "processing" : 1,
+                                "processedDate" : "",
+                                "docNo" : "",
+                                "storeName" : "Bowen & Pomeroy Pty Ltd",
+                                "storeAdd1" : "PO Box 1377",
+                                "storeAdd2" : "",
+                                "storeCity" : "NARRE WARREN",
+                                "state" : "VIC",
+                                "primarySupplier" : "1133",
+                                "supName" : "Robert Bosch (Aust Pty Ltd",
+                                "contactName" : "Robert Bosch (Aust",
+                                "contactPhone" : "1300 369 744",
+                                "contactEmail" : "CustomerService.PT@au.bosch.com",
+                                "vpn" : "0.600.803.240",
+                                "eventCode" : "",
+                                "eventDesc" : "",
+                                "notBeforeDate" : "",
+                                "notAfterDate" : "",
+                                "totalValueExcGST" : 4276.02
+                            },
+                            {
+                                "_id" : "63997b78510191ece582ded4",
+                                "poNumber" : "CNC5055trang5",
+                                "orderType" : "CNC",
+                                "storeNumber" : "549055",
+                                "promId" : "",
+                                "upc" : "3165140888110",
+                                "skuDesc" : "Saw Chain Pole 18V Skin",
+                                "orderBTax" : 184.1,
+                                "extendedValue" : 1417.57,
+                                "qtyOrdered" : 7,
+                                "uom" : "EA",
+                                "processing" : 1,
+                                "processedDate" : "",
+                                "docNo" : "",
+                                "storeName" : "Bowen & Pomeroy Pty Ltd",
+                                "storeAdd1" : "PO Box 1377",
+                                "storeAdd2" : "",
+                                "storeCity" : "NARRE WARREN",
+                                "state" : "VIC",
+                                "primarySupplier" : "1133",
+                                "supName" : "Robert Bosch (Aust Pty Ltd",
+                                "contactName" : "Robert Bosch (Aust",
+                                "contactPhone" : "1300 369 744",
+                                "contactEmail" : "CustomerService.PT@au.bosch.com",
+                                "vpn" : "0.600.8B3.101",
+                                "eventCode" : "",
+                                "eventDesc" : "",
+                                "notBeforeDate" : "",
+                                "notAfterDate" : "",
+                                "totalValueExcGST" : 1288.7
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "_id" : {
+            "orderType" : "CNC",
+            "primarySupplier" : "3958",
+            "cbState" : "VIC"
+        },
+        "stores" : [
+            {
+                "storeNumber" : "939256",
+                "storeNumberGroups" : [
+                    {
+                        "poNumber" : "CNC5056trang1",
+                        "poNumberGroups" : [
+                            {
+                                "_id" : "63982c08510191ece582debf",
+                                "poNumber" : "CNC5056trang1",
+                                "orderType" : "CNC",
+                                "storeNumber" : "939256",
+                                "promId" : "",
+                                "upc" : "088381961530",
+                                "skuDesc" : "Disc Sander White 100G 125mm Pk10 P-33370",
+                                "orderBTax" : 5.16,
+                                "extendedValue" : 11.36,
+                                "qtyOrdered" : 2,
+                                "uom" : "EA",
+                                "processing" : 1,
+                                "storeName" : "Terang Co-Op Mitre 10",
+                                "storeAdd1" : "Cnr Thompson & Bayne Sts",
+                                "storeAdd2" : "",
+                                "storeCity" : "TERANG",
+                                "state" : "VIC",
+                                "primarySupplier" : "3958",
+                                "supName" : "Makita (Australia Pty Ltd 3958",
+                                "contactName" : "Makita (Australia - PowerTool",
+                                "contactPhone" : "1300 361 690",
+                                "contactEmail" : "eorders@makita.com.au",
+                                "vpn" : "P-33370",
+                                "eventCode" : "",
+                                "eventDesc" : "",
+                                "notBeforeDate" : "",
+                                "notAfterDate" : "",
+                                "totalValueExcGST" : 10.32
+                            }
+                        ]
+                    },
+                    {
+                        "poNumber" : "CNC5057trang3",
+                        "poNumberGroups" : [
+                            {
+                                "_id" : "6398506b510191ece582dec6",
+                                "poNumber" : "CNC5057trang3",
+                                "orderType" : "CNC",
+                                "storeNumber" : "939256",
+                                "promId" : "",
+                                "upc" : "088381961530",
+                                "skuDesc" : "Disc Sander White 100G 125mm Pk10 P-33370",
+                                "orderBTax" : 5.16,
+                                "extendedValue" : 11.36,
+                                "qtyOrdered" : 2,
+                                "uom" : "EA",
+                                "processing" : 1,
+                                "processedDate" : "",
+                                "docNo" : "",
+                                "storeName" : "Terang Co-Op Mitre 10",
+                                "storeAdd1" : "Cnr Thompson & Bayne Sts",
+                                "storeAdd2" : "",
+                                "storeCity" : "TERANG",
+                                "state" : "VIC",
+                                "primarySupplier" : "3958",
+                                "supName" : "Makita (Australia Pty Ltd 3958",
+                                "contactName" : "Makita (Australia - PowerTool",
+                                "contactPhone" : "1300 361 690",
+                                "contactEmail" : "eorders@makita.com.au",
+                                "vpn" : "P-33370",
+                                "eventCode" : "",
+                                "eventDesc" : "",
+                                "notBeforeDate" : "",
+                                "notAfterDate" : "",
+                                "totalValueExcGST" : 10.32
+                            },
+                            {
+                                "_id" : "6398506b510191ece582dec7",
+                                "poNumber" : "CNC5057trang3",
+                                "orderType" : "CNC",
+                                "storeNumber" : "939256",
+                                "promId" : "",
+                                "upc" : "088381872423",
+                                "skuDesc" : "Combo Kit 2Pce 12V Max CLX224",
+                                "orderBTax" : 176.5,
+                                "extendedValue" : 776.6,
+                                "qtyOrdered" : 4,
+                                "uom" : "EA",
+                                "processing" : 1,
+                                "processedDate" : "",
+                                "docNo" : "",
+                                "storeName" : "Terang Co-Op Mitre 10",
+                                "storeAdd1" : "Cnr Thompson & Bayne Sts",
+                                "storeAdd2" : "",
+                                "storeCity" : "TERANG",
+                                "state" : "VIC",
+                                "primarySupplier" : "3958",
+                                "supName" : "Makita (Australia Pty Ltd 3958",
+                                "contactName" : "Makita (Australia - PowerTool",
+                                "contactPhone" : "1300 361 690",
+                                "contactEmail" : "eorders@makita.com.au",
+                                "vpn" : "CLX224",
+                                "eventCode" : "",
+                                "eventDesc" : "",
+                                "notBeforeDate" : "",
+                                "notAfterDate" : "",
+                                "totalValueExcGST" : 706.0
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "storeNumber" : "549055",
+                "storeNumberGroups" : [
+                    {
+                        "poNumber" : "CNC5056trang2",
+                        "poNumberGroups" : [
+                            {
+                                "_id" : "63984ee8510191ece582dec3",
+                                "poNumber" : "CNC5056trang2",
+                                "orderType" : "CNC",
+                                "storeNumber" : "549055",
+                                "promId" : "",
+                                "upc" : "088381961530",
+                                "skuDesc" : "Disc Sander White 100G 125mm Pk10 P-33370",
+                                "orderBTax" : 5.16,
+                                "extendedValue" : 113.6,
+                                "qtyOrdered" : 20,
+                                "uom" : "EA",
+                                "processing" : 1,
+                                "processedDate" : "",
+                                "docNo" : "",
+                                "storeName" : "Bowen & Pomeroy Pty Ltd",
+                                "storeAdd1" : "PO Box 1377",
+                                "storeAdd2" : "",
+                                "storeCity" : "NARRE WARREN",
+                                "state" : "VIC",
+                                "primarySupplier" : "3958",
+                                "supName" : "Makita (Australia Pty Ltd 3958",
+                                "contactName" : "Makita (Australia - PowerTool",
+                                "contactPhone" : "1300 361 690",
+                                "contactEmail" : "eorders@makita.com.au",
+                                "vpn" : "P-33370",
+                                "eventCode" : "",
+                                "eventDesc" : "",
+                                "notBeforeDate" : "",
+                                "notAfterDate" : "",
+                                "totalValueExcGST" : 103.2
+                            },
+                            {
+                                "_id" : "63984ee8510191ece582dec4",
+                                "poNumber" : "CNC5056trang2",
+                                "orderType" : "CNC",
+                                "storeNumber" : "549055",
+                                "promId" : "",
+                                "upc" : "088381872423",
+                                "skuDesc" : "Combo Kit 2Pce 12V Max CLX224",
+                                "orderBTax" : 176.5,
+                                "extendedValue" : 388.3,
+                                "qtyOrdered" : 2,
+                                "uom" : "EA",
+                                "processing" : 1,
+                                "processedDate" : "",
+                                "docNo" : "",
+                                "storeName" : "Bowen & Pomeroy Pty Ltd",
+                                "storeAdd1" : "PO Box 1377",
+                                "storeAdd2" : "",
+                                "storeCity" : "NARRE WARREN",
+                                "state" : "VIC",
+                                "primarySupplier" : "3958",
+                                "supName" : "Makita (Australia Pty Ltd 3958",
+                                "contactName" : "Makita (Australia - PowerTool",
+                                "contactPhone" : "1300 361 690",
+                                "contactEmail" : "eorders@makita.com.au",
+                                "vpn" : "CLX224",
+                                "eventCode" : "",
+                                "eventDesc" : "",
+                                "notBeforeDate" : "",
+                                "notAfterDate" : "",
+                                "totalValueExcGST" : 353.0
+                            }
+                        ]
+                    },
+                    {
+                        "poNumber" : "CNC5055trang4",
+                        "poNumberGroups" : [
+                            {
+                                "_id" : "63995297510191ece582ded1",
+                                "poNumber" : "CNC5055trang4",
+                                "orderType" : "CNC",
+                                "storeNumber" : "549055",
+                                "promId" : "",
+                                "upc" : "088381961530",
+                                "skuDesc" : "Disc Sander White 100G 125mm Pk10 P-33370",
+                                "orderBTax" : 5.16,
+                                "extendedValue" : 39.76,
+                                "qtyOrdered" : 7,
+                                "uom" : "EA",
+                                "processing" : 1,
+                                "processedDate" : "",
+                                "docNo" : "",
+                                "storeName" : "Bowen & Pomeroy Pty Ltd",
+                                "storeAdd1" : "PO Box 1377",
+                                "storeAdd2" : "",
+                                "storeCity" : "NARRE WARREN",
+                                "state" : "VIC",
+                                "primarySupplier" : "3958",
+                                "supName" : "Makita (Australia Pty Ltd 3958",
+                                "contactName" : "Makita (Australia - PowerTool",
+                                "contactPhone" : "1300 361 690",
+                                "contactEmail" : "eorders@makita.com.au",
+                                "vpn" : "P-33370",
+                                "eventCode" : "",
+                                "eventDesc" : "",
+                                "notBeforeDate" : "",
+                                "notAfterDate" : "",
+                                "totalValueExcGST" : 36.12
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "_id" : {
+            "orderType" : "CNC",
+            "primarySupplier" : "1119",
+            "cbState" : "VIC"
+        },
+        "stores" : [
+            {
+                "storeNumber" : "549055",
+                "storeNumberGroups" : [
+                    {
+                        "poNumber" : "CNC5055trang4",
+                        "poNumberGroups" : [
+                            {
+                                "_id" : "63995297510191ece582ded2",
+                                "poNumber" : "CNC5055trang4",
+                                "orderType" : "CNC",
+                                "storeNumber" : "549055",
+                                "promId" : "",
+                                "upc" : "0076174838534",
+                                "skuDesc" : "Clamp 90 Degree Corner Dewalt",
+                                "orderBTax" : 0,
+                                "extendedValue" : null,
+                                "qtyOrdered" : 6,
+                                "uom" : "EA",
+                                "processing" : 1,
+                                "processedDate" : "",
+                                "docNo" : "",
+                                "storeName" : "Bowen & Pomeroy Pty Ltd",
+                                "storeAdd1" : "PO Box 1377",
+                                "storeAdd2" : "",
+                                "storeCity" : "NARRE WARREN",
+                                "state" : "VIC",
+                                "primarySupplier" : "1119",
+                                "supName" : "Stanley Black & Decker Aust",
+                                "contactName" : "Black & Decker - Tools",
+                                "contactPhone" : "",
+                                "contactEmail" : "auorders@sbdinc.com",
+                                "vpn" : "DWHT83853",
+                                "eventCode" : "",
+                                "eventDesc" : "",
+                                "notBeforeDate" : "",
+                                "notAfterDate" : "",
+                                "totalValueExcGST" : 0
+                            }
+                        ]
+                    },
+                    {
+                        "poNumber" : "CNC5055trang5",
+                        "poNumberGroups" : [
+                            {
+                                "_id" : "63997b78510191ece582ded5",
+                                "poNumber" : "CNC5055trang5",
+                                "orderType" : "CNC",
+                                "storeNumber" : "549055",
+                                "promId" : "",
+                                "upc" : "0076174838534",
+                                "skuDesc" : "Clamp 90 Degree Corner Dewalt",
+                                "orderBTax" : 0,
+                                "extendedValue" : null,
+                                "qtyOrdered" : 6,
+                                "uom" : "EA",
+                                "processing" : 1,
+                                "processedDate" : "",
+                                "docNo" : "",
+                                "storeName" : "Bowen & Pomeroy Pty Ltd",
+                                "storeAdd1" : "PO Box 1377",
+                                "storeAdd2" : "",
+                                "storeCity" : "NARRE WARREN",
+                                "state" : "VIC",
+                                "primarySupplier" : "1119",
+                                "supName" : "Stanley Black & Decker Aust",
+                                "contactName" : "Black & Decker - Tools",
+                                "contactPhone" : "",
+                                "contactEmail" : "auorders@sbdinc.com",
+                                "vpn" : "DWHT83853",
+                                "eventCode" : "",
+                                "eventDesc" : "",
+                                "notBeforeDate" : "",
+                                "notAfterDate" : "",
+                                "totalValueExcGST" : 0
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }    
+]

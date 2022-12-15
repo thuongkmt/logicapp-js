@@ -1,0 +1,36 @@
+[
+    {
+        "summary": [
+            {
+                "_id": "0.600.803.240",
+                "productDesc": "",
+                "qty": 31,
+                "totalValueExcGST": 18936.66,
+                "totalValueIncl": 20830.45,
+                "unitCostExcGST": 610.86,
+                "uom": "EA",
+                "vpn": "0.600.803.240"
+            },
+            {
+                "_id": "0.600.8B3.101",
+                "productDesc": "Saw Chain Pole 18V Skin",
+                "qty": 7,
+                "totalValueExcGST": 1288.7,
+                "totalValueIncl": 1417.57,
+                "unitCostExcGST": 184.1,
+                "uom": "EA",
+                "vpn": "0.600.8B3.101"
+            },
+            {
+                "_id": "Total",
+                "productDesc": 0,
+                "totalQty": 38,
+                "totalValueExcGST": 20225.36,
+                "totalValueIncl": 22248.02,
+                "unitCostExcGST": 0,
+                "uom": 0,
+                "vpn": 0
+            }
+        ]
+    }
+]
