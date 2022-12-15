@@ -6,8 +6,16 @@ db.getCollection("staging").aggregate([
         }
     },
     {
+        "$addFields": {
+            "totalValueExcGST": {
+                "$multiply":["$orderBTax", "$qtyOrdered"]
+            }
+        }
+    },
+    {
         "$group": {
             "_id": {
+                "orderType": "$orderType",
                 "primarySupplier": "$primarySupplier",
                 "cbState": "$cbState",
                 "storeNumber": "$storeNumber",
@@ -21,6 +29,7 @@ db.getCollection("staging").aggregate([
     {
         "$group": {
             "_id": {
+                "orderType": "$_id.orderType",
                 "primarySupplier": "$_id.primarySupplier",
                 "cbState": "$_id.cbState",
                 "storeNumber": "$_id.storeNumber"
@@ -36,6 +45,7 @@ db.getCollection("staging").aggregate([
     {
         "$group":{
             "_id": {
+                "orderType": "$_id.orderType",
                 "primarySupplier": "$_id.primarySupplier",
                 "cbState": "$_id.cbState"
             },
