@@ -8,17 +8,6 @@ db.getCollection("staging").aggregate([
         }
     },
     {
-        "$project": {
-            "_id": 0,
-            "vpn": 1,
-            "skuDesc": 1,
-            "qtyOrdered": 1,
-            "uom": 1,
-            "orderBTax": 1, 
-            "extendedValue": 1
-        }
-    },
-    {
         "$group": {
             "_id": "$vpn",
             "vpn": {
@@ -41,7 +30,7 @@ db.getCollection("staging").aggregate([
                     "$multiply": ["$orderBTax", "$qtyOrdered"]
                 }
             },
-            "extendedValue": {
+            "totalValueIncl": {
                 "$sum": "$extendedValue"
             }
         }
@@ -50,16 +39,42 @@ db.getCollection("staging").aggregate([
         "$project": {
             "_id": 0,
             "vpn": 1,
+            "productDesc": 1,
+            "qty": 1,
             "totalValueExcGST": {
                 "$trunc":["$totalValueExcGST", 2]
             },
-            "productDesc": 1,
-            "qty": 1,
             "uom": 1,
             "unitCostExcGST": 1,
-            "extendedValue": {
-                "$trunc": ["$extendedValue", 2]
+            "totalValueIncl": {
+                "$trunc": ["$totalValueIncl", 2]
             }
         }
+    },
+    {
+        "$facet": {
+            "total": [
+                {
+                    "$group": {
+                        "_id": "Total",
+                        "vpn": {"$sum": ""},
+                        "productDesc": {"$sum": ""},
+                        "totalQty": {"$sum": "$$ROOT.qty"},
+                        "uom": {"$sum": ""},
+                        "unitCostExcGST": {"$sum": ""},
+                        "totalValueExcGST": {"$sum": "$$ROOT.totalValueExcGST"},
+                        "totalValueIncl": {"$sum": "$$ROOT.totalValueIncl"}
+                    }
+                }
+            ],
+            "data": [{ "$match": {} }]
+        }
+    },
+    { 
+        "$project": {
+            "data": {
+              "$concatArrays": ["$data", "$total"]
+            }
+         }
     }
 ])
