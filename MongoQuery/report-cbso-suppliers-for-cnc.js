@@ -7,8 +7,15 @@ db.getCollection("staging").aggregate([
     },
     {
         "$addFields": {
-            "totalValueExcGST": {
+            "totalValueExcGSTRaw": {
                 "$multiply":["$orderBTax", "$qtyOrdered"]
+            }
+        }
+    },
+    {
+        "$addFields": {
+            "totalValueExcGST": {
+                "$trunc":["$totalValueExcGSTRaw", 2]
             }
         }
     },
@@ -59,17 +66,33 @@ db.getCollection("staging").aggregate([
     },
     {
         "$project":{
-            "stores.storeNumberGroups.poNumberGroups.orderCreated": 0,
-            "stores.storeNumberGroups.poNumberGroups.productSEQ": 0,
-            "stores.storeNumberGroups.poNumberGroups.itemCode": 0,
-            "stores.storeNumberGroups.poNumberGroups.orderCreated": 0,
-            "stores.storeNumberGroups.poNumberGroups.inserted": 0,
-            "stores.storeNumberGroups.poNumberGroups.storePCode": 0,
-            "stores.storeNumberGroups.poNumberGroups.storeBrand": 0,
-            "stores.storeNumberGroups.poNumberGroups.cbState": 0,
-            "stores.storeNumberGroups.poNumberGroups.skuCategory": 0,
-            "stores.storeNumberGroups.poNumberGroups.consolidationDate": 0,
-            "stores.storeNumberGroups.poNumberGroups.suppMinOrd": 0        
+            "stores.storeNumberGroups.poNumberGroups.poNumber": 1,
+            "stores.storeNumberGroups.poNumberGroups.orderType": 1,
+            "stores.storeNumberGroups.poNumberGroups.storeNumber": 1,
+            "stores.storeNumberGroups.poNumberGroups.promId": 1,
+            "stores.storeNumberGroups.poNumberGroups.upc": 1,
+            "stores.storeNumberGroups.poNumberGroups.skuDesc": 1,
+            "stores.storeNumberGroups.poNumberGroups.orderBTax": 1,
+            "stores.storeNumberGroups.poNumberGroups.extendedValue": 1,
+            "stores.storeNumberGroups.poNumberGroups.qtyOrdered": 1,
+            "stores.storeNumberGroups.poNumberGroups.uom": 1,
+            "stores.storeNumberGroups.poNumberGroups.processing": 1,    
+            "stores.storeNumberGroups.poNumberGroups.storeName": 1,
+            "stores.storeNumberGroups.poNumberGroups.storeAdd1": 1,
+            "stores.storeNumberGroups.poNumberGroups.storeAdd2": 1,
+            "stores.storeNumberGroups.poNumberGroups.storeCity": 1,
+            "stores.storeNumberGroups.poNumberGroups.state": 1,
+            "stores.storeNumberGroups.poNumberGroups.primarySupplier": 1,
+            "stores.storeNumberGroups.poNumberGroups.supName": 1,
+            "stores.storeNumberGroups.poNumberGroups.contactName": 1,
+            "stores.storeNumberGroups.poNumberGroups.contactPhone": 1,
+            "stores.storeNumberGroups.poNumberGroups.contactEmail": 1,
+            "stores.storeNumberGroups.poNumberGroups.vpn": 1,
+            "stores.storeNumberGroups.poNumberGroups.eventCode": 1,
+            "stores.storeNumberGroups.poNumberGroups.eventDesc": 1,
+            "stores.storeNumberGroups.poNumberGroups.notBeforeDate": 1,
+            "stores.storeNumberGroups.poNumberGroups.notAfterDate": 1,
+            "stores.storeNumberGroups.poNumberGroups.totalValueExcGST": 1
         }
     }
 ])
