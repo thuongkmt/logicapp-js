@@ -1,0 +1,15 @@
+{
+    "database":"reporting",
+    "collection":"staging",
+    "filter": {
+        "processing": 0,
+        "orderType": "CNC"
+    },
+    "aggregate": [
+        {
+            "$set": {
+                "processing": 1
+            }
+        }
+    ]
+}
