@@ -1,14 +1,14 @@
 const fs = require('fs')
-const sourceSystem = "NOT-GUS";
+const sourceSystem = "GUS";
 const createdTime = "2022-12-12T01:07:51"
 
 var promRegions = [
     {
-      "_id": "364919",
-      "promRegion": "NSW",
-      "promPriceLUKey": "BRI"
+        "_id": "061598",
+        "promRegion": "WA",
+        "promPriceLUKey": "PTH"
     }
-  ];
+];
 var isBreakLoop = false
 var promCode = "";
 var orderEvents = [];
@@ -87,7 +87,7 @@ fs.readFile("./data-result/order-events-sorted.json", "utf8", (err, jsonString) 
                                     switch(sourceSystem){
                                         case "GUS":
                                             //In case: sourceSystem comes from GUS, we already had the promotion value
-                                            if(ipc.promCode == orderLine.promotion){                                  
+                                            if(ipc.promCode == orderLine.promotion){                                
                                                 //map  quantityOrderedAdjusted/status/statusComment
                                                 orderLine.quantityOrderedAdjusted = orderLine.quantityOrdered
                                                 orderLine.status = "01"
@@ -108,13 +108,13 @@ fs.readFile("./data-result/order-events-sorted.json", "utf8", (err, jsonString) 
                                                             promBreaks.push(ipp[`promBreak${i}_Qty`] === undefined ? 0 : ipp[`promBreak${i}_Qty`])
                                                         }
                                                         promBreaks.sort(function(a, b){return b - a});
-                                                        
                                                         //get the promBreak${i}_Qty nearest to the orderLine.quantityOrderedAdjusted
                                                         let isStop = false
                                                         promBreaks.forEach(promBreak => {
                                                             if(!isStop){
                                                                 for(let i=1; i<=6; i++){
                                                                     if(ipp[`promBreak${i}_Qty`] === promBreak){
+                                                                        console.log("promBreak", `${promBreak} - ${ipp[`promBreak${i}_Qty`]}`)
                                                                         if(orderLine.quantityOrderedAdjusted >= ipp[`promBreak${i}_Qty`]) {
                                                                             orderLine.totalLinesAmountAfterTax = parseFloat((orderLine.quantityOrderedAdjusted * ipp[`promCost${i}_AT`]).toFixed(2))
                                                                             orderLine.costBeforeTax = parseFloat(ipp[`promCost${i}_BT`].toFixed(2))
@@ -143,7 +143,11 @@ fs.readFile("./data-result/order-events-sorted.json", "utf8", (err, jsonString) 
                                                         }
                                                         
                                                     }
+
+                                                    return true
                                                 })
+
+                                                return false
                                             }
                                             else{
                                                 if(itemPromChannels.length === loopPromCodeCount) {
