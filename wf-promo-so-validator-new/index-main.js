@@ -39,7 +39,7 @@ orderEvents.events.sort((a, b) => {
         return a.event.eventPromChannelStores.promPrefSeq - b.event.eventPromChannelStores.promPrefSeq
     }
 })
-
+let loopEventsCount = 0 
 orderEvents.events.forEach(item => {
     loopEventsCount ++
     //1.check itemID is equal to itemCode
