@@ -6,7 +6,7 @@ const suppliers = workflowContext.actions.Get_Supplier_Data.outputs.body || []
 const stores = workflowContext.actions.Get_Stores_Data.outputs.body || []
 
 let stagingObjectArray = []
-
+                        
 salesOrder.orderLines.forEach(orderLine => {
     //initial object and mapping with out-of-the-box properties
     let stagingObject = {
@@ -18,7 +18,6 @@ salesOrder.orderLines.forEach(orderLine => {
         promId: salesOrder.promotionId,
         upc: orderLine.productApn,
         itemCode: orderLine.itemCode,
-        skuDesc: orderLine.productDescription,
         orderBTax: orderLine.costBeforeTax,
         extendedValue: parseFloat(orderLine.totalLinesAmountAfterTax),
         qtyOrdered: orderLine.quantityOrderedAdjusted,
@@ -70,6 +69,7 @@ salesOrder.orderLines.forEach(orderLine => {
         productCount ++
         if(orderLine.itemCode === product._id){
             stagingObject.skuCategory = product.departmentName
+            stagingObject.skuDesc = product.name,
             isSkuCatFound = true
             if(orderLine.warehouseId === product.supplierNo){
                 stagingObject.vpn = product.vpn

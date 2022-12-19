@@ -63,7 +63,6 @@ fs.readFile('./data-test-kit/salesorder.json', 'utf8', (error, data) =>{
                                 promId: salesOrder.promotionId,
                                 upc: orderLine.productApn,
                                 itemCode: orderLine.itemCode,
-                                skuDesc: orderLine.productDescription,
                                 orderBTax: orderLine.costBeforeTax,
                                 extendedValue: parseFloat(orderLine.totalLinesAmountAfterTax),
                                 qtyOrdered: orderLine.quantityOrderedAdjusted,
@@ -115,6 +114,7 @@ fs.readFile('./data-test-kit/salesorder.json', 'utf8', (error, data) =>{
                                 productCount ++
                                 if(orderLine.itemCode === product._id){
                                     stagingObject.skuCategory = product.departmentName
+                                    stagingObject.skuDesc = product.name,
                                     isSkuCatFound = true
                                     if(orderLine.warehouseId === product.supplierNo){
                                         stagingObject.vpn = product.vpn

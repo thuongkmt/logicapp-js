@@ -9,6 +9,7 @@ db.getCollection("products").aggregate([
      },
     {
        "$project": {
+            "name": 1,
             "departmentName": 1,
             "vpn": {
                 "$arrayElemAt": ["$productDC.vpn", 0 ]
