@@ -14,8 +14,8 @@ salesOrder.orderLines.forEach(orderLine => {
         orderType: salesOrder.calculatedOrderType,
         orderCreated: salesOrder.createdTime,
         storeNumber: salesOrder.storeNumber,
-        productSEQ: salesOrder.orderLines.length, // the sequence of origional record ???
         promId: salesOrder.promotionId,
+        productSEQ: orderLine.lineNo === undefined ? 0 : orderLine.lineNo, 
         upc: orderLine.productApn,
         itemCode: orderLine.itemCode,
         orderBTax: orderLine.costBeforeTax,
