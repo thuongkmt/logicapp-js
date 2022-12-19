@@ -1,0 +1,1495 @@
+{
+    "definition": {
+        "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+        "actions": {
+            "Condition_check_isContinuedFlag": {
+                "actions": {
+                    "Scope_orderLine_validation": {
+                        "actions": {
+                            "ExeJavaCode_processing_orderLines": {
+                                "inputs": {
+                                    "code": "const orderEvents = workflowContext.actions.ExeJavaScriptCode_getOrderCloseDateOverride.outputs.orderEvents\r\nconst promRegions = workflowContext.actions.Get_stores_from_ESL.outputs.body\r\nconst sourceSystem = workflowContext.trigger.outputs.body.sourceSystem\r\nconst createdTime = workflowContext.trigger.outputs.body.createdTime\r\nconst orderLines = workflowContext.trigger.outputs.body.orderLines\r\n\r\nvar isBreakLoop = false\r\nvar quantityOrderedAdjusted = 0\r\nvar storeOrderMult = 0\r\nvar salesOrderStatus = false\r\n\r\n //in case sourceSystem equal to GUS default event.status is Open\r\n if(sourceSystem === \"GUS\"){\r\n    orderEvents.events.map(item => {\r\n        item.event.status = \"Open\"\r\n        return item\r\n    })\r\n }\r\n else{\r\n    //differentiate which event is out of date\r\n    let createdTimeTimestamp = isNaN(Date.parse(createdTime)) == true ? 0 : Date.parse(createdTime)\r\n    orderEvents.events.map(item => {\r\n        const orderCloseDateOverride = item.event.eventPromChannelStores.storeList.orderCloseDateOverride\r\n        var orderCloseDateOverrideTimestamp = isNaN(Date.parse(orderCloseDateOverride)) == true ? 0 : Date.parse(orderCloseDateOverride)\r\n        if(createdTimeTimestamp <= orderCloseDateOverrideTimestamp){\r\n            item.event.status = \"Open\"\r\n        }\r\n        else{\r\n            item.event.status = \"Close\"\r\n        }\r\n    \r\n        return item\r\n    })\r\n }\r\n\r\n//sorted by promPrefSeq but status is \"Open\"\r\norderEvents.events.sort((a, b) => {\r\n    if(a.event.status === \"Open\"){\r\n        return a.event.eventPromChannelStores.promPrefSeq - b.event.eventPromChannelStores.promPrefSeq\r\n    }\r\n})\r\n\r\norderLines.map(orderLine => { \r\n    if(orderLine.status == \"05\"){\r\n        orderLine.promSource = \"\"\r\n    }\r\n    else{\r\n        isBreakLoop = false;\r\n        let loopEventsCount = 0 \r\n        orderEvents.events.forEach(item => {\r\n            loopEventsCount ++\r\n            //1.check itemID is equal to itemCode\r\n            if(!isBreakLoop){\r\n                let loopItemIdCount = 0\r\n                item.itemLists.every(il => {\r\n                    loopItemIdCount ++\r\n                    if(il.itemID === orderLine.itemCode){\r\n                        let itemPromChannels = il.itemPromChannels\r\n                        //2. check event.eventPromChannelStores is equal to itemList.itemPromChannels.promCode\r\n                        let loopPromCodeCount = 0\r\n                        itemPromChannels.every(ipc => {\r\n                            loopPromCodeCount ++\r\n                            switch(sourceSystem){\r\n                                case \"GUS\":\r\n                                    //In case: sourceSystem comes from GUS, we already had the promotion value\r\n                                    if(ipc.promCode == orderLine.promotion){                                \r\n                                        //map  quantityOrderedAdjusted/status/statusComment\r\n                                        orderLine.quantityOrderedAdjusted = orderLine.quantityOrdered\r\n                                        orderLine.status = \"01\"\r\n                                        orderLine.statusComment = \"Fully Supplied\"                  \r\n\r\n                                        isBreakLoop =true\r\n                                        let itemPromPrcing = ipc.itemPromPricing\r\n                                        let loopPromPriceLUKeyCount = 0\r\n    \r\n                                        itemPromPrcing.every(ipp => {\r\n                                            loopPromPriceLUKeyCount++\r\n                                            if(ipp.promPriceLUKey === promRegions[0][\"promPriceLUKey\"]){\r\n                                                orderLine.srpIncTax = ipp.promSRP\r\n                                                \r\n                                                //order the array desc\r\n                                                let promBreaks = [] \r\n                                                for(let i=1; i<=6; i++){\r\n                                                    promBreaks.push(ipp[`promBreak${i}_Qty`] === undefined ? 0 : ipp[`promBreak${i}_Qty`])\r\n                                                }\r\n                                                promBreaks.sort(function(a, b){return b - a});\r\n                                                //get the promBreak${i}_Qty nearest to the orderLine.quantityOrderedAdjusted\r\n                                                let isStop = false\r\n                                                promBreaks.forEach(promBreak => {\r\n                                                    if(!isStop){\r\n                                                        for(let i=1; i<=6; i++){\r\n                                                            if(ipp[`promBreak${i}_Qty`] === promBreak){\r\n                                                                console.log(\"promBreak\", `${promBreak} - ${ipp[`promBreak${i}_Qty`]}`)\r\n                                                                if(orderLine.quantityOrderedAdjusted >= ipp[`promBreak${i}_Qty`]) {\r\n                                                                    orderLine.totalLinesAmountAfterTax = parseFloat((orderLine.quantityOrderedAdjusted * ipp[`promCost${i}_AT`]).toFixed(2))\r\n                                                                    orderLine.costBeforeTax = parseFloat(ipp[`promCost${i}_BT`].toFixed(2))\r\n                                                                    orderLine.revisedListCost = parseFloat(ipp[`promCost${i}_BT`].toFixed(2))\r\n                                                                    isStop = true\r\n                                                                    break\r\n                                                                } \r\n                                                                else{\r\n                                                                    orderLine.totalLinesAmountAfterTax = 0\r\n                                                                    orderLine.costBeforeTax = 0\r\n                                                                    orderLine.revisedListCost = 0\r\n                                                                }   \r\n                                                            }\r\n                                                        }  \r\n    \r\n                                                        return false\r\n                                                    }\r\n                                                    else return true\r\n                                                })\r\n\r\n                                                return false\r\n                                            }\r\n                                            else{\r\n                                                if(itemPromPrcing.length === loopPromPriceLUKeyCount){\r\n                                                    orderLine.srpIncTax = 0\r\n                                                }\r\n                                                \r\n                                            }\r\n\r\n                                            return true\r\n                                        })\r\n\r\n                                        return false\r\n                                    }\r\n                                    else{\r\n                                        if(itemPromChannels.length === loopPromCodeCount) {\r\n                                            orderLine.status = \"97\"\r\n                                            orderLine.statusComment = \"Not On Promotion\"\r\n                                            orderLine.promSource = \"\"\r\n                                        }\r\n                                    }\r\n\r\n                                    break\r\n    \r\n                                default:\r\n                                    if(ipc.promCode === item.event.eventPromChannelStores.promCode){\r\n                                        let itemPromRegions = ipc.itemPromRegions\r\n                                        let itemPromPrcing = ipc.itemPromPricing\r\n                                        \r\n                                        if(item.event.status === \"Open\"){\r\n                                            //checking in the itemPromRegions\r\n                                            let loopPromRegionCount = 0\r\n                                            itemPromRegions.every(ipr => {\r\n                                                loopPromRegionCount++\r\n                                                if(ipr.region === promRegions[0][\"promRegion\"]) {\r\n                                                    isBreakLoop = true\r\n        \r\n                                                    //map promotion data\r\n                                                    orderLine.promotion = item.event.eventPromChannelStores.promCode\r\n                                                    \r\n                                                    //map quantityOrderedAdjusted with minimum quantity - Set value of \"orderItem.quantityOrderedAdjusted\" to be value of \"orderItem.quantityOrdered\"\r\n                                                    if(orderLine.quantityOrdered >= ipr.storeOrderMin)\r\n                                                    {\r\n                                                        quantityOrderedAdjusted = orderLine.quantityOrdered\r\n                                                        orderLine.status = \"01\"\r\n                                                        orderLine.statusComment = \"Fully Supplied\"\r\n                                                    }\r\n                                                    else\r\n                                                    {\r\n                                                        quantityOrderedAdjusted = ipr.storeOrderMin\r\n                                                        orderLine.status = \"33\"\r\n                                                        orderLine.statusComment = \"Rounded up to Minimum\"\r\n                                                    }\r\n                \r\n                                                    //map quantityOrderedAdjusted with qty-multiple - If value of \"orderItem.quantityOrderedAdjusted\" is greater/closet of quantityOrderedAdjusted and a multiple of \"StoreOrderMult\"\r\n                                                    if(quantityOrderedAdjusted % ipr.storeOrderMult != 0)\r\n                                                    {\r\n                                                        if(quantityOrderedAdjusted > ipr.storeOrderMult)\r\n                                                        {\r\n                                                            let i = 2\r\n                                                            while(ipr.storeOrderMult * i < quantityOrderedAdjusted){\r\n                                                                i++\r\n                                                            }\r\n                                                            quantityOrderedAdjusted = ipr.storeOrderMult * i\r\n\r\n                                                        }\r\n                                                        \r\n                                                        else\r\n                                                            quantityOrderedAdjusted = ipr.storeOrderMult\r\n                                                        \r\n                                                        orderLine.status = \"04\"\r\n                                                        orderLine.statusComment = \"Raised to Pack Quantity\"\r\n                                                    }\r\n                                                    orderLine.quantityOrderedAdjusted = quantityOrderedAdjusted\r\n                                                    \r\n                                                    //map promSource data\r\n                                                    orderLine.promSource = ipr.promSource\r\n                                                    \r\n                                                    //map warehouseId data\r\n                                                    switch(ipr.promSource){\r\n                                                        case \"W\":\r\n                                                            orderLine.warehouseId = \"\" \r\n                                                            break;\r\n                                                        case \"C\":\r\n                                                            orderLine.warehouseId = ipr.supplierID\r\n                                                            break;\r\n                                                        default:\r\n                                                            orderLine.warehouseId = \"\" \r\n                                                            break;\r\n                                                    }\r\n                                                    //map uom data\r\n                                                    orderLine.uom = ipr.salesUOM\r\n        \r\n                                                    //map srpIncTax, totalLinesAmountAfterTax, costBeforeTax data\r\n                                                    let loopPromPriceLUKeyCount = 0\r\n                                                    itemPromPrcing.every(ipp =>{\r\n                                                        loopPromPriceLUKeyCount++\r\n                                                        if(ipp.promPriceLUKey === promRegions[0][\"promPriceLUKey\"]){\r\n                                                            orderLine.srpIncTax = ipp.promSRP\r\n\r\n                                                            //order the array desc\r\n                                                            let promBreaks = [] \r\n                                                            for(let i=1; i<=6; i++){\r\n                                                                promBreaks.push(ipp[`promBreak${i}_Qty`] === undefined ? 0 : ipp[`promBreak${i}_Qty`])\r\n                                                            }\r\n                                                            promBreaks.sort(function(a, b){return b - a});\r\n                                                            //get the promBreak${i}_Qty nearest to the orderLine.quantityOrderedAdjusted\r\n                                                            let isStop = false\r\n                                                            promBreaks.forEach(promBreak => {\r\n                                                                if(!isStop){\r\n                                                                    for(let i=1; i<=6; i++){\r\n                                                                        if(ipp[`promBreak${i}_Qty`] === promBreak){\r\n                                                                            if(orderLine.quantityOrderedAdjusted >= ipp[`promBreak${i}_Qty`]) {\r\n                                                                                orderLine.totalLinesAmountAfterTax = parseFloat((orderLine.quantityOrderedAdjusted * ipp[`promCost${i}_AT`]).toFixed(2))\r\n                                                                                orderLine.costBeforeTax = parseFloat(ipp[`promCost${i}_BT`].toFixed(2))\r\n                                                                                orderLine.revisedListCost = parseFloat(ipp[`promCost${i}_BT`].toFixed(2))\r\n                                                                                isStop = true\r\n                                                                                break\r\n                                                                            } \r\n                                                                            else{\r\n                                                                                orderLine.totalLinesAmountAfterTax = 0\r\n                                                                                orderLine.costBeforeTax = 0\r\n                                                                                orderLine.revisedListCost = 0\r\n                                                                            }   \r\n                                                                        }\r\n                                                                    }  \r\n\r\n                                                                    return false\r\n                                                                }\r\n                                                                else return true\r\n                                                            })\r\n\r\n                                                            return false\r\n                                                        }\r\n                                                        else{\r\n                                                            if(itemPromPrcing.length === loopPromPriceLUKeyCount){\r\n                                                                orderLine.srpIncTax = 0\r\n                                                            }\r\n                                                            \r\n                                                        }\r\n\r\n                                                        return true\r\n                                                    })\r\n\r\n                                                    return false\r\n                                                }\r\n                                                else{\r\n                                                    if(itemPromRegions.length === loopPromRegionCount) {\r\n                                                        orderLine.status = \"97\"\r\n                                                        orderLine.statusComment = \"Not On Promotion\"\r\n                                                        orderLine.promSource = \"\"\r\n                                                    }\r\n                                                }\r\n\r\n                                                return true\r\n                                            })\r\n                                        }\r\n                                        else{\r\n                                            //UPDATE WHEN STATUS IS CLOSE\r\n                                            isBreakLoop = true\r\n                                            orderLine.status = \"97\"\r\n                                            orderLine.statusComment = \"Not On Promotion\"\r\n                                        }\r\n\r\n                                        return false\r\n                                        \r\n                                    }\r\n                                    else{\r\n                                        if(itemPromChannels.length === loopPromCodeCount) {\r\n                                            orderLine.status = \"97\"\r\n                                            orderLine.statusComment = \"Not On Promotion\"\r\n                                            orderLine.promSource = \"\"\r\n                                        }\r\n                                    }\r\n                                    \r\n                                    break\r\n                            }\r\n\r\n                            return true\r\n                        })\r\n\r\n                        return false\r\n                    }\r\n                    else{\r\n                        if(loopItemIdCount === item.itemLists.length && loopEventsCount === orderEvents.events.length){\r\n                            orderLine.status = \"97\"\r\n                            orderLine.statusComment = \"Not On Promotion\"\r\n                            orderLine.promSource = \"\"\r\n                        }\r\n                    }\r\n\r\n                    return true\r\n                })\r\n            }\r\n        }) \r\n    }\r\n\r\n    return orderLine\r\n})\r\n\r\n//checking if at least one of the status in orderline is not matched to C, then reupdate the status of SalesOrder\r\norderLines.every(orderLine => {\r\n    if(orderLine.status === \"01\" || orderLine.status === \"04\" || orderLine.status === \"33\"){\r\n        salesOrderStatus = true;\r\n        \r\n        return false\r\n    }\r\n    else{\r\n        return true\r\n    }\r\n})\r\n\r\n//rerurn data\r\nreturn {\r\n    salesOrderStatus,\r\n    orderLines\r\n}"
+                                },
+                                "runAfter": {},
+                                "type": "JavaScriptCode"
+                            },
+                            "Set_SO_Lines": {
+                                "inputs": {
+                                    "name": "orderLines",
+                                    "value": "@outputs('ExeJavaCode_processing_orderLines')"
+                                },
+                                "runAfter": {
+                                    "ExeJavaCode_processing_orderLines": [
+                                        "Succeeded"
+                                    ]
+                                },
+                                "type": "SetVariable"
+                            }
+                        },
+                        "runAfter": {},
+                        "type": "Scope"
+                    }
+                },
+                "else": {
+                    "actions": {
+                        "ExeJavaScriptCode_orderLines_invalid": {
+                            "inputs": {
+                                "code": "const orderLines = workflowContext.trigger.outputs.body.orderLines\r\n\r\nreturn orderLines.map(orderLine => {\r\n    orderLine.status = \"97\"\r\n    orderLine.statusComment = \"Not On Promotion\"\r\n    return orderLine\r\n})"
+                            },
+                            "runAfter": {
+                                "Set_SO_Header_Status_Comment_Invalid_Value": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "JavaScriptCode"
+                        },
+                        "Set_SO_Header_Status_Comment_Invalid_Value": {
+                            "inputs": {
+                                "name": "statusComment",
+                                "value": "Order rejected."
+                            },
+                            "runAfter": {
+                                "Set_SO_Header_Status_Invalid_Value": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "SetVariable"
+                        },
+                        "Set_SO_Header_Status_Invalid_Value": {
+                            "inputs": {
+                                "name": "status",
+                                "value": "R"
+                            },
+                            "runAfter": {},
+                            "type": "SetVariable"
+                        },
+                        "Set_SO_Lines_invalid": {
+                            "inputs": {
+                                "name": "orderLines",
+                                "value": "@outputs('ExeJavaScriptCode_orderLines_invalid')"
+                            },
+                            "runAfter": {
+                                "ExeJavaScriptCode_orderLines_invalid": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "SetVariable"
+                        }
+                    }
+                },
+                "expression": {
+                    "and": [
+                        {
+                            "equals": [
+                                "@variables('isContinuedFlag')",
+                                true
+                            ]
+                        }
+                    ]
+                },
+                "runAfter": {
+                    "Scope_header_validation": [
+                        "Succeeded"
+                    ]
+                },
+                "type": "If"
+            },
+            "Create_blob_promoSO_": {
+                "inputs": {
+                    "body": "@variables('promoSOContent')",
+                    "headers": {
+                        "ReadFileMetadataFromServer": true
+                    },
+                    "host": {
+                        "connection": {
+                            "referenceName": "azureblob"
+                        }
+                    },
+                    "method": "post",
+                    "path": "/v2/datasets/@{encodeURIComponent(encodeURIComponent('AccountNameFromSettings'))}/files",
+                    "queries": {
+                        "folderPath": "/promoso-out-all",
+                        "name": "promo-so-message-@{guid()}.json",
+                        "queryParametersSingleEncoded": true
+                    }
+                },
+                "runAfter": {
+                    "Inject_SO_Lines": [
+                        "Succeeded"
+                    ]
+                },
+                "runtimeConfiguration": {
+                    "contentTransfer": {
+                        "transferMode": "Chunked"
+                    }
+                },
+                "type": "ApiConnection"
+            },
+            "Initialize_SO_Content": {
+                "inputs": {
+                    "variables": [
+                        {
+                            "name": "promoSOContent",
+                            "type": "object",
+                            "value": "@triggerBody()"
+                        }
+                    ]
+                },
+                "runAfter": {
+                    "isContinuedFlag": [
+                        "Succeeded"
+                    ]
+                },
+                "type": "InitializeVariable"
+            },
+            "Initialize_orderLines_Array": {
+                "inputs": {
+                    "variables": [
+                        {
+                            "name": "orderLines",
+                            "type": "array",
+                            "value": []
+                        }
+                    ]
+                },
+                "runAfter": {
+                    "targetBackend": [
+                        "Succeeded"
+                    ]
+                },
+                "type": "InitializeVariable"
+            },
+            "Inject_SO_Lines": {
+                "inputs": {
+                    "name": "promoSOContent",
+                    "value": "@outputs('Replace_Order_Lines')"
+                },
+                "runAfter": {
+                    "Replace_Order_Lines": [
+                        "Succeeded"
+                    ]
+                },
+                "type": "SetVariable"
+            },
+            "Replace_Order_Lines": {
+                "inputs": "@setProperty(outputs('Replace_SO_Header_StatusComment'),'orderLines',variables('orderLines'))",
+                "runAfter": {
+                    "Replace_SO_Header_StatusComment": [
+                        "Succeeded"
+                    ]
+                },
+                "type": "Compose"
+            },
+            "Replace_SO_Header_Status": {
+                "inputs": "@setProperty(variables('promoSOContent'),'status',variables('status'))",
+                "runAfter": {
+                    "Condition_check_isContinuedFlag": [
+                        "Succeeded"
+                    ]
+                },
+                "type": "Compose"
+            },
+            "Replace_SO_Header_StatusComment": {
+                "inputs": "@setProperty(outputs('Replace_SO_Header_Status'),'statusComment',variables('statusComment'))",
+                "runAfter": {
+                    "Replace_SO_Header_Status": [
+                        "Succeeded"
+                    ]
+                },
+                "type": "Compose"
+            },
+            "Scope_header_validation": {
+                "actions": {
+                    "Condition_check_orderEvents": {
+                        "actions": {
+                            "Check_created_time_and_source_system": {
+                                "actions": {
+                                    "Condition_check-stores": {
+                                        "actions": {
+                                            "Parse_JSON_stores": {
+                                                "inputs": {
+                                                    "content": "@body('Get_stores_from_ESL')",
+                                                    "schema": {
+                                                        "items": {
+                                                            "properties": {
+                                                                "_id": {
+                                                                    "type": "string"
+                                                                },
+                                                                "promPriceLUKey": {
+                                                                    "type": "string"
+                                                                },
+                                                                "promRegion": {
+                                                                    "type": "string"
+                                                                }
+                                                            },
+                                                            "required": [
+                                                                "_id",
+                                                                "promRegion",
+                                                                "promPriceLUKey"
+                                                            ],
+                                                            "type": "object"
+                                                        },
+                                                        "type": "array"
+                                                    }
+                                                },
+                                                "runAfter": {},
+                                                "type": "ParseJson"
+                                            }
+                                        },
+                                        "else": {
+                                            "actions": {
+                                                "Set_isContinuedFlag-3": {
+                                                    "inputs": {
+                                                        "name": "isContinuedFlag",
+                                                        "value": false
+                                                    },
+                                                    "runAfter": {},
+                                                    "type": "SetVariable"
+                                                }
+                                            }
+                                        },
+                                        "expression": {
+                                            "and": [
+                                                {
+                                                    "greater": [
+                                                        "@length(outputs('Get_stores_from_ESL')?['body'])",
+                                                        0
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        "runAfter": {
+                                            "Get_stores_from_ESL": [
+                                                "Succeeded"
+                                            ]
+                                        },
+                                        "type": "If"
+                                    },
+                                    "Get_stores_from_ESL": {
+                                        "inputs": {
+                                            "body": {
+                                                "collection": "stores",
+                                                "database": "@{parameters('ESL_DB_NAME')}",
+                                                "filter": {
+                                                    "id": "@triggerBody()?['storeNumber']"
+                                                },
+                                                "project": {
+                                                    "promPriceLUKey": 1,
+                                                    "promRegion": 1
+                                                }
+                                            },
+                                            "function": {
+                                                "connectionName": "azureFunctionOperation"
+                                            },
+                                            "method": "POST"
+                                        },
+                                        "runAfter": {
+                                            "Set_SO_Header_Status_Comment_Valid_Value": [
+                                                "Succeeded"
+                                            ]
+                                        },
+                                        "type": "Function"
+                                    },
+                                    "Set_SO_Header_Status_Comment_Valid_Value": {
+                                        "inputs": {
+                                            "name": "statusComment",
+                                            "value": "Order confirmed and is being processed."
+                                        },
+                                        "runAfter": {
+                                            "Set_SO_Header_Status_Valid_Value": [
+                                                "Succeeded"
+                                            ]
+                                        },
+                                        "type": "SetVariable"
+                                    },
+                                    "Set_SO_Header_Status_Valid_Value": {
+                                        "inputs": {
+                                            "name": "status",
+                                            "value": "C"
+                                        },
+                                        "runAfter": {},
+                                        "type": "SetVariable"
+                                    }
+                                },
+                                "description": "- Whether the  createdDate  is within the orderOpendDate and orderCloseDate?(change the createdTime from UTC to Melbourne time)\nOR\n- sourceSystem equal to GUS",
+                                "else": {
+                                    "actions": {
+                                        "Set_isContinuedFlag-2": {
+                                            "inputs": {
+                                                "name": "isContinuedFlag",
+                                                "value": false
+                                            },
+                                            "runAfter": {},
+                                            "type": "SetVariable"
+                                        }
+                                    }
+                                },
+                                "expression": {
+                                    "or": [
+                                        {
+                                            "and": [
+                                                {
+                                                    "greaterOrEquals": [
+                                                        "@ticks(convertTimeZone(triggerBody()?['createdTime'],'UTC','AUS Eastern Standard Time'))",
+                                                        "@ticks(body('Parse_JSON_orderEvents')[0]['_id']['orderOpenDate'])"
+                                                    ]
+                                                },
+                                                {
+                                                    "lessOrEquals": [
+                                                        "@ticks(convertTimeZone(triggerBody()?['createdTime'],'UTC','AUS Eastern Standard Time'))",
+                                                        "@ticks(outputs('ExeJavaScriptCode_getOrderCloseDateOverride')['orderCloseDateOverride'])"
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "and": [
+                                                {
+                                                    "equals": [
+                                                        "@triggerBody()['sourceSystem']",
+                                                        "GUS"
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                "runAfter": {
+                                    "ExeJavaScriptCode_getOrderCloseDateOverride": [
+                                        "Succeeded"
+                                    ]
+                                },
+                                "type": "If"
+                            },
+                            "ExeJavaScriptCode_getOrderCloseDateOverride": {
+                                "inputs": {
+                                    "code": "const orderEvents = workflowContext.actions.Parse_JSON_orderEvents.outputs.body[0]\r\n\r\n //sort orderCloseDateOverride\r\n orderEvents.events.sort((a, b) => (Date.parse(b.event.eventPromChannelStores.storeList.orderCloseDateOverride) - Date.parse(a.event.eventPromChannelStores.storeList.orderCloseDateOverride)))\r\n \r\n const orderCloseDateTimeStamp = isNaN(Date.parse(orderEvents._id.orderCloseDate)) == true ? 0 : Date.parse(orderEvents._id.orderCloseDate)\r\n let orderCloseDateOverride = orderEvents._id.orderCloseDate\r\n let biggestCloseDateOverride = orderEvents.events[0]\r\n if(biggestCloseDateOverride.event.eventPromChannelStores.storeList.hasOwnProperty(\"orderCloseDateOverride\")){\r\n     const currentDateString = biggestCloseDateOverride.event.eventPromChannelStores.storeList.orderCloseDateOverride\r\n     let currentDateTimeStamp = isNaN(Date.parse(currentDateString)) == true ? 0 : Date.parse(currentDateString)\r\n     if(currentDateTimeStamp > orderCloseDateTimeStamp){\r\n         orderCloseDateOverride = currentDateString\r\n     }\r\n }\r\n\r\nreturn {\r\n    orderCloseDateOverride,\r\n    orderEvents\r\n}"
+                                },
+                                "runAfter": {
+                                    "Parse_JSON_orderEvents": [
+                                        "Succeeded"
+                                    ]
+                                },
+                                "type": "JavaScriptCode"
+                            },
+                            "Parse_JSON_orderEvents": {
+                                "inputs": {
+                                    "content": "@body('Get_orderEvents_from_ESL')",
+                                    "schema": {
+                                        "items": {
+                                            "properties": {
+                                                "_id": {
+                                                    "properties": {
+                                                        "orderCloseDate": {
+                                                            "type": "string"
+                                                        },
+                                                        "orderOpenDate": {
+                                                            "type": "string"
+                                                        },
+                                                        "targetBackend": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "type": "object"
+                                                },
+                                                "events": {
+                                                    "items": {
+                                                        "properties": {
+                                                            "event": {
+                                                                "properties": {
+                                                                    "eventCode": {
+                                                                        "type": "string"
+                                                                    },
+                                                                    "eventPromChannelStores": {
+                                                                        "properties": {
+                                                                            "orderSubmitPromID": {
+                                                                                "type": "string"
+                                                                            },
+                                                                            "promCode": {
+                                                                                "type": "string"
+                                                                            },
+                                                                            "promPrefSeq": {
+                                                                                "type": "integer"
+                                                                            },
+                                                                            "storeList": {
+                                                                                "properties": {
+                                                                                    "myChannel": {
+                                                                                        "type": "string"
+                                                                                    },
+                                                                                    "orderCloseDateOverride": {
+                                                                                        "type": "string"
+                                                                                    },
+                                                                                    "storeID": {
+                                                                                        "type": "string"
+                                                                                    },
+                                                                                    "visible": {
+                                                                                        "type": "string"
+                                                                                    }
+                                                                                },
+                                                                                "type": "object"
+                                                                            }
+                                                                        },
+                                                                        "type": "object"
+                                                                    },
+                                                                    "saleType": {
+                                                                        "type": "string"
+                                                                    }
+                                                                },
+                                                                "type": "object"
+                                                            },
+                                                            "itemLists": {
+                                                                "items": {
+                                                                    "properties": {
+                                                                        "itemID": {
+                                                                            "type": "string"
+                                                                        },
+                                                                        "itemPromChannels": {
+                                                                            "items": {
+                                                                                "properties": {
+                                                                                    "itemPromPricing": {
+                                                                                        "items": {
+                                                                                            "properties": {
+                                                                                                "promBreak1_Qty": {
+                                                                                                    "type": "number"
+                                                                                                },
+                                                                                                "promBreak2_Qty": {
+                                                                                                    "type": "number"
+                                                                                                },
+                                                                                                "promBreak3_Qty": {
+                                                                                                    "type": "number"
+                                                                                                },
+                                                                                                "promCost1_AT": {
+                                                                                                    "type": "number"
+                                                                                                },
+                                                                                                "promCost1_BT": {
+                                                                                                    "type": "number"
+                                                                                                },
+                                                                                                "promCost2_AT": {
+                                                                                                    "type": "number"
+                                                                                                },
+                                                                                                "promCost2_BT": {
+                                                                                                    "type": "number"
+                                                                                                },
+                                                                                                "promCost3_AT": {
+                                                                                                    "type": "number"
+                                                                                                },
+                                                                                                "promCost3_BT": {
+                                                                                                    "type": "number"
+                                                                                                },
+                                                                                                "promPriceLUKey": {
+                                                                                                    "type": "string"
+                                                                                                },
+                                                                                                "promSRP": {
+                                                                                                    "type": "number"
+                                                                                                }
+                                                                                            },
+                                                                                            "required": [
+                                                                                                "promBreak1_Qty",
+                                                                                                "promCost1_BT",
+                                                                                                "promPriceLUKey",
+                                                                                                "promCost1_AT",
+                                                                                                "promSRP"
+                                                                                            ],
+                                                                                            "type": "object"
+                                                                                        },
+                                                                                        "type": "array"
+                                                                                    },
+                                                                                    "itemPromRegions": {
+                                                                                        "items": {
+                                                                                            "properties": {
+                                                                                                "promSource": {
+                                                                                                    "type": "string"
+                                                                                                },
+                                                                                                "region": {
+                                                                                                    "type": "string"
+                                                                                                },
+                                                                                                "salesUOM": {
+                                                                                                    "type": "string"
+                                                                                                },
+                                                                                                "storeOrderMin": {
+                                                                                                    "type": "integer"
+                                                                                                },
+                                                                                                "storeOrderMult": {
+                                                                                                    "type": "integer"
+                                                                                                },
+                                                                                                "supplierID": {
+                                                                                                    "type": "string"
+                                                                                                }
+                                                                                            },
+                                                                                            "required": [
+                                                                                                "storeOrderMin",
+                                                                                                "storeOrderMult",
+                                                                                                "salesUOM",
+                                                                                                "supplierID",
+                                                                                                "promSource",
+                                                                                                "region"
+                                                                                            ],
+                                                                                            "type": "object"
+                                                                                        },
+                                                                                        "type": "array"
+                                                                                    },
+                                                                                    "promCode": {
+                                                                                        "type": "string"
+                                                                                    }
+                                                                                },
+                                                                                "required": [
+                                                                                    "promCode",
+                                                                                    "itemPromRegions",
+                                                                                    "itemPromPricing"
+                                                                                ],
+                                                                                "type": "object"
+                                                                            },
+                                                                            "type": "array"
+                                                                        }
+                                                                    },
+                                                                    "required": [
+                                                                        "itemID",
+                                                                        "itemPromChannels"
+                                                                    ],
+                                                                    "type": "object"
+                                                                },
+                                                                "type": "array"
+                                                            }
+                                                        },
+                                                        "required": [
+                                                            "event",
+                                                            "itemLists"
+                                                        ],
+                                                        "type": "object"
+                                                    },
+                                                    "type": "array"
+                                                }
+                                            },
+                                            "required": [
+                                                "_id",
+                                                "events"
+                                            ],
+                                            "type": "object"
+                                        },
+                                        "type": "array"
+                                    }
+                                },
+                                "runAfter": {},
+                                "type": "ParseJson"
+                            }
+                        },
+                        "else": {
+                            "actions": {
+                                "Set_isContinuedFlag-1": {
+                                    "inputs": {
+                                        "name": "isContinuedFlag",
+                                        "value": false
+                                    },
+                                    "runAfter": {},
+                                    "type": "SetVariable"
+                                }
+                            }
+                        },
+                        "expression": {
+                            "and": [
+                                {
+                                    "greater": [
+                                        "@length(outputs('Get_orderEvents_from_ESL')?['body'])",
+                                        0
+                                    ]
+                                }
+                            ]
+                        },
+                        "runAfter": {
+                            "Get_orderEvents_from_ESL": [
+                                "Succeeded"
+                            ]
+                        },
+                        "type": "If"
+                    },
+                    "ExeJavaScriptCode_getUnique_itemCode": {
+                        "inputs": {
+                            "code": "const orderLines = workflowContext.trigger.outputs.body.orderLines\r\n\r\nif (!Array.isArray(orderLines)) return []\r\nlet itemcodes = orderLines.map(item => item.itemCode)\r\nlet uniqueItemcodes = [... new Set(itemcodes)]\r\nreturn uniqueItemcodes"
+                        },
+                        "runAfter": {},
+                        "type": "JavaScriptCode"
+                    },
+                    "Get_orderEvents_from_ESL": {
+                        "description": "Condition to get data \n- targetBackend = catID\n- promotionId = event.eventPromChannelStores.orderSubmitPromID\n- storeNumber = event.eventPromChannelStores.storeList.storeID\n + The property \"visible\" corresponding to the storeID must be Y",
+                        "inputs": {
+                            "body": {
+                                "aggregate": [
+                                    {
+                                        "$match": {
+                                            "event.eventPromChannelStores.orderSubmitPromID": "@triggerBody()['promotionId']",
+                                            "event.eventPromChannelStores.storeList.storeID": "@triggerBody()['storeNumber']",
+                                            "event.eventPromChannelStores.storeList.visible": "Y",
+                                            "targetBackend": "@variables('targetBackend')"
+                                        }
+                                    },
+                                    {
+                                        "$project": {
+                                            "event.eventCode": 1,
+                                            "event.eventPromChannelStores.orderSubmitPromID": 1,
+                                            "event.eventPromChannelStores.promCode": 1,
+                                            "event.eventPromChannelStores.promPrefSeq": 1,
+                                            "event.eventPromChannelStores.storeList": 1,
+                                            "event.itemList.itemID": 1,
+                                            "event.itemList.itemPromChannels": 1,
+                                            "event.saleType": 1,
+                                            "orderCloseDate": 1,
+                                            "orderOpenDate": 1,
+                                            "targetBackend": 1
+                                        }
+                                    },
+                                    {
+                                        "$unwind": "$event"
+                                    },
+                                    {
+                                        "$unwind": "$event.eventPromChannelStores"
+                                    },
+                                    {
+                                        "$unwind": "$event.eventPromChannelStores.storeList"
+                                    },
+                                    {
+                                        "$match": {
+                                            "event.eventPromChannelStores.storeList.storeID": "@triggerBody()['storeNumber']",
+                                            "event.eventPromChannelStores.storeList.visible": "Y"
+                                        }
+                                    },
+                                    {
+                                        "$unwind": "$event.itemList"
+                                    },
+                                    {
+                                        "$match": {
+                                            "event.itemList.itemID": {
+                                                "$in": "@outputs('ExeJavaScriptCode_getUnique_itemCode')"
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "$project": {
+                                            "event.itemList.itemPromChannels.allocationRule": 0,
+                                            "event.itemList.itemPromChannels.catGroup": 0,
+                                            "event.itemList.itemPromChannels.catPage": 0,
+                                            "event.itemList.itemPromChannels.catSubGroup": 0,
+                                            "event.itemList.itemPromChannels.comments": 0,
+                                            "event.itemList.itemPromChannels.promProdNo": 0
+                                        }
+                                    },
+                                    {
+                                        "$group": {
+                                            "_id": {
+                                                "event": {
+                                                    "eventCode": "$event.eventCode",
+                                                    "eventPromChannelStores": "$event.eventPromChannelStores",
+                                                    "saleType": "$event.saleType"
+                                                },
+                                                "orderCloseDate": "$orderCloseDate",
+                                                "orderOpenDate": "$orderOpenDate",
+                                                "productId": "$_id",
+                                                "targetBackend": "$targetBackend"
+                                            },
+                                            "itemLists": {
+                                                "$push": {
+                                                    "itemID": "$event.itemList.itemID",
+                                                    "itemPromChannels": "$event.itemList.itemPromChannels"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "$group": {
+                                            "_id": {
+                                                "orderCloseDate": "$$ROOT._id.orderCloseDate",
+                                                "orderOpenDate": "$$ROOT._id.orderOpenDate",
+                                                "targetBackend": "$$ROOT._id.targetBackend"
+                                            },
+                                            "events": {
+                                                "$push": {
+                                                    "event": "$$ROOT._id.event",
+                                                    "itemLists": "$$ROOT.itemLists"
+                                                }
+                                            }
+                                        }
+                                    }
+                                ],
+                                "collection": "orderevents16",
+                                "database": "@{parameters('ESL_DB_NAME')}"
+                            },
+                            "function": {
+                                "connectionName": "azureFunctionOperation"
+                            },
+                            "method": "POST"
+                        },
+                        "runAfter": {
+                            "ExeJavaScriptCode_getUnique_itemCode": [
+                                "Succeeded"
+                            ]
+                        },
+                        "type": "Function"
+                    }
+                },
+                "runAfter": {
+                    "Initialize_SO_Content": [
+                        "Succeeded"
+                    ],
+                    "Initialize_orderLines_Array": [
+                        "Succeeded"
+                    ],
+                    "statusComment": [
+                        "Succeeded"
+                    ]
+                },
+                "type": "Scope"
+            },
+            "Send_message_to_promoValidator_service_bus_topic": {
+                "inputs": {
+                    "body": {
+                        "ContentData": "@{base64(concat('{','\n','    \"messageType\": \"file\",','\n','    \"targetBackend\": \"',variables('targetBackend'),'\",','\n','     \"contentSchemaVersion\": \"2022-11-23\",','\n','    \"url\": \"',body('Create_blob_promoSO_')?['Path'],'\"','\n','}'))}",
+                        "Properties": {
+                            "TargetBackend": "@variables('targetBackend')"
+                        },
+                        "SessionId": "@{guid()}"
+                    },
+                    "host": {
+                        "connection": {
+                            "referenceName": "servicebus_2"
+                        }
+                    },
+                    "method": "post",
+                    "path": "/@{encodeURIComponent(encodeURIComponent('ihg-so-in-promo-validator-as-topic'))}/messages",
+                    "queries": {
+                        "systemProperties": "None"
+                    }
+                },
+                "runAfter": {
+                    "Create_blob_promoSO_": [
+                        "Succeeded"
+                    ]
+                },
+                "type": "ApiConnection"
+            },
+            "isContinuedFlag": {
+                "inputs": {
+                    "variables": [
+                        {
+                            "name": "isContinuedFlag",
+                            "type": "boolean",
+                            "value": true
+                        }
+                    ]
+                },
+                "runAfter": {},
+                "type": "InitializeVariable"
+            },
+            "status": {
+                "inputs": {
+                    "variables": [
+                        {
+                            "name": "status",
+                            "type": "string"
+                        }
+                    ]
+                },
+                "runAfter": {},
+                "type": "InitializeVariable"
+            },
+            "statusComment": {
+                "inputs": {
+                    "variables": [
+                        {
+                            "name": "statusComment",
+                            "type": "string"
+                        }
+                    ]
+                },
+                "runAfter": {
+                    "status": [
+                        "Succeeded"
+                    ]
+                },
+                "type": "InitializeVariable"
+            },
+            "targetBackend": {
+                "inputs": {
+                    "variables": [
+                        {
+                            "name": "targetBackend",
+                            "type": "string",
+                            "value": "@triggerBody()?['targetBackend']"
+                        }
+                    ]
+                },
+                "runAfter": {},
+                "type": "InitializeVariable"
+            }
+        },
+        "contentVersion": "1.0.0.0",
+        "outputs": {},
+        "triggers": {
+            "manual": {
+                "inputs": {
+                    "schema": {
+                        "$schema": "https://json-schema.org/draft-04/schema#",
+                        "definitions": {
+                            "Document.Address": {
+                                "properties": {
+                                    "address": {
+                                        "type": [
+                                            "string",
+                                            "null"
+                                        ]
+                                    },
+                                    "city": {
+                                        "type": [
+                                            "string",
+                                            "null"
+                                        ]
+                                    },
+                                    "name": {
+                                        "type": [
+                                            "string",
+                                            "null"
+                                        ]
+                                    },
+                                    "postCode": {
+                                        "type": [
+                                            "string",
+                                            "null"
+                                        ]
+                                    },
+                                    "state": {
+                                        "type": [
+                                            "string",
+                                            "null"
+                                        ]
+                                    }
+                                },
+                                "type": "object"
+                            },
+                            "Document.OrderLines": {
+                                "properties": {
+                                    "aisle": {
+                                        "type": [
+                                            "string",
+                                            "null"
+                                        ]
+                                    },
+                                    "backOrderQty": {
+                                        "type": "number"
+                                    },
+                                    "backOrderRequired": {
+                                        "type": [
+                                            "string",
+                                            "null"
+                                        ]
+                                    },
+                                    "costAfterTax": {
+                                        "type": "number"
+                                    },
+                                    "costBeforeTax": {
+                                        "type": "number"
+                                    },
+                                    "createdTime": {
+                                        "type": [
+                                            "string",
+                                            "null"
+                                        ]
+                                    },
+                                    "createdUser": {
+                                        "type": [
+                                            "string",
+                                            "null"
+                                        ]
+                                    },
+                                    "customSrpIncTax": {
+                                        "type": "number"
+                                    },
+                                    "hazGoodInfo": {
+                                        "type": [
+                                            "string",
+                                            "null"
+                                        ]
+                                    },
+                                    "itemCode": {
+                                        "type": [
+                                            "string",
+                                            "null"
+                                        ]
+                                    },
+                                    "itemType": {
+                                        "type": [
+                                            "string",
+                                            "null"
+                                        ]
+                                    },
+                                    "kitGroupDescription": {
+                                        "type": [
+                                            "string",
+                                            "null"
+                                        ]
+                                    },
+                                    "kitGroupId": {
+                                        "type": [
+                                            "string",
+                                            "null"
+                                        ]
+                                    },
+                                    "kitLine": {
+                                        "type": [
+                                            "string",
+                                            "null"
+                                        ]
+                                    },
+                                    "kitParentId": {
+                                        "type": [
+                                            "string",
+                                            "null"
+                                        ]
+                                    },
+                                    "lineNo": {
+                                        "type": "number"
+                                    },
+                                    "marginManageFlag": {
+                                        "type": [
+                                            "string",
+                                            "null"
+                                        ]
+                                    },
+                                    "maxRetailFlag": {
+                                        "type": [
+                                            "string",
+                                            "null"
+                                        ]
+                                    },
+                                    "modifiedTime": {
+                                        "type": [
+                                            "string",
+                                            "null"
+                                        ]
+                                    },
+                                    "modifiedUser": {
+                                        "type": [
+                                            "string",
+                                            "null"
+                                        ]
+                                    },
+                                    "originalItem": {
+                                        "type": [
+                                            "string",
+                                            "null"
+                                        ]
+                                    },
+                                    "originalItemBar": {
+                                        "type": [
+                                            "string",
+                                            "null"
+                                        ]
+                                    },
+                                    "pickComment1": {
+                                        "type": [
+                                            "string",
+                                            "null"
+                                        ]
+                                    },
+                                    "pickComment2": {
+                                        "type": [
+                                            "string",
+                                            "null"
+                                        ]
+                                    },
+                                    "pickComment3": {
+                                        "type": [
+                                            "string",
+                                            "null"
+                                        ]
+                                    },
+                                    "pickComment4": {
+                                        "type": [
+                                            "string",
+                                            "null"
+                                        ]
+                                    },
+                                    "pickDate": {
+                                        "type": [
+                                            "string",
+                                            "null"
+                                        ]
+                                    },
+                                    "pickRequestNo": {
+                                        "type": [
+                                            "string",
+                                            "null"
+                                        ]
+                                    },
+                                    "pickUser": {
+                                        "type": [
+                                            "string",
+                                            "null"
+                                        ]
+                                    },
+                                    "pickedFlag": {
+                                        "type": [
+                                            "string",
+                                            "null"
+                                        ]
+                                    },
+                                    "pickingSortOrder": {
+                                        "type": "number"
+                                    },
+                                    "processingStatus": {
+                                        "type": [
+                                            "string",
+                                            "null"
+                                        ]
+                                    },
+                                    "processingStatusDescription": {
+                                        "type": [
+                                            "string",
+                                            "null"
+                                        ]
+                                    },
+                                    "productApn": {
+                                        "type": [
+                                            "string",
+                                            "null"
+                                        ]
+                                    },
+                                    "productCode": {
+                                        "type": "string"
+                                    },
+                                    "productCodeType": {
+                                        "type": "string"
+                                    },
+                                    "productDescription": {
+                                        "type": [
+                                            "string",
+                                            "null"
+                                        ]
+                                    },
+                                    "promSource": {
+                                        "type": [
+                                            "string",
+                                            "null"
+                                        ]
+                                    },
+                                    "promotion": {
+                                        "type": [
+                                            "string",
+                                            "null"
+                                        ]
+                                    },
+                                    "quantityAllocated": {
+                                        "type": "number"
+                                    },
+                                    "quantityCancelled": {
+                                        "type": "number"
+                                    },
+                                    "quantityOrdered": {
+                                        "type": "number"
+                                    },
+                                    "quantityOrderedAdjusted": {
+                                        "type": "number"
+                                    },
+                                    "quantityRemaining": {
+                                        "type": "number"
+                                    },
+                                    "recordType": {
+                                        "type": [
+                                            "string",
+                                            "null"
+                                        ]
+                                    },
+                                    "replacementSubstituteCode": {
+                                        "type": [
+                                            "string",
+                                            "null"
+                                        ]
+                                    },
+                                    "retailCompetitiveFlag": {
+                                        "type": [
+                                            "string",
+                                            "null"
+                                        ]
+                                    },
+                                    "retailUom": {
+                                        "type": [
+                                            "string",
+                                            "null"
+                                        ]
+                                    },
+                                    "retailUomConv": {
+                                        "type": "number"
+                                    },
+                                    "revisedListCost": {
+                                        "type": "number"
+                                    },
+                                    "salesLineId": {
+                                        "type": [
+                                            "string",
+                                            "null"
+                                        ]
+                                    },
+                                    "salesOrderId": {
+                                        "type": [
+                                            "string",
+                                            "null"
+                                        ]
+                                    },
+                                    "srpIncTax": {
+                                        "type": "number"
+                                    },
+                                    "status": {
+                                        "type": [
+                                            "string",
+                                            "null"
+                                        ]
+                                    },
+                                    "statusComment": {
+                                        "type": [
+                                            "string",
+                                            "null"
+                                        ]
+                                    },
+                                    "stockTypeFlags": {
+                                        "type": [
+                                            "string",
+                                            "null"
+                                        ]
+                                    },
+                                    "storeComment": {
+                                        "type": [
+                                            "string",
+                                            "null"
+                                        ]
+                                    },
+                                    "substituteCodeApn": {
+                                        "type": [
+                                            "string",
+                                            "null"
+                                        ]
+                                    },
+                                    "taxAmount": {
+                                        "type": "number"
+                                    },
+                                    "totalLinesAmountAfterTax": {
+                                        "type": "number"
+                                    },
+                                    "totalLinesAmountBeforeTax": {
+                                        "type": "number"
+                                    },
+                                    "totalPickedAmount": {
+                                        "type": "number"
+                                    },
+                                    "totalQuantityPicked": {
+                                        "type": "number"
+                                    },
+                                    "uom": {
+                                        "type": [
+                                            "string",
+                                            "null"
+                                        ]
+                                    },
+                                    "warehouseId": {
+                                        "type": [
+                                            "string",
+                                            "null"
+                                        ]
+                                    }
+                                },
+                                "required": [
+                                    "productCode",
+                                    "quantityOrdered",
+                                    "productCodeType"
+                                ],
+                                "type": "object"
+                            }
+                        },
+                        "description": "Common SO Schema Version 2022-11-23",
+                        "properties": {
+                            "backOrderRequired": {
+                                "type": [
+                                    "string",
+                                    "null"
+                                ]
+                            },
+                            "billingAddress": {
+                                "$ref": "#/definitions/Document.Address"
+                            },
+                            "building": {
+                                "type": [
+                                    "string",
+                                    "null"
+                                ]
+                            },
+                            "calculatedOrderType": {
+                                "type": [
+                                    "string",
+                                    "null"
+                                ]
+                            },
+                            "createdTime": {
+                                "type": "string"
+                            },
+                            "createdUser": {
+                                "type": [
+                                    "string",
+                                    "null"
+                                ]
+                            },
+                            "customerRunNo": {
+                                "type": [
+                                    "string",
+                                    "null"
+                                ]
+                            },
+                            "deliveryAddress": {
+                                "$ref": "#/definitions/Document.Address"
+                            },
+                            "despatchId": {
+                                "type": [
+                                    "string",
+                                    "null"
+                                ]
+                            },
+                            "docType": {
+                                "type": [
+                                    "string",
+                                    "null"
+                                ]
+                            },
+                            "fileLayout": {
+                                "type": [
+                                    "string",
+                                    "null"
+                                ]
+                            },
+                            "grandTotal": {
+                                "type": "number"
+                            },
+                            "identity": {
+                                "type": [
+                                    "string",
+                                    "null"
+                                ]
+                            },
+                            "lastFinaliseUser": {
+                                "type": [
+                                    "string",
+                                    "null"
+                                ]
+                            },
+                            "modifiedTime": {
+                                "type": [
+                                    "string",
+                                    "null"
+                                ]
+                            },
+                            "modifiedUser": {
+                                "type": [
+                                    "string",
+                                    "null"
+                                ]
+                            },
+                            "mspSupplierNumber": {
+                                "type": [
+                                    "string",
+                                    "null"
+                                ]
+                            },
+                            "notAfterDate": {
+                                "type": [
+                                    "string",
+                                    "null"
+                                ]
+                            },
+                            "omsTransNumber": {
+                                "type": [
+                                    "string",
+                                    "null"
+                                ]
+                            },
+                            "orderFileName": {
+                                "type": [
+                                    "string",
+                                    "null"
+                                ]
+                            },
+                            "orderLines": {
+                                "items": {
+                                    "$ref": "#/definitions/Document.OrderLines"
+                                },
+                                "minItems": 0,
+                                "type": "array"
+                            },
+                            "orderLocked": {
+                                "type": [
+                                    "string",
+                                    "null"
+                                ]
+                            },
+                            "orderRequestId": {
+                                "type": [
+                                    "string",
+                                    "null"
+                                ]
+                            },
+                            "orderType": {
+                                "type": [
+                                    "string",
+                                    "null"
+                                ]
+                            },
+                            "pdeSerialNumber": {
+                                "type": [
+                                    "string",
+                                    "null"
+                                ]
+                            },
+                            "pickComment1": {
+                                "type": [
+                                    "string",
+                                    "null"
+                                ]
+                            },
+                            "pickComment2": {
+                                "type": [
+                                    "string",
+                                    "null"
+                                ]
+                            },
+                            "pickComment3": {
+                                "type": [
+                                    "string",
+                                    "null"
+                                ]
+                            },
+                            "pickComment4": {
+                                "type": [
+                                    "string",
+                                    "null"
+                                ]
+                            },
+                            "processedDate": {
+                                "type": [
+                                    "string",
+                                    "null"
+                                ]
+                            },
+                            "processingStatus": {
+                                "type": [
+                                    "string",
+                                    "null"
+                                ]
+                            },
+                            "processingStatusDescription": {
+                                "type": [
+                                    "string",
+                                    "null"
+                                ]
+                            },
+                            "promCode": {
+                                "type": [
+                                    "string",
+                                    "null"
+                                ]
+                            },
+                            "promotionId": {
+                                "type": [
+                                    "string",
+                                    "null"
+                                ]
+                            },
+                            "recordType": {
+                                "type": [
+                                    "string",
+                                    "null"
+                                ]
+                            },
+                            "referenceOrderId": {
+                                "type": "string"
+                            },
+                            "requiredDate": {
+                                "type": [
+                                    "string",
+                                    "null"
+                                ]
+                            },
+                            "salesOrderId": {
+                                "type": [
+                                    "string",
+                                    "null"
+                                ]
+                            },
+                            "site": {
+                                "type": [
+                                    "string",
+                                    "null"
+                                ]
+                            },
+                            "sourceSystem": {
+                                "type": [
+                                    "string",
+                                    "null"
+                                ]
+                            },
+                            "specialInstructions": {
+                                "type": [
+                                    "string",
+                                    "null"
+                                ]
+                            },
+                            "status": {
+                                "type": [
+                                    "string",
+                                    "null"
+                                ]
+                            },
+                            "statusComment": {
+                                "type": [
+                                    "string",
+                                    "null"
+                                ]
+                            },
+                            "storeComment": {
+                                "type": [
+                                    "string",
+                                    "null"
+                                ]
+                            },
+                            "storeNumber": {
+                                "type": "string"
+                            },
+                            "subTotal": {
+                                "type": "number"
+                            },
+                            "targetBackend": {
+                                "type": [
+                                    "string",
+                                    "null"
+                                ]
+                            },
+                            "totalLines": {
+                                "type": "number"
+                            },
+                            "totalTaxAmount": {
+                                "type": "number"
+                            },
+                            "urgent": {
+                                "type": [
+                                    "string",
+                                    "null"
+                                ]
+                            }
+                        },
+                        "required": [
+                            "referenceOrderId",
+                            "storeNumber",
+                            "createdTime"
+                        ],
+                        "type": "object"
+                    }
+                },
+                "kind": "Http",
+                "type": "Request"
+            }
+        }
+    },
+    "kind": "Stateful"
+}
