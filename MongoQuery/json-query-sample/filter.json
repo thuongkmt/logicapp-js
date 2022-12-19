@@ -1,0 +1,11 @@
+{
+  "collection": "stores",
+  "database": "@{parameters('ESL_DB_NAME')}",
+  "filter": {
+    "id": @{triggerBody()?['storeNumber']}
+  },
+  "project": {
+    "promPriceLUKey": 1,
+    "promRegion": 1
+  }
+}

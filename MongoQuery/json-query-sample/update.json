@@ -1,0 +1,17 @@
+{
+    "database":"reporting",
+    "collection":"staging",
+    "filter": {
+        "_id": {
+            "$in": ["63982c08510191ece582debe", "63984ee8510191ece582dec2"]
+        },
+        "idtype":"ObjectId"
+    },
+    "aggregate": [
+        {
+            "$set": {
+                "processing": 3
+            }
+        }
+    ]
+}
