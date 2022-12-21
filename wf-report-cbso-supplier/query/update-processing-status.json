@@ -1,15 +1,17 @@
 {
-    "database":"reporting",
-    "collection":"staging",
-    "filter": {
-        "processing": 0,
-        "orderType": "CNC"
-    },
     "aggregate": [
-        {
-            "$set": {
-                "processing": 1
-            }
+      {
+        "$set": {
+          "processing": 1
         }
-    ]
-}
+      }
+    ],
+    "collection": "staging",
+    "database": "@{parameters('ESL_DB_REPORTING')}",
+    "filter": {
+      "_id": {
+              "$in": @{outputs('ExeJavaScriptCode_Get_All_Ids')}
+          },
+          "idtype":"ObjectId"
+    }
+  }
