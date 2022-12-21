@@ -6,9 +6,24 @@ db.getCollection("staging").aggregate([
         }
     },
     {
+        "$addFields": {
+            "totalValueExcGSTRaw": {
+                "$multiply":["$orderBTax", "$qtyOrdered"]
+            }
+        }
+    },
+    {
+        "$addFields": {
+            "totalValueExcGST": {
+                "$trunc":["$totalValueExcGSTRaw", 2]
+            }
+        }
+    },
+    {
         "$group": {
             "_id": {
                 "eventCode": "$eventCode",
+                "orderType": "$orderType",
                 "primarySupplier": "$primarySupplier",
                 "cbState": "$cbState",
                 "storeNumber": "$storeNumber",
@@ -23,6 +38,7 @@ db.getCollection("staging").aggregate([
         "$group": {
             "_id": {
                 "eventCode": "$_id.eventCode",
+                "orderType": "$_id.orderType",
                 "primarySupplier": "$_id.primarySupplier",
                 "cbState": "$_id.cbState",
                 "storeNumber": "$_id.storeNumber"
@@ -39,6 +55,7 @@ db.getCollection("staging").aggregate([
         "$group":{
             "_id": {
                 "eventCode": "$_id.eventCode",
+                "orderType": "$_id.orderType",
                 "primarySupplier": "$_id.primarySupplier",
                 "cbState": "$_id.cbState"
             },
@@ -61,8 +78,7 @@ db.getCollection("staging").aggregate([
             "data.stores.storeNumberGroup.storeBrand": 0,
             "data.stores.storeNumberGroup.cbState": 0,
             "data.stores.storeNumberGroup.skuCategory": 0,
-            "data.stores.storeNumberGroup.consolidationDate": 0,
-            "data.stores.storeNumberGroup.suppMinOrd": 0        
+            "data.stores.storeNumberGroup.suppMinOrd": 0    
         }
     }
 ])
