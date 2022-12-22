@@ -62,7 +62,7 @@ db.getCollection("staging").aggregate([
             "poNumberGroups":{
                 "$addToSet": {
                     "poNumber": "$_id.poNumber",
-                    "storeNumberGroup": "$storeNumberGroups"
+                    "poNumberGroups": "$storeNumberGroups"
                 }
             }
         }
