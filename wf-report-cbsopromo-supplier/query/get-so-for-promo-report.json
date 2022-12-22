@@ -1,0 +1,104 @@
+{
+    "aggregate": [
+        {
+            "$match": {
+                "processing": 0,
+                "orderType": "Promo"
+            }
+        },
+        {
+            "$addFields": {
+                "consolidationDateString": {
+                    "$substr": [ "$consolidationDate", 0, 10 ]
+                }
+            }
+        },
+        {
+            "$match":{
+                "$and": [
+                    {"consolidationDateString": {"$eq": "2022-12-22"}}
+                ]
+            }
+        },
+        {
+            "$addFields": {
+                "totalValueExcGSTRaw": {
+                    "$multiply":["$orderBTax", "$qtyOrdered"]
+                }
+            }
+        },
+        {
+            "$addFields": {
+                "totalValueExcGST": {
+                    "$trunc":["$totalValueExcGSTRaw", 2]
+                }
+            }
+        },
+        {
+            "$group": {
+                "_id": {
+                    "consolidationDateString": "$consolidationDateString",
+                    "eventCode": "$eventCode",
+                    "orderType": "$orderType",
+                    "primarySupplier": "$primarySupplier",
+                    "cbState": "$cbState",
+                    "storeNumber": "$storeNumber",
+                    "poNumber": "$poNumber"
+                },
+                "storeNumberGroups": {
+                    "$push": "$$ROOT"
+                }
+            }
+        },
+        {
+            "$group": {
+                "_id": {
+                    "consolidationDateString": "$_id.consolidationDateString",
+                    "eventCode": "$_id.eventCode",
+                    "orderType": "$_id.orderType",
+                    "primarySupplier": "$_id.primarySupplier",
+                    "cbState": "$_id.cbState",
+                    "storeNumber": "$_id.storeNumber"
+                },
+                "poNumberGroups":{
+                    "$addToSet": {
+                        "poNumber": "$_id.poNumber",
+                        "storeNumberGroup": "$storeNumberGroups"
+                    }
+                }
+            }
+        },
+        {
+            "$group":{
+                "_id": {
+                    "consolidationDateString": "$_id.consolidationDateString",
+                    "eventCode": "$_id.eventCode",
+                    "orderType": "$_id.orderType",
+                    "primarySupplier": "$_id.primarySupplier",
+                    "cbState": "$_id.cbState"
+                },
+                "stores":{
+                    "$addToSet": {
+                        "storeNumber": "$_id.storeNumber",
+                        "storeNumberGroups": "$poNumberGroups"
+                    }
+                }
+            }
+        },
+        {
+            "$project":{
+                "stores.storeNumberGroups.poNumberGroups.orderCreated": 0,
+                "stores.storeNumberGroups.poNumberGroups.productSEQ": 0,
+                "stores.storeNumberGroups.poNumberGroups.itemCode": 0,
+                "stores.storeNumberGroups.poNumberGroups.inserted": 0,
+                "stores.storeNumberGroups.poNumberGroups.storePCode": 0,
+                "stores.storeNumberGroups.poNumberGroups.storeBrand": 0,
+                "stores.storeNumberGroups.poNumberGroups.cbState": 0,
+                "stores.storeNumberGroups.poNumberGroups.skuCategory": 0,
+                "stores.storeNumberGroups.poNumberGroups.suppMinOrd": 0    
+            }
+        }
+    ],
+    "collection": "staging",
+    "database": "@{parameters('ESL_DB_REPORTING')}"
+}

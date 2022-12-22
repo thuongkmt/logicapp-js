@@ -44,7 +44,7 @@ db.getCollection("staging").aggregate([
                 "storeNumber": "$storeNumber",
                 "poNumber": "$poNumber"
             },
-            "stores": {
+            "storeNumberGroups": {
                 "$push": "$$ROOT"
             }
         }
@@ -59,10 +59,10 @@ db.getCollection("staging").aggregate([
                 "cbState": "$_id.cbState",
                 "storeNumber": "$_id.storeNumber"
             },
-            "storeNumberGroups":{
+            "poNumberGroups":{
                 "$addToSet": {
                     "poNumber": "$_id.poNumber",
-                    "storeNumberGroup": "$stores"
+                    "storeNumberGroup": "$storeNumberGroups"
                 }
             }
         }
@@ -76,26 +76,25 @@ db.getCollection("staging").aggregate([
                 "primarySupplier": "$_id.primarySupplier",
                 "cbState": "$_id.cbState"
             },
-            "data":{
+            "stores":{
                 "$addToSet": {
                     "storeNumber": "$_id.storeNumber",
-                    "stores": "$storeNumberGroups"
+                    "storeNumberGroups": "$poNumberGroups"
                 }
             }
         }
     },
     {
         "$project":{
-            "data.stores.storeNumberGroup.orderCreated": 0,
-            "data.stores.storeNumberGroup.productSEQ": 0,
-            "data.stores.storeNumberGroup.itemCode": 0,
-            "data.stores.storeNumberGroup.orderCreated": 0,
-            "data.stores.storeNumberGroup.inserted": 0,
-            "data.stores.storeNumberGroup.storePCode": 0,
-            "data.stores.storeNumberGroup.storeBrand": 0,
-            "data.stores.storeNumberGroup.cbState": 0,
-            "data.stores.storeNumberGroup.skuCategory": 0,
-            "data.stores.storeNumberGroup.suppMinOrd": 0    
+            "stores.storeNumberGroups.poNumberGroups.orderCreated": 0,
+            "stores.storeNumberGroups.poNumberGroups.productSEQ": 0,
+            "stores.storeNumberGroups.poNumberGroups.itemCode": 0,
+            "stores.storeNumberGroups.poNumberGroups.inserted": 0,
+            "stores.storeNumberGroups.poNumberGroups.storePCode": 0,
+            "stores.storeNumberGroups.poNumberGroups.storeBrand": 0,
+            "stores.storeNumberGroups.poNumberGroups.cbState": 0,
+            "stores.storeNumberGroups.poNumberGroups.skuCategory": 0,
+            "stores.storeNumberGroups.poNumberGroups.suppMinOrd": 0    
         }
     }
 ])
