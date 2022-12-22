@@ -7,24 +7,22 @@ db.getCollection("staging").aggregate([
     },
     {
         "$addFields": {
-            "consolidationDate": {
-                "$toLong": {
-                    "$toDate": "$consolidationDate"
-                }
+            "consolidationDateString": {
+                "$substr": [ "$consolidationDate", 0, 10 ]
             }
         }
     },
     {
         "$match":{
             "$and": [
-                {"consolidationDate": {"$gt": 1661436900000}}, 
-                {"consolidationDate": {"$lt": 1661609700000}}
+                {"consolidationDateString": {"$eq": "2022-08-26"}}, 
             ]
         }
     },
     {
-        "$project":{
-            "consolidationDate": 1
+        "$group": {
+            "_id": "$consolidationDateString",
+            "myCount": {"$sum": 1}
         }
     }
 ])
