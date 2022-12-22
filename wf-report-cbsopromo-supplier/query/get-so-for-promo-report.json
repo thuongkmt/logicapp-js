@@ -16,7 +16,7 @@
         {
             "$match":{
                 "$and": [
-                    {"consolidationDateString": {"$eq": "2022-12-22"}}
+                    {"consolidationDateString": {"$eq": @{variables('currentDate')}}}
                 ]
             }
         },
