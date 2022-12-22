@@ -1,0 +1,32 @@
+{
+    "aggregate": [
+        {
+            "$match":{
+                "orderType":"Promo",
+                "processing": 0
+            }
+        },
+        {
+            "$addFields": {
+                "consolidationDateString": {
+                    "$substr": [ "$consolidationDate", 0, 10 ]
+                }
+            }
+        },
+        {
+            "$match":{
+                "$and": [
+                    {"consolidationDateString": {"$eq": @{variables('currentDate')}}}
+                ]
+            }
+        },
+        {
+            "$group": {
+                "_id": "$consolidationDateString",
+                "myCount": {"$sum": 1}
+            }
+        }
+    ],
+    "database":@{parameters('ESL_DB_REPORTING')},
+    "collection": "staging"
+}

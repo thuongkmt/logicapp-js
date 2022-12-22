@@ -7,6 +7,20 @@ db.getCollection("staging").aggregate([
     },
     {
         "$addFields": {
+            "consolidationDateString": {
+                "$substr": [ "$consolidationDate", 0, 10 ]
+            }
+        }
+    },
+    {
+        "$match":{
+            "$and": [
+                {"consolidationDateString": {"$eq": "2022-12-22"}}, 
+            ]
+        }
+    },
+    {
+        "$addFields": {
             "totalValueExcGSTRaw": {
                 "$multiply":["$orderBTax", "$qtyOrdered"]
             }
@@ -22,6 +36,7 @@ db.getCollection("staging").aggregate([
     {
         "$group": {
             "_id": {
+                "consolidationDateString": "$consolidationDateString",
                 "eventCode": "$eventCode",
                 "orderType": "$orderType",
                 "primarySupplier": "$primarySupplier",
@@ -37,6 +52,7 @@ db.getCollection("staging").aggregate([
     {
         "$group": {
             "_id": {
+                "consolidationDateString": "$_id.consolidationDateString",
                 "eventCode": "$_id.eventCode",
                 "orderType": "$_id.orderType",
                 "primarySupplier": "$_id.primarySupplier",
@@ -54,6 +70,7 @@ db.getCollection("staging").aggregate([
     {
         "$group":{
             "_id": {
+                "consolidationDateString": "$_id.consolidationDateString",
                 "eventCode": "$_id.eventCode",
                 "orderType": "$_id.orderType",
                 "primarySupplier": "$_id.primarySupplier",

@@ -1,12 +1,11 @@
 db.getCollection("staging").updateMany(
     {
-        "_id": {
-            "$in": [{$toObjectId: "63982c08510191ece582debe"}]
-        }
+        "orderType": "Promo",
+        "consolidationDate":"2022-08-26T14:15:00.000Z"
     },
     {
         "$set": {
-            "processing": 3
+            "consolidationDate": "2022-12-22T14:15:00.000Z"
         }
     }
 )
