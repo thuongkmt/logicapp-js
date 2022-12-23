@@ -2,3 +2,7 @@
 1. data-test-kit/multi-cnc-suppler.json file: the result of getting Data For Report (get all the suppliers)
 2. data-test-kit/current-cnc-supplier.json file: the item of certain supplier of above
 3. data-test-kit/cnc-supplier-summary.json file: the summary for reporting for each corresponding supplier 
+
+
+
+# this module and wf-report-cbsopromo-supplier as the same logic
