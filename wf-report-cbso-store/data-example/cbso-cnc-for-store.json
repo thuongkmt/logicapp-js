@@ -1,0 +1,329 @@
+{
+    "_id" : {
+        "orderType" : "CNC",
+        "cbState" : "VIC",
+        "storeNumber" : "939256"
+    },
+    "primarySupplierGroups" : [
+        {
+            "primarySupplier" : "1133",
+            "primarySupplierGroups" : [
+                {
+                    "poNumber" : "CNC5056trang1",
+                    "poNumberGroups" : [
+                        {
+                            "_id" : "63982c08510191ece582debe",
+                            "poNumber" : "CNC5056trang1",
+                            "orderType" : "CNC",
+                            "storeNumber" : "939256",
+                            "productSEQ" : 1,
+                            "promId" : "",
+                            "upc" : "3165140666572",
+                            "itemCode" : "2989564",
+                            "skuDesc" : "",
+                            "orderBTax" : 610.86,
+                            "qtyOrdered" : 1,
+                            "processing" : 1,
+                            "storeName" : "Terang Co-Op Mitre 10",
+                            "primarySupplier" : "1133",
+                            "supName" : "Robert Bosch (Aust Pty Ltd",
+                            "contactPhone" : "1300 369 744",
+                            "vpn" : "0.600.803.240",
+                            "eventCode" : "",
+                            "eventDesc" : "",
+                            "notBeforeDate" : "",
+                            "notAfterDate" : "",
+                            "docNo" : 10000007
+                        }
+                    ]
+                },
+                {
+                    "poNumber" : "CNC5057trang3",
+                    "poNumberGroups" : [
+                        {
+                            "_id" : "6398506b510191ece582dec5",
+                            "poNumber" : "CNC5057trang3",
+                            "orderType" : "CNC",
+                            "storeNumber" : "939256",
+                            "productSEQ" : 1,
+                            "promId" : "",
+                            "upc" : "3165140666572",
+                            "itemCode" : "2989564",
+                            "skuDesc" : "Bosch Turbine Shredder AXT 23 TC",
+                            "orderBTax" : 610.86,
+                            "qtyOrdered" : 13,
+                            "processing" : 1,
+                            "processedDate" : "",
+                            "docNo" : 10000007,
+                            "storeName" : "Terang Co-Op Mitre 10",
+                            "primarySupplier" : "1133",
+                            "supName" : "Robert Bosch (Aust Pty Ltd",
+                            "contactPhone" : "1300 369 744",
+                            "vpn" : "0.600.803.240",
+                            "eventCode" : "",
+                            "eventDesc" : "",
+                            "notBeforeDate" : "",
+                            "notAfterDate" : ""
+                        }
+                    ]
+                },
+                {
+                    "poNumber" : "CNC5061trang1",
+                    "poNumberGroups" : [
+                        {
+                            "_id" : "63a034e3d757afcd3241f7fc",
+                            "poNumber" : "CNC5061trang1",
+                            "orderType" : "CNC",
+                            "storeNumber" : "939256",
+                            "promId" : "",
+                            "productSEQ" : 1,
+                            "upc" : "3165140666572",
+                            "itemCode" : "2989564",
+                            "orderBTax" : 610.86,
+                            "qtyOrdered" : 13,
+                            "processing" : 1,
+                            "processedDate" : "",
+                            "docNo" : 10000007,
+                            "storeName" : "Terang Co-Op Mitre 10",
+                            "primarySupplier" : "1133",
+                            "supName" : "Robert Bosch (Aust Pty Ltd",
+                            "contactPhone" : "1300 369 744",
+                            "vpn" : "0.600.803.240",
+                            "eventCode" : "",
+                            "eventDesc" : "",
+                            "notBeforeDate" : "",
+                            "notAfterDate" : ""
+                        }
+                    ]
+                },
+                {
+                    "poNumber" : "CNC5061trang2",
+                    "poNumberGroups" : [
+                        {
+                            "_id" : "63a04d5cd757afcd3241f81b",
+                            "poNumber" : "CNC5061trang2",
+                            "orderType" : "CNC",
+                            "storeNumber" : "939256",
+                            "promId" : "",
+                            "productSEQ" : 1,
+                            "upc" : "3165140666572",
+                            "itemCode" : "2989564",
+                            "orderBTax" : 610.86,
+                            "qtyOrdered" : 13,
+                            "processing" : 1,
+                            "processedDate" : "",
+                            "docNo" : 10000007,
+                            "storeName" : "Terang Co-Op Mitre 10",
+                            "primarySupplier" : "1133",
+                            "supName" : "Robert Bosch (Aust Pty Ltd",
+                            "contactPhone" : "1300 369 744",
+                            "skuDesc" : "Bosch Turbine Shredder AXT 23 TC",
+                            "vpn" : "0.600.803.240",
+                            "eventCode" : "",
+                            "eventDesc" : "",
+                            "notBeforeDate" : "",
+                            "notAfterDate" : ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "primarySupplier" : "3958",
+            "primarySupplierGroups" : [
+                {
+                    "poNumber" : "CNC5056trang1",
+                    "poNumberGroups" : [
+                        {
+                            "_id" : "63982c08510191ece582debf",
+                            "poNumber" : "CNC5056trang1",
+                            "orderType" : "CNC",
+                            "storeNumber" : "939256",
+                            "productSEQ" : 3,
+                            "promId" : "",
+                            "upc" : "088381961530",
+                            "itemCode" : "5132006",
+                            "skuDesc" : "Disc Sander White 100G 125mm Pk10 P-33370",
+                            "orderBTax" : 5.16,
+                            "qtyOrdered" : 2,
+                            "processing" : 1,
+                            "storeName" : "Terang Co-Op Mitre 10",
+                            "primarySupplier" : "3958",
+                            "supName" : "Makita (Australia Pty Ltd 3958",
+                            "contactPhone" : "1300 361 690",
+                            "vpn" : "P-33370",
+                            "eventCode" : "",
+                            "eventDesc" : "",
+                            "notBeforeDate" : "",
+                            "notAfterDate" : "",
+                            "docNo" : 10000008
+                        }
+                    ]
+                },
+                {
+                    "poNumber" : "CNC5057trang3",
+                    "poNumberGroups" : [
+                        {
+                            "_id" : "6398506b510191ece582dec6",
+                            "poNumber" : "CNC5057trang3",
+                            "orderType" : "CNC",
+                            "storeNumber" : "939256",
+                            "productSEQ" : 2,
+                            "promId" : "",
+                            "upc" : "088381961530",
+                            "itemCode" : "5132006",
+                            "skuDesc" : "Disc Sander White 100G 125mm Pk10 P-33370",
+                            "orderBTax" : 5.16,
+                            "qtyOrdered" : 2,
+                            "processing" : 1,
+                            "processedDate" : "",
+                            "docNo" : 10000008,
+                            "storeName" : "Terang Co-Op Mitre 10",
+                            "primarySupplier" : "3958",
+                            "supName" : "Makita (Australia Pty Ltd 3958",
+                            "contactPhone" : "1300 361 690",
+                            "vpn" : "P-33370",
+                            "eventCode" : "",
+                            "eventDesc" : "",
+                            "notBeforeDate" : "",
+                            "notAfterDate" : ""
+                        },
+                        {
+                            "_id" : "6398506b510191ece582dec7",
+                            "poNumber" : "CNC5057trang3",
+                            "orderType" : "CNC",
+                            "storeNumber" : "939256",
+                            "productSEQ" : 3,
+                            "promId" : "",
+                            "upc" : "088381872423",
+                            "itemCode" : "6172621",
+                            "skuDesc" : "Combo Kit 2Pce 12V Max CLX224",
+                            "orderBTax" : 176.5,
+                            "qtyOrdered" : 4,
+                            "processing" : 1,
+                            "processedDate" : "",
+                            "docNo" : 10000008,
+                            "storeName" : "Terang Co-Op Mitre 10",
+                            "primarySupplier" : "3958",
+                            "supName" : "Makita (Australia Pty Ltd 3958",
+                            "contactPhone" : "1300 361 690",
+                            "vpn" : "CLX224",
+                            "eventCode" : "",
+                            "eventDesc" : "",
+                            "notBeforeDate" : "",
+                            "notAfterDate" : ""
+                        }
+                    ]
+                },
+                {
+                    "poNumber" : "CNC5061trang1",
+                    "poNumberGroups" : [
+                        {
+                            "_id" : "63a034e3d757afcd3241f7fd",
+                            "poNumber" : "CNC5061trang1",
+                            "orderType" : "CNC",
+                            "storeNumber" : "939256",
+                            "promId" : "",
+                            "productSEQ" : 3,
+                            "upc" : "088381961530",
+                            "itemCode" : "5132006",
+                            "orderBTax" : 5.16,
+                            "qtyOrdered" : 2,
+                            "processing" : 1,
+                            "processedDate" : "",
+                            "docNo" : 10000008,
+                            "storeName" : "Terang Co-Op Mitre 10",
+                            "primarySupplier" : "3958",
+                            "supName" : "Makita (Australia Pty Ltd 3958",
+                            "contactPhone" : "1300 361 690",
+                            "vpn" : "P-33370",
+                            "eventCode" : "",
+                            "eventDesc" : "",
+                            "notBeforeDate" : "",
+                            "notAfterDate" : ""
+                        },
+                        {
+                            "_id" : "63a034e3d757afcd3241f7fe",
+                            "poNumber" : "CNC5061trang1",
+                            "orderType" : "CNC",
+                            "storeNumber" : "939256",
+                            "promId" : "",
+                            "productSEQ" : 4,
+                            "upc" : "088381872423",
+                            "itemCode" : "6172621",
+                            "orderBTax" : 176.5,
+                            "qtyOrdered" : 4,
+                            "processing" : 1,
+                            "processedDate" : "",
+                            "docNo" : 10000008,
+                            "storeName" : "Terang Co-Op Mitre 10",
+                            "primarySupplier" : "3958",
+                            "supName" : "Makita (Australia Pty Ltd 3958",
+                            "contactPhone" : "1300 361 690",
+                            "vpn" : "CLX224",
+                            "eventCode" : "",
+                            "eventDesc" : "",
+                            "notBeforeDate" : "",
+                            "notAfterDate" : ""
+                        }
+                    ]
+                },
+                {
+                    "poNumber" : "CNC5061trang2",
+                    "poNumberGroups" : [
+                        {
+                            "_id" : "63a04d5cd757afcd3241f81c",
+                            "poNumber" : "CNC5061trang2",
+                            "orderType" : "CNC",
+                            "storeNumber" : "939256",
+                            "promId" : "",
+                            "productSEQ" : 3,
+                            "upc" : "088381961530",
+                            "itemCode" : "5132006",
+                            "orderBTax" : 5.16,
+                            "qtyOrdered" : 2,
+                            "processing" : 1,
+                            "processedDate" : "",
+                            "docNo" : 10000008,
+                            "storeName" : "Terang Co-Op Mitre 10",
+                            "primarySupplier" : "3958",
+                            "supName" : "Makita (Australia Pty Ltd 3958",
+                            "contactPhone" : "1300 361 690",
+                            "skuDesc" : "Disc Sander White 100G 125mm Pk10 P-33370",
+                            "vpn" : "P-33370",
+                            "eventCode" : "",
+                            "eventDesc" : "",
+                            "notBeforeDate" : "",
+                            "notAfterDate" : ""
+                        },
+                        {
+                            "_id" : "63a04d5cd757afcd3241f81d",
+                            "poNumber" : "CNC5061trang2",
+                            "orderType" : "CNC",
+                            "storeNumber" : "939256",
+                            "promId" : "",
+                            "productSEQ" : 4,
+                            "upc" : "088381872423",
+                            "itemCode" : "6172621",
+                            "orderBTax" : 176.5,
+                            "qtyOrdered" : 4,
+                            "processing" : 1,
+                            "processedDate" : "",
+                            "docNo" : 10000008,
+                            "storeName" : "Terang Co-Op Mitre 10",
+                            "primarySupplier" : "3958",
+                            "supName" : "Makita (Australia Pty Ltd 3958",
+                            "contactPhone" : "1300 361 690",
+                            "skuDesc" : "Combo Kit 2Pce 12V Max CLX224",
+                            "vpn" : "CLX224",
+                            "eventCode" : "",
+                            "eventDesc" : "",
+                            "notBeforeDate" : "",
+                            "notAfterDate" : ""
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
