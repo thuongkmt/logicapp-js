@@ -11,9 +11,9 @@ db.getCollection("staging").aggregate([
         "$group": {
             "_id": {
                 "orderType": "$orderType",
+                "cbState": "$cbState",
                 "storeNumber": "$storeNumber",
                 "primarySupplier": "$primarySupplier",
-                "cbState": "$cbState",
                 "poNumber": "$poNumber"
             },
             "primarySuppliers": {
@@ -25,8 +25,8 @@ db.getCollection("staging").aggregate([
         "$group": {
              "_id": {
                 "orderType": "$_id.orderType",
-                "storeNumber": "$_id.storeNumber",
                 "cbState": "$_id.cbState",
+                "storeNumber": "$_id.storeNumber",
                 "primarySupplier": "$_id.primarySupplier"
             },
             "poNumberGroups": {
@@ -41,9 +41,8 @@ db.getCollection("staging").aggregate([
         "$group": {
             "_id": {
                 "orderType": "$_id.orderType",
-                "storeNumber": "$_id.storeNumber",
                 "cbState": "$_id.cbState",
-                
+                "storeNumber": "$_id.storeNumber"
             },
             "primarySupplierGroups": {
                 "$addToSet": {
@@ -51,6 +50,26 @@ db.getCollection("staging").aggregate([
                     "primarySupplierGroups": "$poNumberGroups"
                 }
             }
+        }
+    },
+    {
+        "$project": {
+            "primarySupplierGroups.primarySupplierGroups.poNumberGroups.orderCreated": 0,
+            "primarySupplierGroups.primarySupplierGroups.poNumberGroups.extendedValue": 0,
+            "primarySupplierGroups.primarySupplierGroups.poNumberGroups.uom": 0,
+            "primarySupplierGroups.primarySupplierGroups.poNumberGroups.inserted": 0,
+            "primarySupplierGroups.primarySupplierGroups.poNumberGroups.storeAdd1": 0,
+            "primarySupplierGroups.primarySupplierGroups.poNumberGroups.storeAdd2": 0,
+            "primarySupplierGroups.primarySupplierGroups.poNumberGroups.storeCity": 0,
+            "primarySupplierGroups.primarySupplierGroups.poNumberGroups.state": 0,
+            "primarySupplierGroups.primarySupplierGroups.poNumberGroups.storePCode": 0,
+            "primarySupplierGroups.primarySupplierGroups.poNumberGroups.storeBrand": 0,
+            "primarySupplierGroups.primarySupplierGroups.poNumberGroups.cbState": 0,
+            "primarySupplierGroups.primarySupplierGroups.poNumberGroups.contactName": 0,
+            "primarySupplierGroups.primarySupplierGroups.poNumberGroups.contactEmail": 0,
+            "primarySupplierGroups.primarySupplierGroups.poNumberGroups.skuCategory": 0,
+            "primarySupplierGroups.primarySupplierGroups.poNumberGroups.consolidationDate": 0,
+            "primarySupplierGroups.primarySupplierGroups.poNumberGroups.suppMinOrd": 0
         }
     }
 ])
