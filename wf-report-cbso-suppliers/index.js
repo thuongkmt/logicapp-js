@@ -14,10 +14,15 @@ fs.readFile('./data-test-kit/current-cnc-supplier.json','utf8',(error, data) => 
 
         //START PROCESSING
         let report = {
-            _id: reportData._id,
-            stores: reportData.stores,
-            summary: reportSummaryData.summary
+            data: {
+                _id: reportData._id,
+                stores: reportData.stores,
+                summary: reportSummaryData.summary
+            },
+            headerKey: "charge-back-header",
+            bodyKey: "charge-back-body"
         }
+
         //END PROCESSING
 
         fs.writeFile('./data-result/cnc-report.json', JSON.stringify(report),(error) => {
