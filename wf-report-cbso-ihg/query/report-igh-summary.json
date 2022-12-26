@@ -1,4 +1,5 @@
-db.getCollection("staging").aggregate([
+{
+    "aggregate": [
         {
             "$match": {
                 "orderType": "CNC",
@@ -55,4 +56,7 @@ db.getCollection("staging").aggregate([
                 "documentNumber": 1
             }
         }
-  ])
+  ],
+    "database": "",
+    "collection": ""
+}
