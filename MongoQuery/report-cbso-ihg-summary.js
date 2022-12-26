@@ -34,14 +34,14 @@ db.getCollection("staging").aggregate([
         {
             "$project": {
                 "_id": 0,
-                "Event Code": "$eventCode",
-                "Event Desciption": "$eventDesc",
-                "Document Number": "$documentNumber",
-                "Supplier Number": "$supplierNumber",
-                "Supplier Name": "$supplierName",
-                "Contact": "$contact",
-                "Phone": "$phone",
-                "Email Address": {
+                "eventCode": "$eventCode",
+                "eventDesciption": "$eventDesc",
+                "documentNumber": "$documentNumber",
+                "supplierNumber": "$supplierNumber",
+                "supplierName": "$supplierName",
+                "contact": "$contact",
+                "phone": "$phone",
+                "emailAddress": {
                     "$cond": {
                         "if": {
                             "$eq": ["$processing", 3]
@@ -50,9 +50,9 @@ db.getCollection("staging").aggregate([
                         "else": "$emailAddress"
                     }
                 },
-                "Email Sent": "$emailSent",
-                "Stock Delivery From": "$stockDeliveryFrom",
-                "Stock Delivery To": "$stockDeliveryFrom"
+                "emailSent": "$emailSent",
+                "stockDeliveryFrom": "$stockDeliveryFrom",
+                "stockDeliveryTo": "$stockDeliveryFrom"
             }
         }
   ])
