@@ -89,6 +89,41 @@
                     "$trunc": ["$supplierStoreTotal", 2]
                 }
             }
+        },
+        {
+            "$unwind": "$stores"
+        },
+        {
+            "$project": {
+                "_id": 0,
+                "Event Code": "$stores.eventCode",
+                "Event Description": "$stores.eventDescription",
+                "Document Number": "$stores.documentNumber",
+                "Supplier Number": "$_id.supplierNumber",
+                "Contact": "$stores.contact",
+                "Phone": "$stores.phone",
+                "Email Address": "$stores.emailAddress",
+                "Email Sent": "$stores.emailSent",
+                "Stock Delivery From": "$stores.stockDeliveryFrom",
+                "Stock Delivery To": "$stores.stockDeliveryTo",
+                "Item": "$stores.item",
+                "VPN": "$stores.vpn",
+                "APN": "$stores.apn",
+                "Description": "$stores.description",
+                "Category": "$stores.category",
+                "Store": "$_id.store",
+                "Store Name": "$_id.storeName",
+                "Store Brand": "$_id.storeBrand",
+                "Store Ref": "$stores.storeRef",
+                "Order Created Date": "$stores.orderCreatedDate",
+                "Quantity Ordered": "$stores.quantityOrdered",
+                "UOM": "$store.uom",
+                "Unit Cost": "$stores.unitCost",
+                "Line Total": "$stores.totalLine",
+                "Supplier Store Total": "$supplierStoreTotal",
+                "Supplier Min": "$stores.supplierMin"
+                
+            }
         }
     ],
     "database": "",
