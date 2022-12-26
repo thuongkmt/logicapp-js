@@ -17,6 +17,16 @@ db.getCollection("staging").aggregate([
         }
     },
     {
+        "$sort": {
+            "eventCode": 1,
+            "primarySupplier": 1,
+            "storeNumber": 1,
+            "poNumber": 1,
+            "skuCategory": 1,
+            "productSEQ": 1
+        }
+    },
+    {
         "$project": {
             "eventCode": 1,
             "eventDescription": "$eventDesc",
