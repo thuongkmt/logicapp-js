@@ -1,5 +1,5 @@
 {
-    "aggreate": [
+    "aggregate": [
         {
             "$match":{
                 "orderType": "CNC",
