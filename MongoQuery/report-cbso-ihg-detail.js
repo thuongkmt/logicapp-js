@@ -25,7 +25,15 @@ db.getCollection("staging").aggregate([
             "supplierName": "$supName",
             "contact": "$contactName",
             "phone": "$contactPhone",
-            "emailAddress": "$contactEmail",
+            "emailAddress": {
+                "$cond": {
+                    "if": {
+                        "$eq": ["$processing", 3]
+                    },
+                    "then": "Fail to send to supplier",
+                    "else": "$contactEmail"
+                }
+            },
             "emailSent": "$processedDate",
             "stockDeliveryFrom": "$notBeforeDate",
             "stockDeliveryTo": "$notAfterDate",
@@ -44,7 +52,8 @@ db.getCollection("staging").aggregate([
             "unitCost": "$orderBTax",
             "totalLine": {
                 "$trunc": ["$totalLine", 2]
-            }
+            },
+            "supplierMin": {"$concat": [{"$literal": "$"}, {"$toString": "$suppMinOrd"}]}
         }
     },
     {
