@@ -1,7 +1,7 @@
 db.getCollection("staging").aggregate([
     {
         "$match": {
-            "processing": 0,
+            "processing": 1,
             "orderType": "CNC"
         }
     },
@@ -17,6 +17,11 @@ db.getCollection("staging").aggregate([
             "totalValueExcGST": {
                 "$trunc":["$totalValueExcGSTRaw", 2]
             }
+        }
+    }, 
+    {
+        "$sort": {
+            "productSEQ": 1
         }
     },
     {
@@ -67,7 +72,6 @@ db.getCollection("staging").aggregate([
     {
         "$project":{
             "stores.storeNumberGroups.poNumberGroups.orderCreated": 0,
-            "stores.storeNumberGroups.poNumberGroups.productSEQ": 0,
             "stores.storeNumberGroups.poNumberGroups.itemCode": 0,
             "stores.storeNumberGroups.poNumberGroups.inserted": 0,
             "stores.storeNumberGroups.poNumberGroups.storePCode": 0,
