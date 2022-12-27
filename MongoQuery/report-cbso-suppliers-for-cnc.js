@@ -1,7 +1,7 @@
 db.getCollection("staging").aggregate([
     {
         "$match": {
-            "processing": 1,
+            "processing": 0,
             "orderType": "CNC"
         }
     },

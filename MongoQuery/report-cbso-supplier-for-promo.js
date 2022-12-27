@@ -32,6 +32,11 @@ db.getCollection("staging").aggregate([
                 "$trunc":["$totalValueExcGSTRaw", 2]
             }
         }
+    }, 
+    {
+        "$sort": {
+            "productSEQ": 1
+        }
     },
     {
         "$group": {
@@ -87,7 +92,6 @@ db.getCollection("staging").aggregate([
     {
         "$project":{
             "stores.storeNumberGroups.poNumberGroups.orderCreated": 0,
-            "stores.storeNumberGroups.poNumberGroups.productSEQ": 0,
             "stores.storeNumberGroups.poNumberGroups.itemCode": 0,
             "stores.storeNumberGroups.poNumberGroups.inserted": 0,
             "stores.storeNumberGroups.poNumberGroups.storePCode": 0,

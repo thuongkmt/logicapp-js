@@ -66,6 +66,11 @@ db.getCollection("staging").aggregate([
         }
     },
     {
+        "$sort": {
+            "vpn": 1
+        }
+    },
+    {
         "$facet": {
             "total": [
                 {
