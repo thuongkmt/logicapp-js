@@ -22,6 +22,13 @@ db.getCollection("staging").aggregate([
         }
     },
     {
+        "$sort": {
+            "_id.primarySupplier": 1,
+            "_id.poNumber": 1,
+            "_id.productSEQ": 1
+        }
+    },
+    {
         "$group": {
              "_id": {
                 "orderType": "$_id.orderType",
