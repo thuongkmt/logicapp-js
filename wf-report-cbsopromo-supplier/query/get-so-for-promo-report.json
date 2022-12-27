@@ -33,6 +33,11 @@
                     "$trunc":["$totalValueExcGSTRaw", 2]
                 }
             }
+        }, 
+        {
+            "$sort": {
+                "productSEQ": 1
+            }
         },
         {
             "$group": {

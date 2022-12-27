@@ -23,6 +23,13 @@
             }
         },
         {
+            "$sort": {
+                "_id.primarySupplier": 1,
+                "_id.poNumber": 1,
+                "primarySuppliers.productSEQ": 1
+            }
+        },
+        {
             "$group": {
                  "_id": {
                     "orderType": "$_id.orderType",
