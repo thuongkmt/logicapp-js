@@ -1,9 +1,9 @@
 db.getCollection("staging").aggregate([
     {
         "$match": {
-            "orderType": "Promo",
+            "orderType": "CNC",
             "docNo": {
-                "$in": [10000012, 10000008]
+                "$in": [10000009, 10000007]
             }
         }
     },
@@ -25,7 +25,7 @@ db.getCollection("staging").aggregate([
         "$sort": {
             "_id.primarySupplier": 1,
             "_id.poNumber": 1,
-            "_id.productSEQ": 1
+            "primarySuppliers.productSEQ": 1
         }
     },
     {
