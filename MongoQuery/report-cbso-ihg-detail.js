@@ -3,7 +3,7 @@ db.getCollection("staging").aggregate([
         "$match":{
             "orderType": "CNC",
             "docNo": {
-                "$in": [10000007, 10000008, 10000009]
+                "$in": [10000142, 10000141, 10000140]
             }
         }
     },
@@ -28,7 +28,7 @@ db.getCollection("staging").aggregate([
     },
     {
         "$project": {
-            "eventCode": 1,
+            "eventCode": "$eventCode",
             "eventDescription": "$eventDesc",
             "documentNumber": "$docNo",
             "supplierNumber": "$primarySupplier",
@@ -48,17 +48,17 @@ db.getCollection("staging").aggregate([
             "stockDeliveryFrom": "$notBeforeDate",
             "stockDeliveryTo": "$notAfterDate",
             "item": "$itemCode",
-            "vpn": 1,
+            "vpn": "$vpn",
             "apn": "$upc",
             "description": "$skuDesc",
             "category": "$skuCategory",
             "store": "$storeNumber",
-            "storeName": 1,
-            "storeBrand": 1,
+            "storeName": "$storeName",
+            "storeBrand": "$storeBrand",
             "storeRef": "$poNumber",
             "orderCreatedDate": "$orderCreated",
             "quantityOrdered": "$qtyOrdered",
-            "uom" : 1,
+            "uom" : "$uom",
             "unitCost": "$orderBTax",
             "totalLine": {
                 "$trunc": ["$totalLine", 2]
@@ -111,8 +111,8 @@ db.getCollection("staging").aggregate([
             "description": "$stores.description",
             "category": "$stores.category",
             "store": "$_id.store",
-            "storeName": "$_id.storeName",
-            "storeBrand": "$_id.storeBrand",
+            "storeName": "$stores.storeName",
+            "storeBrand": "$stores.storeBrand",
             "storeRef": "$stores.storeRef",
             "orderCreatedDate": "$stores.orderCreatedDate",
             "quantityOrdered": "$stores.quantityOrdered",
