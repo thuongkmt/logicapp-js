@@ -35,7 +35,7 @@ db.getCollection("staging").aggregate([
             "$project": {
                 "_id": 0,
                 "eventCode": "$eventCode",
-                "eventDesciption": "$eventDesc",
+                "eventDescription": "$eventDesc",
                 "documentNumber": "$documentNumber",
                 "supplierNumber": "$supplierNumber",
                 "supplierName": "$supplierName",
