@@ -18,13 +18,13 @@ db.getCollection("staging").aggregate([
     {
         "$match":{
             "$and": [
-                {"consolidationDateString": {"$eq": "2022-12-22"}}, 
+                {"consolidationDateString": {"$eq": "2022-12-28"}}, 
             ]
         }
     },
     {
         "$group": {
-            "_id": "$vpn",
+            "_id": "$itemCode",
             "vpn": {
                 "$first": "$vpn"
             },

@@ -3,7 +3,11 @@ db.getCollection("staging").aggregate([
         "$match":{
             "orderType": "CNC",
             "docNo": {
-                "$in": [10000142, 10000141, 10000140]
+                "$in": [10000140,
+                            10000141,
+                            10000142,
+                            10000143,
+                            10000144]
             }
         }
     },
@@ -121,7 +125,6 @@ db.getCollection("staging").aggregate([
             "lineTotal": "$stores.totalLine",
             "supplierStoreTotal": "$supplierStoreTotal",
             "supplierMin": "$stores.supplierMin"
-            
         }
     }
 ])
