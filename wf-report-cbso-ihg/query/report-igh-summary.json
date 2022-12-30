@@ -21,11 +21,18 @@
                 "contact": { "$first": "$contactName" },
                 "phone": { "$first": "$contactPhone" },
                 "emailAddress": { "$first": "$contactEmail" },
-                "emailSent": { "$first": "$processDate" },
+                "emailSent": { "$first": "$processedDate" },
                 "stockDeliveryFrom": { "$first": "$notBeforeDate" },
                 "stockDeliveryTo": { "$first": "$notAfterDate" },
                 "processing": { "$first": "$processing" }
             }
+        },
+        {
+            "$addFields": {
+                 "emailSentFormat": {
+                    "$dateFromString": {"dateString": "$emailSent", "format": "%Y-%m-%dT%H:%M:%S.%LZ"}
+                }
+            }     
         },
         {
             "$sort": {
@@ -52,6 +59,9 @@
                     }
                 },
                 "emailSent": "$emailSent",
+                "emailSentMel": {
+                     "$dateToString": {"date": "$emailSentFormat", "format": "%Y-%m-%dT%H:%M:%S.%LZ", "timezone":"Australia/Melbourne"}
+                },
                 "stockDeliveryFrom": "$stockDeliveryFrom",
                 "stockDeliveryTo": "$stockDeliveryFrom"
             }

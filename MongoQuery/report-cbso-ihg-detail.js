@@ -3,11 +3,7 @@ db.getCollection("staging").aggregate([
         "$match":{
             "orderType": "CNC",
             "docNo": {
-                "$in": [10000140,
-                            10000141,
-                            10000142,
-                            10000143,
-                            10000144]
+                "$in": [10000397, 10000398, 10000396]
             }
         }
     },
@@ -17,6 +13,12 @@ db.getCollection("staging").aggregate([
                "$sum": {
                     "$multiply": ["$orderBTax", "$qtyOrdered"]
                 }
+            },
+            "orderCreatedFormat": {
+                "$dateFromString": {"dateString": "$orderCreated"}
+            },
+            "processedDateFormat": {
+                "$dateFromString": {"dateString": "$processedDate", "format": "%Y-%m-%dT%H:%M:%S.%LZ"}
             }
         }
     },
@@ -49,6 +51,7 @@ db.getCollection("staging").aggregate([
                 }
             },
             "emailSent": "$processedDate",
+            "emailSentFormat": "$processedDateFormat",
             "stockDeliveryFrom": "$notBeforeDate",
             "stockDeliveryTo": "$notAfterDate",
             "item": "$itemCode",
@@ -61,6 +64,7 @@ db.getCollection("staging").aggregate([
             "storeBrand": "$storeBrand",
             "storeRef": "$poNumber",
             "orderCreatedDate": "$orderCreated",
+            "orderCreatedFormat": "$orderCreatedFormat",
             "quantityOrdered": "$qtyOrdered",
             "uom" : "$uom",
             "unitCost": "$orderBTax",
@@ -107,6 +111,9 @@ db.getCollection("staging").aggregate([
             "phone": "$stores.phone",
             "emailAddress": "$stores.emailAddress",
             "emailSent": "$stores.emailSent",
+            "emailSentMel": {
+                "$dateToString": {"date": "$stores.emailSentFormat", "format": "%Y-%m-%dT%H:%M:%S.%LZ", "timezone":"Australia/Melbourne"}
+            },
             "stockDeliveryFrom": "$stores.stockDeliveryFrom",
             "stockDeliveryTo": "$stores.stockDeliveryTo",
             "item": "$stores.item",
@@ -119,6 +126,9 @@ db.getCollection("staging").aggregate([
             "storeBrand": "$stores.storeBrand",
             "storeRef": "$stores.storeRef",
             "orderCreatedDate": "$stores.orderCreatedDate",
+            "orderCreatedDateMel": {
+                "$dateToString": {"date": "$stores.orderCreatedFormat", "format": "%Y-%m-%dT%H:%M:%S.%LZ", "timezone":"Australia/Melbourne"}
+            },
             "quantityOrdered": "$stores.quantityOrdered",
             "uom": "$store.uom",
             "unitCost": "$stores.unitCost",

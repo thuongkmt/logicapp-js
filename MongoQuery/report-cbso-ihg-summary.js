@@ -3,7 +3,7 @@ db.getCollection("staging").aggregate([
             "$match": {
                 "orderType": "CNC",
                 "docNo": {
-                    "$in": [10000142, 10000141, 10000140]
+                    "$in": [10000397, 10000398, 10000396]
                 }
             }
         },
@@ -20,11 +20,18 @@ db.getCollection("staging").aggregate([
                 "contact": { "$first": "$contactName" },
                 "phone": { "$first": "$contactPhone" },
                 "emailAddress": { "$first": "$contactEmail" },
-                "emailSent": { "$first": "$processDate" },
+                "emailSent": { "$first": "$processedDate" },
                 "stockDeliveryFrom": { "$first": "$notBeforeDate" },
                 "stockDeliveryTo": { "$first": "$notAfterDate" },
                 "processing": { "$first": "$processing" }
             }
+        },
+        {
+            "$addFields": {
+                 "emailSentFormat": {
+                    "$dateFromString": {"dateString": "$emailSent", "format": "%Y-%m-%dT%H:%M:%S.%LZ"}
+                }
+            }     
         },
         {
             "$sort": {
@@ -51,6 +58,9 @@ db.getCollection("staging").aggregate([
                     }
                 },
                 "emailSent": "$emailSent",
+                "emailSentMel": {
+                     "$dateToString": {"date": "$emailSentFormat", "format": "%Y-%m-%dT%H:%M:%S.%LZ", "timezone":"Australia/Melbourne"}
+                },
                 "stockDeliveryFrom": "$stockDeliveryFrom",
                 "stockDeliveryTo": "$stockDeliveryFrom"
             }

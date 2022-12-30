@@ -14,6 +14,12 @@
                    "$sum": {
                         "$multiply": ["$orderBTax", "$qtyOrdered"]
                     }
+                },
+                "orderCreatedFormat": {
+                    "$dateFromString": {"dateString": "$orderCreated"}
+                },
+                "processedDateFormat": {
+                    "$dateFromString": {"dateString": "$processedDate", "format": "%Y-%m-%dT%H:%M:%S.%LZ"}
                 }
             }
         },
@@ -46,6 +52,7 @@
                     }
                 },
                 "emailSent": "$processedDate",
+                "emailSentFormat": "$processedDateFormat",
                 "stockDeliveryFrom": "$notBeforeDate",
                 "stockDeliveryTo": "$notAfterDate",
                 "item": "$itemCode",
@@ -58,6 +65,7 @@
                 "storeBrand": "$storeBrand",
                 "storeRef": "$poNumber",
                 "orderCreatedDate": "$orderCreated",
+                "orderCreatedFormat": "$orderCreatedFormat",
                 "quantityOrdered": "$qtyOrdered",
                 "uom" : "$uom",
                 "unitCost": "$orderBTax",
@@ -104,6 +112,9 @@
                 "phone": "$stores.phone",
                 "emailAddress": "$stores.emailAddress",
                 "emailSent": "$stores.emailSent",
+                "emailSentMel": {
+                    "$dateToString": {"date": "$stores.emailSentFormat", "format": "%Y-%m-%dT%H:%M:%S.%LZ", "timezone":"Australia/Melbourne"}
+                },
                 "stockDeliveryFrom": "$stores.stockDeliveryFrom",
                 "stockDeliveryTo": "$stores.stockDeliveryTo",
                 "item": "$stores.item",
@@ -116,13 +127,15 @@
                 "storeBrand": "$stores.storeBrand",
                 "storeRef": "$stores.storeRef",
                 "orderCreatedDate": "$stores.orderCreatedDate",
+                "orderCreatedDateMel": {
+                    "$dateToString": {"date": "$stores.orderCreatedFormat", "format": "%Y-%m-%dT%H:%M:%S.%LZ", "timezone":"Australia/Melbourne"}
+                },
                 "quantityOrdered": "$stores.quantityOrdered",
                 "uom": "$store.uom",
                 "unitCost": "$stores.unitCost",
                 "lineTotal": "$stores.totalLine",
                 "supplierStoreTotal": "$supplierStoreTotal",
                 "supplierMin": "$stores.supplierMin"
-                
             }
         }
     ],

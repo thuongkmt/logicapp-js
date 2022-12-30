@@ -1,0 +1,18 @@
+{
+    "aggregate": [
+      {
+        "$set": {
+          "processedDate": "@{formatDateTime(body('Current_time_2'),'yyyy-MM-ddTHH:mm:ss.fffZ')}",
+          "processing": 2
+        }
+      }
+    ],
+    "collection": "staging",
+    "database": "@{parameters('ESL_DB_REPORTING')}",
+    "filter": {
+      "_id": {
+        "$in": @{outputs('ExeJavaScriptCode_Get_Ids_Report')}
+      },
+      "idtype": "ObjectId"
+    }
+  }

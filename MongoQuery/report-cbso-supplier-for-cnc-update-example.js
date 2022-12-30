@@ -1,6 +1,6 @@
 db.getCollection("staging").updateMany(
     {
-        "processing": 1,
+        "processing": 2,
         "orderType": "CNC"
     },
     {

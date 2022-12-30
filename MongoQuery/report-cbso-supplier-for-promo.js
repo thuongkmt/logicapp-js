@@ -1,7 +1,7 @@
 db.getCollection("staging").aggregate([
     {
         "$match": {
-            "processing": 0,
+            "processing": 2,
             "orderType": "Promo"
         }
     },
@@ -15,7 +15,7 @@ db.getCollection("staging").aggregate([
     {
         "$match":{
             "$and": [
-                {"consolidationDateString": {"$eq": "2022-12-22"}}, 
+                {"consolidationDateString": {"$eq": "2022-12-29"}}, 
             ]
         }
     },

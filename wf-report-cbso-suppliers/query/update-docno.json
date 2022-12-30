@@ -1,0 +1,17 @@
+{
+    "aggregate": [
+      {
+        "$set": {
+          "docNo": @{body('Get_Latest_Sequence_For_The_WMS')['sequence']}
+        }
+      }
+    ],
+    "collection": "staging",
+    "database": "@{parameters('ESL_DB_REPORTING')}",
+    "filter": {
+      "_id": {
+        "$in": @{outputs('ExeJavaScriptCode_Get_Ids_Report')}
+      },
+      "idtype": "ObjectId"
+    }
+  }

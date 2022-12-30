@@ -1,0 +1,17 @@
+{
+    "aggregate": [
+      {
+        "$set": {
+          "processing": 3
+        }
+      }
+    ],
+    "collection": "staging",
+    "database": "@{parameters('ESL_DB_REPORTING')}",
+    "filter": {
+      "_id": {
+        "$in": @{outputs('ExeJavaScriptCode_Get_Ids_Report')}
+      },
+      "idtype": "ObjectId"
+    }
+  }
