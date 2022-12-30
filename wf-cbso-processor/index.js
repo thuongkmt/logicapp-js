@@ -162,9 +162,9 @@ fs.readFile('./data-test-kit/salesorder.json', 'utf8', (error, data) =>{
                                             let consolidationDate = orderEvent.event.consolidationDate === undefined ? "" : orderEvent.event.consolidationDate
                                             let consolidationDateTime = ""
                                             if(consolidationDate!= ""){
-                                                consolidationDateTime = new Date(consolidationDate).toISOString()
+                                                consolidationDateTime = new Date(consolidationDate).toUTCString()
                                             }
-                                            stagingObject.consolidationDate = consolidationDateTime
+                                            stagingObject.consolidationDate = new Date(consolidationDateTime).toISOString()
                                             return false
                                         }
                                         if(orderEventCount === orderEvents.length){

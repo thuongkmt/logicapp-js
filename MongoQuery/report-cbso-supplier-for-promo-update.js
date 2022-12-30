@@ -1,13 +1,13 @@
 db.getCollection("staging").updateMany(
     {
-        "processing": 2,
+        "processing": 0,
         "orderType": "Promo",
-        "consolidationDate" : "2022-12-29T14:15:00.000Z"
+        "consolidationDate": "2022-12-15T15:00:00.000Z"
     },
     {
         "$set": {
            "processing": 0,
-           "consolidationDate" : "2022-12-29T14:15:00.000Z"
+           "consolidationDate" : "2022-12-30T15:00:00.000Z"
         }
     }
 )
