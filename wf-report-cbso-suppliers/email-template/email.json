@@ -1,0 +1,14 @@
+{
+    "Body": "<p>@{outputs('Current_Report_Data')['stores'][0]['storeNumberGroups'][0]['poNumberGroups'][0]['supName']}</p><p>ATT: @{outputs('Current_Report_Data')['stores'][0]['storeNumberGroups'][0]['poNumberGroups'][0]['contactName']}</p><p>Phone: @{outputs('Current_Report_Data')['stores'][0]['storeNumberGroups'][0]['poNumberGroups'][0]['contactPhone']}</p><p>Email: @{outputs('Current_Report_Data')['stores'][0]['storeNumberGroups'][0]['poNumberGroups'][0]['contactEmail']}</p><p>Dear @{if(empty(outputs('Current_Report_Data')['stores'][0]['storeNumberGroups'][0]['poNumberGroups'][0]['contactName']), outputs('Current_Report_Data')['stores'][0]['storeNumberGroups'][0]['poNumberGroups'][0]['contactName'], outputs('Current_Report_Data')['stores'][0]['storeNumberGroups'][0]['poNumberGroups'][0]['supName'])}</p><p>Please find attached order(s) from the Mitre 10 (www.mitre10.com.au) and HTH (www.homehardware.com.au) Online Stores.</p><p>Please ensure these order(s) are despatched to stores within 2 business days.</p><p>If, due to any reason, there will be a delay in despatching an order to the store, please advise us ASAP by return email. Refer to the <strong>Terms and Conditions for supply of 'Buy Online' purchase orders </strong>which is attached to this email for more information.</p><p>Please deliver the above order(s) direct to each store listed.</p><p>If you have any queries regarding this, please contact the Mitre 10 Hub on 1300 880 440.</p>",
+    "CorrelationId": "@{variables('correlationId')}",
+    "Importance": "Normal",
+    "Receiver": "trangntm@smartosc.com",
+    "Service": "ITSM",
+    "Title": "CNC Orders for @{outputs('Current_Report_Data')['_id']['primarySupplier']}-  (Automated Message - Do Not Reply)",
+    "Attachments": [
+       {
+            "ContentBytes": "",
+            "Name": ""
+       }
+    ]
+  }

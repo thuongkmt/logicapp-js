@@ -1,9 +1,9 @@
 db.getCollection("staging").aggregate([
     {
         "$match": {
-            "orderType": "CNC",
+            "orderType": "Promo",
             "docNo": {
-                "$in": [10000009, 10000007]
+                "$in": [10000418]
             }
         }
     },
