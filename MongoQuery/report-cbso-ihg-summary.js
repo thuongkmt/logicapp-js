@@ -3,7 +3,7 @@ db.getCollection("staging").aggregate([
             "$match": {
                 "orderType": "CNC",
                 "docNo": {
-                    "$in": [10000430]
+                    "$in": [10000445]
                 }
             }
         },
@@ -59,7 +59,7 @@ db.getCollection("staging").aggregate([
                 },
                 "emailSent": "$emailSent",
                 "emailSentMel": {
-                     "$dateToString": {"date": "$emailSentFormat", "format": "%Y-%m-%dT%H:%M:%S.%LZ", "timezone":"Australia/Melbourne"}
+                     "$dateToString": {"date": "$emailSentFormat", "format": "%d/%m/%Y %H:%m", "timezone":"Australia/Melbourne"}
                 },
                 "stockDeliveryFrom": "$stockDeliveryFrom",
                 "stockDeliveryTo": "$stockDeliveryFrom"

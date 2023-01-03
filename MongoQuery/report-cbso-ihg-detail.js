@@ -3,7 +3,7 @@ db.getCollection("staging").aggregate([
         "$match":{
             "orderType": "CNC",
             "docNo": {
-                "$in": [10000430]
+                "$in": [10000445]
             }
         }
     },
@@ -112,7 +112,7 @@ db.getCollection("staging").aggregate([
             "emailAddress": "$stores.emailAddress",
             "emailSent": "$stores.emailSent",
             "emailSentMel": {
-                "$dateToString": {"date": "$stores.emailSentFormat", "format": "%Y-%m-%dT%H:%M:%S.%LZ", "timezone":"Australia/Melbourne"}
+                "$dateToString": {"date": "$stores.emailSentFormat", "format": "%d/%m/%Y %H:%m", "timezone":"Australia/Melbourne"}
             },
             "stockDeliveryFrom": "$stores.stockDeliveryFrom",
             "stockDeliveryTo": "$stores.stockDeliveryTo",
@@ -127,7 +127,7 @@ db.getCollection("staging").aggregate([
             "storeRef": "$stores.storeRef",
             "orderCreatedDate": "$stores.orderCreatedDate",
             "orderCreatedDateMel": {
-                "$dateToString": {"date": "$stores.orderCreatedFormat", "format": "%Y-%m-%dT%H:%M:%S.%LZ", "timezone":"Australia/Melbourne"}
+                "$dateToString": {"date": "$stores.orderCreatedFormat", "format": "%d/%m/%Y %H:%m", "timezone":"Australia/Melbourne"}
             },
             "quantityOrdered": "$stores.quantityOrdered",
             "uom": "$store.uom",
