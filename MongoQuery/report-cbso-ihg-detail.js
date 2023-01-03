@@ -112,7 +112,7 @@ db.getCollection("staging").aggregate([
             "emailAddress": "$stores.emailAddress",
             "emailSent": "$stores.emailSent",
             "emailSentMel": {
-                "$dateToString": {"date": "$stores.emailSentFormat", "format": "%Y-%m-%d", "timezone":"Australia/Melbourne"}
+                "$dateToString": {"date": "$stores.emailSentFormat", "format": "%Y-%m-%dT%H:%M:%S.%LZ", "timezone":"Australia/Melbourne"}
             },
             "stockDeliveryFrom": "$stores.stockDeliveryFrom",
             "stockDeliveryTo": "$stores.stockDeliveryTo",
@@ -127,7 +127,7 @@ db.getCollection("staging").aggregate([
             "storeRef": "$stores.storeRef",
             "orderCreatedDate": "$stores.orderCreatedDate",
             "orderCreatedDateMel": {
-                "$dateToString": {"date": "$stores.orderCreatedFormat", "format": "%Y-%m-%d", "timezone":"Australia/Melbourne"}
+                "$dateToString": {"date": "$stores.orderCreatedFormat", "format": "%Y-%m-%dT%H:%M:%S.%LZ", "timezone":"Australia/Melbourne"}
             },
             "quantityOrdered": "$stores.quantityOrdered",
             "uom": "$store.uom",

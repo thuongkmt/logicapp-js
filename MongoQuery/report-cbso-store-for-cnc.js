@@ -8,6 +8,20 @@ db.getCollection("staging").aggregate([
         }
     },
     {
+        "$addFields": {
+            "processedDateFormat": {
+                "$dateFromString": {"dateString": "$processedDate", "format": "%Y-%m-%dT%H:%M:%S.%LZ"}
+            }
+        }
+    },
+    {
+        "$set": {
+            "processedDate" : {
+                "$dateToString": {"date": "$processedDateFormat", "format": "%Y-%m-%d", "timezone":"Australia/Melbourne"}
+            }
+        }
+    },
+    {
         "$group": {
             "_id": {
                 "orderType": "$orderType",

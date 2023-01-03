@@ -10,7 +10,7 @@
         },
         {
             "$group": {
-                "_id": "$vpn",
+                "_id": "$itemCode",
                 "vpn": {
                     "$first": "$vpn"
                 },

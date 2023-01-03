@@ -1,0 +1,14 @@
+{
+    "Attachments": [
+      {
+        "ContentBytes": "@{body('Generate_PDF_Report')['$content']}",
+        "Name": "IHG @{triggerBody()?['orderType']} Purchase Orders @{body('Get_Data_For_Report')['_id']['storeNumber']} @{body('Get_Data_For_Report')['primarySupplierGroups'][0]['primarySupplierGroups'][0]['poNumberGroups'][0]['eventCode']} @{formatDateTime(body('Current_time'),'ddMMyyyy')}.pdf"
+      }
+    ],
+    "Body": "<p>Dear @{outputs('Current_Report_Data')['primarySupplierGroups'][0]['primarySupplierGroups'][0]['poNumberGroups'][0]['storeName']},</p><br /><p>Attached are your CNC Agency / Supplier orders sent and raised to the supplier* on @{substring(outputs('Current_Report_Data')['primarySupplierGroups'][0]['primarySupplierGroups'][0]['poNumberGroups'][0]['processedDate'],0,10)} for @{outputs('Current_Report_Data')['primarySupplierGroups'][0]['primarySupplierGroups'][0]['poNumberGroups'][0]['storeName']}</p><br /><p>*What to do next? Be sure to raise a purchase order in your POS and receipt the goods once they're delivered.</p><br /><p>If you have any queries regarding this, please contact the Mitre 10 Hub on 1300 880 440.</p>",
+    "CorrelationId": "@{triggerOutputs()['headers']['correlationId']}",
+    "Importance": "Normal",
+    "Receiver": "trangntm@smartosc.com",
+    "Service": "ITSM",
+    "Title": "@{triggerBody()?['orderType']} Supplier Orders for @{substring(outputs('Current_Report_Data')['primarySupplierGroups'][0]['primarySupplierGroups'][0]['poNumberGroups'][0]['processedDate'], 0, 10)}"
+  }
