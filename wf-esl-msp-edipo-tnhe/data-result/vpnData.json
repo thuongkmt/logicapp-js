@@ -1,0 +1,72 @@
+[
+    {
+        "productApn": "9315384000050",
+        "status": "27",
+        "vpn": "COMPCC"
+    },
+    {
+        "productApn": "9315384000043",
+        "status": "27",
+        "vpn": ""
+    },
+    {
+        "productApn": "9315384000067",
+        "status": "27",
+        "vpn": "SL16WG"
+    },
+    {
+        "productApn": "9315384000036",
+        "status": "27",
+        "vpn": "STDCC"
+    },
+    {
+        "productApn": "9315384000029",
+        "status": "27",
+        "vpn": "STDWG"
+    },
+    {
+        "productApn": "9315384400089",
+        "status": "27",
+        "vpn": "GSKT"
+    },
+    {
+        "productApn": "9315384000388",
+        "status": "27",
+        "vpn": "CORD40CREAM"
+    },
+    {
+        "productApn": "9315384000258",
+        "status": "27",
+        "vpn": "RA40CC"
+    },
+    {
+        "productApn": "9315384000241",
+        "status": "27",
+        "vpn": "RA40WG"
+    },
+    {
+        "productApn": "9315384000272",
+        "status": "27",
+        "vpn": ""
+    },
+    {
+        "productApn": "9315384000265",
+        "status": "27",
+        "vpn": "RA50WG"
+    },
+    {
+        "productApn": "9315384100026",
+        "status": "27",
+        "vpn": "FA45GR"
+    },
+    {
+        "productApn": "9315384000340",
+        "status": "27",
+        "vpn": "FA45WG"
+    },
+    {
+        "productApn": "9315384100019",
+        "status": "27",
+        "vpn": "FA51GR"
+    }
+]

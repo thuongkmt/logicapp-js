@@ -1,0 +1,98 @@
+[
+    {
+        "vpn": [
+            "RA50WG"
+        ],
+        "mspSupplierNumber": "3457",
+        "productApn": "9315384000265",
+        "targetBackend": "AX"
+    },
+    {
+        "vpn": [
+            "FA45WG"
+        ],
+        "mspSupplierNumber": "3457",
+        "productApn": "9315384000340",
+        "targetBackend": "AX"
+    },
+    {
+        "vpn": [
+            "COMPCC"
+        ],
+        "mspSupplierNumber": "3457",
+        "productApn": "9315384000050",
+        "targetBackend": "AX"
+    },
+    {
+        "vpn": [
+            "STDWG"
+        ],
+        "mspSupplierNumber": "3457",
+        "productApn": "9315384000029",
+        "targetBackend": "AX"
+    },
+    {
+        "vpn": [
+            "RA40CC"
+        ],
+        "mspSupplierNumber": "3457",
+        "productApn": "9315384000258",
+        "targetBackend": "AX"
+    },
+    {
+        "vpn": [
+            "GSKT"
+        ],
+        "mspSupplierNumber": "3457",
+        "productApn": "9315384400089",
+        "targetBackend": "AX"
+    },
+    {
+        "vpn": [
+            "RA40WG"
+        ],
+        "mspSupplierNumber": "3457",
+        "productApn": "9315384000241",
+        "targetBackend": "AX"
+    },
+    {
+        "vpn": [
+            "CORD40CREAM"
+        ],
+        "mspSupplierNumber": "3457",
+        "productApn": "9315384000388",
+        "targetBackend": "AX"
+    },
+    {
+        "vpn": [
+            "FA45GR"
+        ],
+        "mspSupplierNumber": "3457",
+        "productApn": "9315384100026",
+        "targetBackend": "AX"
+    },
+    {
+        "vpn": [
+            "FA51GR"
+        ],
+        "mspSupplierNumber": "3457",
+        "productApn": "9315384100019",
+        "targetBackend": "AX"
+    },
+    {
+        "vpn": [
+            "STDCC"
+        ],
+        "mspSupplierNumber": "3457",
+        "productApn": "9315384000036",
+        "targetBackend": "AX"
+    },
+    {
+        "vpn": [
+            "SL16WG"
+        ],
+        "mspSupplierNumber": "3457",
+        "productApn": "9315384000067",
+        "targetBackend": "AX"
+    }
+]
