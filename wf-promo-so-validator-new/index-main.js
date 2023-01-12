@@ -273,6 +273,7 @@ orderLines.map(orderLine => {
                                             isBreakLoop = true
                                             orderLine.status = "97"
                                             orderLine.statusComment = "Not On Promotion"
+                                            orderLine.promSource = ""
                                         }
 
                                         return false

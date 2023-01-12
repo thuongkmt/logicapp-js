@@ -297,6 +297,7 @@ fs.readFile("./data-result/order-events-sorted.json", "utf8", (err, jsonString) 
                                                     isBreakLoop = true
                                                     orderLine.status = "97"
                                                     orderLine.statusComment = "Not On Promotion"
+                                                    orderLine.promSource = ""
                                                 }
 
                                                 return false

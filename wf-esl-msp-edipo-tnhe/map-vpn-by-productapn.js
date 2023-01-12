@@ -33,7 +33,7 @@ fs.readFile('./data-test-kit/orderlines.json', 'utf8', (error, data)=>{
             })
         })
 
-        fs.writeFile('./data-result/vpnData.json', JSON.stringify(vpnData), (error) =>{
+        fs.writeFile('./data-result/vpn-data.json', JSON.stringify(vpnData), (error) =>{
             if(error) throw(error)
         })
         //END PROCESSING

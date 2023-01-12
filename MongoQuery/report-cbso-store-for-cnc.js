@@ -1,9 +1,14 @@
 db.getCollection("staging").aggregate([
     {
         "$match": {
-            "orderType": "Promo",
+            "orderType": "CNC",
             "docNo": {
-                "$in": [10000418]
+                "$in": [10000465,
+            10000466,
+            10000467,
+            10000468,
+            10000469,
+            10000470]
             }
         }
     },
@@ -24,6 +29,7 @@ db.getCollection("staging").aggregate([
     {
         "$group": {
             "_id": {
+                "eventCode":"$eventCode",
                 "orderType": "$orderType",
                 "cbState": "$cbState",
                 "storeNumber": "$storeNumber",
@@ -45,6 +51,7 @@ db.getCollection("staging").aggregate([
     {
         "$group": {
              "_id": {
+                "eventCode": "$_id.eventCode",
                 "orderType": "$_id.orderType",
                 "cbState": "$_id.cbState",
                 "storeNumber": "$_id.storeNumber",
@@ -61,6 +68,7 @@ db.getCollection("staging").aggregate([
     {
         "$group": {
             "_id": {
+                "eventCode": "$_id.eventCode",
                 "orderType": "$_id.orderType",
                 "cbState": "$_id.cbState",
                 "storeNumber": "$_id.storeNumber"

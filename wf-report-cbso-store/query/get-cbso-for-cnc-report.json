@@ -25,6 +25,7 @@
         {
             "$group": {
                 "_id": {
+                    "eventCode":"$eventCode",
                     "orderType": "$orderType",
                     "cbState": "$cbState",
                     "storeNumber": "$storeNumber",
@@ -46,6 +47,7 @@
         {
             "$group": {
                  "_id": {
+                    "eventCode": "$_id.eventCode",
                     "orderType": "$_id.orderType",
                     "cbState": "$_id.cbState",
                     "storeNumber": "$_id.storeNumber",
@@ -62,6 +64,7 @@
         {
             "$group": {
                 "_id": {
+                    "eventCode": "$_id.eventCode",
                     "orderType": "$_id.orderType",
                     "cbState": "$_id.cbState",
                     "storeNumber": "$_id.storeNumber"
