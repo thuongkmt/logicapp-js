@@ -102,6 +102,7 @@ fs.readFile("./data-test-kit/orderevents.json", "utf8", (error, data) =>{
 
                     else{
                         orderLine.promSource = WAREHOUSE
+                        warehouseOrderLines.push(orderLine)
                     }
                 }
             })

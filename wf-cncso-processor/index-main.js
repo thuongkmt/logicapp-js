@@ -86,6 +86,7 @@ orderLines.map(orderLine =>{
         }
         else{
             orderLine.promSource = WAREHOUSE
+            warehouseOrderLines.push(orderLine)
         }
     }
 })
