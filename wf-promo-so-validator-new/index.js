@@ -4,11 +4,11 @@ const createdTime = "2022-12-12T01:07:51"
 
 var promRegions = [
     {
-        "_id": "061598",
-        "promRegion": "WA",
-        "promPriceLUKey": "PTH"
+      "_id": "041889",
+      "promRegion": "WA",
+      "promPriceLUKey": "WA"
     }
-];
+  ];
 var isBreakLoop = false
 var promCode = "";
 var orderEvents = [];
@@ -56,7 +56,7 @@ fs.readFile("./data-result/order-events-sorted.json", "utf8", (err, jsonString) 
         }
     })
 
-    fs.readFile("./data-test-kit/orderLines-gus.json", "utf8", (err, jsonString) => {
+    fs.readFile("./data-test-set/same-item-id-in-all-event/orderLine-gus.json", "utf8", (err, jsonString) => {
         if (err) {
         console.log("File read failed:", err);
         return;
@@ -73,31 +73,32 @@ fs.readFile("./data-result/order-events-sorted.json", "utf8", (err, jsonString) 
                 let loopEventsCount = 0 
                 orderEvents.events.forEach(item => {
                     loopEventsCount ++
-                    //1.check itemID is equal to itemCode
                     if(!isBreakLoop){
-                        let loopItemIdCount = 0
-                        item.itemLists.every(il => {
-                            loopItemIdCount ++
+                        let itemLists = item.itemLists
+                        //1.check itemID is equal to itemCode
+                        let loopItemListCount = 0
+                        itemLists.every(il => {
+                            loopItemListCount ++
                             if(il.itemID === orderLine.itemCode){
                                 let itemPromChannels = il.itemPromChannels
-                                //2. check event.eventPromChannelStores is equal to itemList.itemPromChannels.promCode
+                                //2. check itemList.itemPromChannels.promCode
                                 let loopPromCodeCount = 0
                                 itemPromChannels.every(ipc => {
                                     loopPromCodeCount ++
                                     switch(sourceSystem){
                                         case "GUS":
                                             //In case: sourceSystem comes from GUS, we already had the promotion value
-                                            if(ipc.promCode == orderLine.promotion){                                
+                                            if(ipc.promCode == orderLine.promotion){   
                                                 //map  quantityOrderedAdjusted/status/statusComment
                                                 orderLine.quantityOrderedAdjusted = orderLine.quantityOrdered
                                                 orderLine.status = "01"
                                                 orderLine.statusComment = "Fully Supplied"                  
-        
+
                                                 isBreakLoop =true
-                                                let itemPromPrcing = ipc.itemPromPricing
+                                                let itemPromPricing = ipc.itemPromPricing
                                                 let loopPromPriceLUKeyCount = 0
             
-                                                itemPromPrcing.every(ipp => {
+                                                itemPromPricing.every(ipp => {
                                                     loopPromPriceLUKeyCount++
                                                     if(ipp.promPriceLUKey === promRegions[0]["promPriceLUKey"]){
                                                         orderLine.srpIncTax = ipp.promSRP
@@ -114,7 +115,6 @@ fs.readFile("./data-result/order-events-sorted.json", "utf8", (err, jsonString) 
                                                             if(!isStop){
                                                                 for(let i=1; i<=6; i++){
                                                                     if(ipp[`promBreak${i}_Qty`] === promBreak){
-                                                                        console.log("promBreak", `${promBreak} - ${ipp[`promBreak${i}_Qty`]}`)
                                                                         if(orderLine.quantityOrderedAdjusted >= ipp[`promBreak${i}_Qty`]) {
                                                                             orderLine.totalLinesAmountAfterTax = parseFloat((orderLine.quantityOrderedAdjusted * ipp[`promCost${i}_AT`]).toFixed(2))
                                                                             orderLine.costBeforeTax = parseFloat(ipp[`promCost${i}_BT`].toFixed(2))
@@ -138,7 +138,7 @@ fs.readFile("./data-result/order-events-sorted.json", "utf8", (err, jsonString) 
                                                         return false
                                                     }
                                                     else{
-                                                        if(itemPromPrcing.length === loopPromPriceLUKeyCount){
+                                                        if(itemPromPricing.length === loopPromPriceLUKeyCount){
                                                             orderLine.srpIncTax = 0
                                                         }
                                                         
@@ -150,7 +150,7 @@ fs.readFile("./data-result/order-events-sorted.json", "utf8", (err, jsonString) 
                                                 return false
                                             }
                                             else{
-                                                if(itemPromChannels.length === loopPromCodeCount) {
+                                                if(itemPromChannels.length === loopPromCodeCount && loopEventsCount === item.itemLists.length) {
                                                     orderLine.status = "97"
                                                     orderLine.statusComment = "Not On Promotion"
                                                     orderLine.promSource = ""
@@ -162,7 +162,7 @@ fs.readFile("./data-result/order-events-sorted.json", "utf8", (err, jsonString) 
                                         default:
                                             if(ipc.promCode === item.event.eventPromChannelStores.promCode){
                                                 let itemPromRegions = ipc.itemPromRegions
-                                                let itemPromPrcing = ipc.itemPromPricing
+                                                let itemPromPricing = ipc.itemPromPricing
                                                 
                                                 if(item.event.status === "Open"){
                                                     //checking in the itemPromRegions
@@ -230,7 +230,7 @@ fs.readFile("./data-result/order-events-sorted.json", "utf8", (err, jsonString) 
                 
                                                             //map srpIncTax, totalLinesAmountAfterTax, costBeforeTax data
                                                             let loopPromPriceLUKeyCount = 0
-                                                            itemPromPrcing.every(ipp =>{
+                                                            itemPromPricing.every(ipp =>{
                                                                 loopPromPriceLUKeyCount++
                                                                 if(ipp.promPriceLUKey === promRegions[0]["promPriceLUKey"]){
                                                                     orderLine.srpIncTax = ipp.promSRP
@@ -270,7 +270,7 @@ fs.readFile("./data-result/order-events-sorted.json", "utf8", (err, jsonString) 
                                                                     return false
                                                                 }
                                                                 else{
-                                                                    if(itemPromPrcing.length === loopPromPriceLUKeyCount){
+                                                                    if(itemPromPricing.length === loopPromPriceLUKeyCount){
                                                                         orderLine.srpIncTax = 0
                                                                     }
                                                                     
@@ -304,7 +304,7 @@ fs.readFile("./data-result/order-events-sorted.json", "utf8", (err, jsonString) 
                                                 
                                             }
                                             else{
-                                                if(itemPromChannels.length === loopPromCodeCount) {
+                                                if(itemPromChannels.length === loopPromCodeCount && loopEventsCount === item.itemLists.length) {
                                                     orderLine.status = "97"
                                                     orderLine.statusComment = "Not On Promotion"
                                                     orderLine.promSource = ""
@@ -320,7 +320,7 @@ fs.readFile("./data-result/order-events-sorted.json", "utf8", (err, jsonString) 
                                 return false
                             }
                             else{
-                                if(loopItemIdCount === item.itemLists.length && loopEventsCount === orderEvents.events.length){
+                                if(loopItemListCount === item.itemLists.length && loopEventsCount === orderEvents.events.length){
                                     orderLine.status = "97"
                                     orderLine.statusComment = "Not On Promotion"
                                     orderLine.promSource = ""
@@ -338,7 +338,6 @@ fs.readFile("./data-result/order-events-sorted.json", "utf8", (err, jsonString) 
 
         //checking if at least one of the status in orderline is not matched to C, then reupdate the status of SalesOrder
         orderLines.every(orderLine => {
-            console.log("orderLine.status", orderLine.status)
             if(orderLine.status === "01" || orderLine.status === "04" || orderLine.status === "33"){
                 salesOrderStatus = true;
                 return false

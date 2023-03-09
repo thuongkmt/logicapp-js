@@ -1,6 +1,6 @@
 const fs = require("fs")
 
-fs.readFile("./data-test-kit/events-gus-full.json","utf8",(err, data) =>{
+fs.readFile("./data-test-set/same-item-id-in-all-event/events-gus.json","utf8",(err, data) =>{
     if(err){
         console.log("File read failed:", err);
         return;
