@@ -150,7 +150,7 @@ fs.readFile("./data-result/order-events-sorted.json", "utf8", (err, jsonString) 
                                                 return false
                                             }
                                             else{
-                                                if(itemPromChannels.length === loopPromCodeCount && loopEventsCount === item.itemLists.length) {
+                                                if(itemPromChannels.length === loopPromCodeCount && loopEventsCount === itemLists.length) {
                                                     orderLine.status = "97"
                                                     orderLine.statusComment = "Not On Promotion"
                                                     orderLine.promSource = ""
@@ -304,7 +304,7 @@ fs.readFile("./data-result/order-events-sorted.json", "utf8", (err, jsonString) 
                                                 
                                             }
                                             else{
-                                                if(itemPromChannels.length === loopPromCodeCount && loopEventsCount === item.itemLists.length) {
+                                                if(itemPromChannels.length === loopPromCodeCount && loopEventsCount === itemLists.length) {
                                                     orderLine.status = "97"
                                                     orderLine.statusComment = "Not On Promotion"
                                                     orderLine.promSource = ""
@@ -320,7 +320,7 @@ fs.readFile("./data-result/order-events-sorted.json", "utf8", (err, jsonString) 
                                 return false
                             }
                             else{
-                                if(loopItemListCount === item.itemLists.length && loopEventsCount === orderEvents.events.length){
+                                if(loopItemListCount === itemLists.length && loopEventsCount === orderEvents.events.length){
                                     orderLine.status = "97"
                                     orderLine.statusComment = "Not On Promotion"
                                     orderLine.promSource = ""

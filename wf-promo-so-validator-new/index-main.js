@@ -49,31 +49,32 @@ orderLines.map(orderLine => {
         let loopEventsCount = 0 
         orderEvents.events.forEach(item => {
             loopEventsCount ++
-            //1.check itemID is equal to itemCode
             if(!isBreakLoop){
-                let loopItemIdCount = 0
-                item.itemLists.every(il => {
-                    loopItemIdCount ++
+                let itemLists = item.itemLists
+                //1.check itemID is equal to itemCode
+                let loopItemListCount = 0
+                itemLists.every(il => {
+                    loopItemListCount ++
                     if(il.itemID === orderLine.itemCode){
                         let itemPromChannels = il.itemPromChannels
-                        //2. check event.eventPromChannelStores is equal to itemList.itemPromChannels.promCode
+                        //2. check itemList.itemPromChannels.promCode
                         let loopPromCodeCount = 0
                         itemPromChannels.every(ipc => {
                             loopPromCodeCount ++
                             switch(sourceSystem){
                                 case "GUS":
                                     //In case: sourceSystem comes from GUS, we already had the promotion value
-                                    if(ipc.promCode == orderLine.promotion){                                
+                                    if(ipc.promCode == orderLine.promotion){   
                                         //map  quantityOrderedAdjusted/status/statusComment
                                         orderLine.quantityOrderedAdjusted = orderLine.quantityOrdered
                                         orderLine.status = "01"
                                         orderLine.statusComment = "Fully Supplied"                  
 
                                         isBreakLoop =true
-                                        let itemPromPrcing = ipc.itemPromPricing
+                                        let itemPromPricing = ipc.itemPromPricing
                                         let loopPromPriceLUKeyCount = 0
     
-                                        itemPromPrcing.every(ipp => {
+                                        itemPromPricing.every(ipp => {
                                             loopPromPriceLUKeyCount++
                                             if(ipp.promPriceLUKey === promRegions[0]["promPriceLUKey"]){
                                                 orderLine.srpIncTax = ipp.promSRP
@@ -90,7 +91,6 @@ orderLines.map(orderLine => {
                                                     if(!isStop){
                                                         for(let i=1; i<=6; i++){
                                                             if(ipp[`promBreak${i}_Qty`] === promBreak){
-                                                                console.log("promBreak", `${promBreak} - ${ipp[`promBreak${i}_Qty`]}`)
                                                                 if(orderLine.quantityOrderedAdjusted >= ipp[`promBreak${i}_Qty`]) {
                                                                     orderLine.totalLinesAmountAfterTax = parseFloat((orderLine.quantityOrderedAdjusted * ipp[`promCost${i}_AT`]).toFixed(2))
                                                                     orderLine.costBeforeTax = parseFloat(ipp[`promCost${i}_BT`].toFixed(2))
@@ -114,7 +114,7 @@ orderLines.map(orderLine => {
                                                 return false
                                             }
                                             else{
-                                                if(itemPromPrcing.length === loopPromPriceLUKeyCount){
+                                                if(itemPromPricing.length === loopPromPriceLUKeyCount){
                                                     orderLine.srpIncTax = 0
                                                 }
                                                 
@@ -126,7 +126,7 @@ orderLines.map(orderLine => {
                                         return false
                                     }
                                     else{
-                                        if(itemPromChannels.length === loopPromCodeCount) {
+                                        if(itemPromChannels.length === loopPromCodeCount && loopEventsCount === itemLists.length) {
                                             orderLine.status = "97"
                                             orderLine.statusComment = "Not On Promotion"
                                             orderLine.promSource = ""
@@ -138,7 +138,7 @@ orderLines.map(orderLine => {
                                 default:
                                     if(ipc.promCode === item.event.eventPromChannelStores.promCode){
                                         let itemPromRegions = ipc.itemPromRegions
-                                        let itemPromPrcing = ipc.itemPromPricing
+                                        let itemPromPricing = ipc.itemPromPricing
                                         
                                         if(item.event.status === "Open"){
                                             //checking in the itemPromRegions
@@ -206,7 +206,7 @@ orderLines.map(orderLine => {
         
                                                     //map srpIncTax, totalLinesAmountAfterTax, costBeforeTax data
                                                     let loopPromPriceLUKeyCount = 0
-                                                    itemPromPrcing.every(ipp =>{
+                                                    itemPromPricing.every(ipp =>{
                                                         loopPromPriceLUKeyCount++
                                                         if(ipp.promPriceLUKey === promRegions[0]["promPriceLUKey"]){
                                                             orderLine.srpIncTax = ipp.promSRP
@@ -246,7 +246,7 @@ orderLines.map(orderLine => {
                                                             return false
                                                         }
                                                         else{
-                                                            if(itemPromPrcing.length === loopPromPriceLUKeyCount){
+                                                            if(itemPromPricing.length === loopPromPriceLUKeyCount){
                                                                 orderLine.srpIncTax = 0
                                                             }
                                                             
@@ -280,7 +280,7 @@ orderLines.map(orderLine => {
                                         
                                     }
                                     else{
-                                        if(itemPromChannels.length === loopPromCodeCount) {
+                                        if(itemPromChannels.length === loopPromCodeCount && loopEventsCount === itemLists.length) {
                                             orderLine.status = "97"
                                             orderLine.statusComment = "Not On Promotion"
                                             orderLine.promSource = ""
@@ -296,7 +296,7 @@ orderLines.map(orderLine => {
                         return false
                     }
                     else{
-                        if(loopItemIdCount === item.itemLists.length && loopEventsCount === orderEvents.events.length){
+                        if(loopItemListCount === itemLists.length && loopEventsCount === orderEvents.events.length){
                             orderLine.status = "97"
                             orderLine.statusComment = "Not On Promotion"
                             orderLine.promSource = ""
