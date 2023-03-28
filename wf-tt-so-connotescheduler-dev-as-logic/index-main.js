@@ -2,6 +2,7 @@ const storeLoad = workflowContext.actions.Query_Store_Load.outputs.body.ResultSe
 
 let connoteArray = []
 let picklistArray = []
+//Split Array
 storeLoad.forEach(item => {
     if(item.connote_status === 0){
         connoteArray.push(item)
@@ -10,6 +11,8 @@ storeLoad.forEach(item => {
         picklistArray.push(item)
     }
 });
+//Group Array
+
 return {
     connoteArray,
     picklistArray
