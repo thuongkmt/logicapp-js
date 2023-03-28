@@ -1,0 +1,50 @@
+[
+    {
+      "so_no": "311536",
+      "store_no": "424",
+      "plan_no": "507492",
+      "connote_status": 1,
+      "picklist_status": 0,
+      "item_no": "100039421"
+    },
+    {
+      "so_no": "311536",
+      "store_no": "424",
+      "plan_no": "507492",
+      "connote_status": 1,
+      "picklist_status": 0,
+      "item_no": "100039422"
+    },
+    {
+      "so_no": "311536",
+      "store_no": "424",
+      "plan_no": "507492",
+      "connote_status": 1,
+      "picklist_status": 0,
+      "item_no": "100039423"
+    },
+    {
+      "so_no": "311538",
+      "store_no": "424",
+      "plan_no": "507493",
+      "connote_status": 0,
+      "picklist_status": 0,
+      "item_no": "100039421"
+    },
+    {
+      "so_no": "311538",
+      "store_no": "424",
+      "plan_no": "507493",
+      "connote_status": 0,
+      "picklist_status": 0,
+      "item_no": "100039422"
+    },
+    {
+      "so_no": "311538",
+      "store_no": "424",
+      "plan_no": "507493",
+      "connote_status": 0,
+      "picklist_status": 0,
+      "item_no": "100039423"
+    }
+  ]
