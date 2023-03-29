@@ -8,6 +8,7 @@ fs.readFile('./data-test-kit/store-load.json','utf8',(error, data) => {
 
     storeLoad = JSON.parse(data)
     //START PROCESSING
+
     //Split Array
     storeLoad.forEach(item => {
         if(item.connote_status === 0){
@@ -17,31 +18,39 @@ fs.readFile('./data-test-kit/store-load.json','utf8',(error, data) => {
             picklistArray.push(item)
         }
     });
-    //Group Array
-   
-    let pdata=[]
-    for(key in connoteArray) 
-    {
-        let resultarr=connoteArray[key]
-        let pkey = connoteArray[key].plan_no+'-'+ connoteArray[key].store_no;
-        let obj = {};
-        let isNew = true;
-        if(pdata.length > 0){
-            for(let j=0;j<pdata.length;j++){
-                if(pdata[j].hasOwnProperty(pkey)){
-                    pdata[j][pkey][pdata[j][pkey].length] = resultarr;
-                    isNew = false;
-                    break;
-                }
-            }
-        }
-        if(isNew){
-            obj[pkey] = new Array();
-            obj[pkey][0] = resultarr;
-            pdata.push(obj);
-        }
-    }
 
-    console.log("connoteArray", JSON.stringify(pdata))
+    //Group Array
+    var connoteArrayGroup = [];
+	for (var i in connoteArray) {
+		var connoteItem = connoteArray[i]
+		var newConnoteItem = {}
+        var currentKey = `storeload${connoteItem.plan_no}${connoteItem.store_no}`
+
+		var foundItem = false;
+		for (var j in connoteArrayGroup) {
+			if (connoteArrayGroup[j].hasOwnProperty(currentKey)) {
+				foundItem = j;
+			}
+		}
+
+		if (!foundItem) {
+			newConnoteItem[currentKey] = {plan_no: connoteItem.plan_no, store_no: connoteItem.store_no};
+			newConnoteItem[currentKey]['list_so'] = [];
+			newConnoteItem[currentKey]['list_so'].push(connoteItem.so_no);
+			connoteArrayGroup.push(newConnoteItem);
+		} else {
+			connoteArrayGroup[foundItem][currentKey]['list_so'].filter(so => {
+                if(so != connoteItem.so_no)
+                connoteArrayGroup[foundItem][currentKey]['list_so'].push(connoteItem.so_no)
+            })
+		}
+	}
+
+    //Replace object property for currentKey
+    const regex = /(storeload[0-9]*)/ig;
+    var data = JSON.stringify(connoteArrayGroup).replaceAll(regex, 'store_load')
+
+    //Logging
+    console.log("connoteArrayGroup", JSON.stringify(JSON.parse(data)))
     console.log("picklistArray", picklistArray)
 })
