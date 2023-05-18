@@ -77,7 +77,7 @@ orderLines.map(orderLine => {
                                         itemPromPricing.every(ipp => {
                                             loopPromPriceLUKeyCount++
                                             if(ipp.promPriceLUKey === promRegions[0]["promPriceLUKey"]){
-                                                orderLine.srpIncTax = ipp.promSRP
+                                                orderLine.srpIncTax = ipp.promSRP ||  0
                                                 
                                                 //order the array desc
                                                 let promBreaks = [] 
@@ -209,7 +209,7 @@ orderLines.map(orderLine => {
                                                     itemPromPricing.every(ipp =>{
                                                         loopPromPriceLUKeyCount++
                                                         if(ipp.promPriceLUKey === promRegions[0]["promPriceLUKey"]){
-                                                            orderLine.srpIncTax = ipp.promSRP
+                                                            orderLine.srpIncTax = ipp.promSRP ||  0
 
                                                             //order the array desc
                                                             let promBreaks = [] 

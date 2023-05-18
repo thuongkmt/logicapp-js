@@ -101,8 +101,7 @@ fs.readFile("./data-result/order-events-sorted.json", "utf8", (err, jsonString) 
                                                 itemPromPricing.every(ipp => {
                                                     loopPromPriceLUKeyCount++
                                                     if(ipp.promPriceLUKey === promRegions[0]["promPriceLUKey"]){
-                                                        orderLine.srpIncTax = ipp.promSRP
-                                                        
+                                                        orderLine.srpIncTax = ipp.promSRP ||  0
                                                         //order the array desc
                                                         let promBreaks = [] 
                                                         for(let i=1; i<=6; i++){
@@ -233,7 +232,7 @@ fs.readFile("./data-result/order-events-sorted.json", "utf8", (err, jsonString) 
                                                             itemPromPricing.every(ipp =>{
                                                                 loopPromPriceLUKeyCount++
                                                                 if(ipp.promPriceLUKey === promRegions[0]["promPriceLUKey"]){
-                                                                    orderLine.srpIncTax = ipp.promSRP
+                                                                    orderLine.srpIncTax = ipp.promSRP ||  0
         
                                                                     //order the array desc
                                                                     let promBreaks = [] 
