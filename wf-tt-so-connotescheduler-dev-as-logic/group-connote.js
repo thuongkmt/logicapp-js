@@ -1,0 +1,4 @@
+const conArray = workflowContext.actions.ExecScriptCode_For_Store_Load.outputs.body.connoteArray || []
+let conArrGrp = []
+conArray.map((o,s)=>{var n={},t=`stload${o.plan_no}${o.store_no}`;let e=0;conArrGrp.every((s,l)=>{if(e++,s.hasOwnProperty(t)){var r=0;return conArrGrp[l][t].list_so.every(s=>(r++,o.so_no!=s&&(r==conArrGrp[l][t].list_so.length&&conArrGrp[l][t].list_so.push(o.so_no),!0))),!1}return e==conArrGrp.length&&(n[t]={plan_no:o.plan_no,store_no:o.store_no},n[t].list_so=[],n[t].list_so.push(o.so_no),conArrGrp.push(n)),!0}),0==conArrGrp.length&&(n[t]={plan_no:o.plan_no,store_no:o.store_no},n[t].list_so=[],n[t].list_so.push(o.so_no),conArrGrp.push(n))});const regex=/(stload[0-9]*)/ig;let result=JSON.stringify(conArrGrp).replace(regex,"store_load");
+return JSON.parse(result) || []

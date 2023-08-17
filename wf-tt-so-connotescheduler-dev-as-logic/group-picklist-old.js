@@ -12,7 +12,7 @@ for (var i in picArray) {
         }
     }
     if (!isYes) {
-        newItem[key] = {plan_no: item.plan_no, store_no: item.store_no};
+        newItem[key] = {plan_no: item.plan_no, store_no: item.store_no, warehouse: item.warehouse};
         newItem[key]['list_so'] = [];
         newItem[key]['list_so'].push(item.so_no);
         picArrGr.push(newItem);

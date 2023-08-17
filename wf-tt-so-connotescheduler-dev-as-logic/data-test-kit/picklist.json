@@ -1,0 +1,5663 @@
+[
+    {
+        "so_no": "387320",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000135044"
+    },
+    {
+        "so_no": "391333",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000118654"
+    },
+    {
+        "so_no": "391333",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000135044"
+    },
+    {
+        "so_no": "391333",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100059178"
+    },
+    {
+        "so_no": "391333",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100066892"
+    },
+    {
+        "so_no": "393195",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000111578"
+    },
+    {
+        "so_no": "393195",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000123954"
+    },
+    {
+        "so_no": "393195",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000124585"
+    },
+    {
+        "so_no": "393241",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000117561"
+    },
+    {
+        "so_no": "393313",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000115525"
+    },
+    {
+        "so_no": "394963",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000115529"
+    },
+    {
+        "so_no": "394964",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000115529"
+    },
+    {
+        "so_no": "394964",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000128007"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000111578"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000118622"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000118653"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000123314"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000123951"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000123953"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000128401"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000129899"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000173459"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000186546"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100054279"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100063811"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100063815"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100067349"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100080789"
+    },
+    {
+        "so_no": "398725",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100083797"
+    },
+    {
+        "so_no": "387337",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100071185"
+    },
+    {
+        "so_no": "389038",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000135044"
+    },
+    {
+        "so_no": "389038",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100080788"
+    },
+    {
+        "so_no": "389063",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000111579"
+    },
+    {
+        "so_no": "391347",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000135044"
+    },
+    {
+        "so_no": "393208",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000111578"
+    },
+    {
+        "so_no": "393208",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000135044"
+    },
+    {
+        "so_no": "393208",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000173528"
+    },
+    {
+        "so_no": "393256",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000111563"
+    },
+    {
+        "so_no": "393256",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000149207"
+    },
+    {
+        "so_no": "393256",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000173516"
+    },
+    {
+        "so_no": "393256",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100054269"
+    },
+    {
+        "so_no": "395017",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000118653"
+    },
+    {
+        "so_no": "395018",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000111575"
+    },
+    {
+        "so_no": "395018",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000115527"
+    },
+    {
+        "so_no": "395018",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000117561"
+    },
+    {
+        "so_no": "395018",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100073401"
+    },
+    {
+        "so_no": "398728",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100083797"
+    },
+    {
+        "so_no": "389024",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000173530"
+    },
+    {
+        "so_no": "389024",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100080788"
+    },
+    {
+        "so_no": "391324",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000124585"
+    },
+    {
+        "so_no": "391324",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000173530"
+    },
+    {
+        "so_no": "393189",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000123644"
+    },
+    {
+        "so_no": "393189",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000130608"
+    },
+    {
+        "so_no": "393189",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000173459"
+    },
+    {
+        "so_no": "393189",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000173528"
+    },
+    {
+        "so_no": "393189",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000173533"
+    },
+    {
+        "so_no": "393189",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000178680"
+    },
+    {
+        "so_no": "393189",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100066892"
+    },
+    {
+        "so_no": "393189",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100066894"
+    },
+    {
+        "so_no": "393189",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100073401"
+    },
+    {
+        "so_no": "394923",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000118653"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000100167"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000111565"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000111581"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000111583"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000113497"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000113976"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000118151"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000123564"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000130608"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000135044"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000148814"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000173516"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000173517"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000173518"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000173528"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000173534"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000176652"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000178680"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000183094"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100054269"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100066891"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100066892"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100080789"
+    },
+    {
+        "so_no": "395214",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000149207"
+    },
+    {
+        "so_no": "395214",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000154101"
+    },
+    {
+        "so_no": "395214",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000154104"
+    },
+    {
+        "so_no": "387337",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100071185"
+    },
+    {
+        "so_no": "389038",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000135044"
+    },
+    {
+        "so_no": "389038",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100080788"
+    },
+    {
+        "so_no": "389063",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000111579"
+    },
+    {
+        "so_no": "391347",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000135044"
+    },
+    {
+        "so_no": "393208",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000111578"
+    },
+    {
+        "so_no": "393208",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000135044"
+    },
+    {
+        "so_no": "393208",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000173528"
+    },
+    {
+        "so_no": "393256",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000111563"
+    },
+    {
+        "so_no": "393256",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000149207"
+    },
+    {
+        "so_no": "393256",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000173516"
+    },
+    {
+        "so_no": "393256",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100054269"
+    },
+    {
+        "so_no": "395017",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000118653"
+    },
+    {
+        "so_no": "395018",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000111575"
+    },
+    {
+        "so_no": "395018",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000115527"
+    },
+    {
+        "so_no": "395018",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000117561"
+    },
+    {
+        "so_no": "395018",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100073401"
+    },
+    {
+        "so_no": "398728",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100083797"
+    },
+    {
+        "so_no": "387337",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100071185"
+    },
+    {
+        "so_no": "389038",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000135044"
+    },
+    {
+        "so_no": "389038",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100080788"
+    },
+    {
+        "so_no": "389063",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000111579"
+    },
+    {
+        "so_no": "391347",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000135044"
+    },
+    {
+        "so_no": "393208",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000111578"
+    },
+    {
+        "so_no": "393208",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000135044"
+    },
+    {
+        "so_no": "393208",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000173528"
+    },
+    {
+        "so_no": "393256",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000111563"
+    },
+    {
+        "so_no": "393256",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000149207"
+    },
+    {
+        "so_no": "393256",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000173516"
+    },
+    {
+        "so_no": "393256",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100054269"
+    },
+    {
+        "so_no": "395017",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000118653"
+    },
+    {
+        "so_no": "395018",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000111575"
+    },
+    {
+        "so_no": "395018",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000115527"
+    },
+    {
+        "so_no": "395018",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000117561"
+    },
+    {
+        "so_no": "395018",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100073401"
+    },
+    {
+        "so_no": "398728",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100083797"
+    },
+    {
+        "so_no": "389024",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000173530"
+    },
+    {
+        "so_no": "389024",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100080788"
+    },
+    {
+        "so_no": "391324",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000124585"
+    },
+    {
+        "so_no": "391324",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000173530"
+    },
+    {
+        "so_no": "393189",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000123644"
+    },
+    {
+        "so_no": "393189",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000130608"
+    },
+    {
+        "so_no": "393189",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000173459"
+    },
+    {
+        "so_no": "393189",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000173528"
+    },
+    {
+        "so_no": "393189",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000173533"
+    },
+    {
+        "so_no": "393189",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000178680"
+    },
+    {
+        "so_no": "393189",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100066892"
+    },
+    {
+        "so_no": "393189",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100066894"
+    },
+    {
+        "so_no": "393189",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100073401"
+    },
+    {
+        "so_no": "394923",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000118653"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000100167"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000111565"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000111581"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000111583"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000113497"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000113976"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000118151"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000123564"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000130608"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000135044"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000148814"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000173516"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000173517"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000173518"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000173528"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000173534"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000176652"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000178680"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000183094"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100054269"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100066891"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100066892"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100080789"
+    },
+    {
+        "so_no": "395214",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000149207"
+    },
+    {
+        "so_no": "395214",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000154101"
+    },
+    {
+        "so_no": "395214",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000154104"
+    },
+    {
+        "so_no": "387320",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000135044"
+    },
+    {
+        "so_no": "391333",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000118654"
+    },
+    {
+        "so_no": "391333",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000135044"
+    },
+    {
+        "so_no": "391333",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100059178"
+    },
+    {
+        "so_no": "391333",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100066892"
+    },
+    {
+        "so_no": "393195",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000111578"
+    },
+    {
+        "so_no": "393195",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000123954"
+    },
+    {
+        "so_no": "393195",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000124585"
+    },
+    {
+        "so_no": "393241",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000117561"
+    },
+    {
+        "so_no": "393313",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000115525"
+    },
+    {
+        "so_no": "394963",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000115529"
+    },
+    {
+        "so_no": "394964",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000115529"
+    },
+    {
+        "so_no": "394964",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000128007"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000111578"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000118622"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000118653"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000123314"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000123951"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000123953"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000128401"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000129899"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000173459"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000186546"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100054279"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100063811"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100063815"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100067349"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100080789"
+    },
+    {
+        "so_no": "398725",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100083797"
+    },
+    {
+        "so_no": "387337",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100071185"
+    },
+    {
+        "so_no": "389038",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000135044"
+    },
+    {
+        "so_no": "389038",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100080788"
+    },
+    {
+        "so_no": "389063",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000111579"
+    },
+    {
+        "so_no": "391347",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000135044"
+    },
+    {
+        "so_no": "393208",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000111578"
+    },
+    {
+        "so_no": "393208",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000135044"
+    },
+    {
+        "so_no": "393208",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000173528"
+    },
+    {
+        "so_no": "393256",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000111563"
+    },
+    {
+        "so_no": "393256",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000149207"
+    },
+    {
+        "so_no": "393256",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000173516"
+    },
+    {
+        "so_no": "393256",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100054269"
+    },
+    {
+        "so_no": "395017",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000118653"
+    },
+    {
+        "so_no": "395018",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000111575"
+    },
+    {
+        "so_no": "395018",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000115527"
+    },
+    {
+        "so_no": "395018",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000117561"
+    },
+    {
+        "so_no": "395018",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100073401"
+    },
+    {
+        "so_no": "398728",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100083797"
+    },
+    {
+        "so_no": "389024",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000173530"
+    },
+    {
+        "so_no": "389024",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100080788"
+    },
+    {
+        "so_no": "391324",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000124585"
+    },
+    {
+        "so_no": "391324",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000173530"
+    },
+    {
+        "so_no": "393189",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000123644"
+    },
+    {
+        "so_no": "393189",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000130608"
+    },
+    {
+        "so_no": "393189",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000173459"
+    },
+    {
+        "so_no": "393189",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000173528"
+    },
+    {
+        "so_no": "393189",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000173533"
+    },
+    {
+        "so_no": "393189",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000178680"
+    },
+    {
+        "so_no": "393189",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100066892"
+    },
+    {
+        "so_no": "393189",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100066894"
+    },
+    {
+        "so_no": "393189",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100073401"
+    },
+    {
+        "so_no": "394923",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000118653"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000100167"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000111565"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000111581"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000111583"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000113497"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000113976"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000118151"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000123564"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000130608"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000135044"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000148814"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000173516"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000173517"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000173518"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000173528"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000173534"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000176652"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000178680"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000183094"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100054269"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100066891"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100066892"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100080789"
+    },
+    {
+        "so_no": "395214",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000149207"
+    },
+    {
+        "so_no": "395214",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000154101"
+    },
+    {
+        "so_no": "395214",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000154104"
+    },
+    {
+        "so_no": "387320",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000135044"
+    },
+    {
+        "so_no": "391333",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000118654"
+    },
+    {
+        "so_no": "391333",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000135044"
+    },
+    {
+        "so_no": "391333",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100059178"
+    },
+    {
+        "so_no": "391333",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100066892"
+    },
+    {
+        "so_no": "393195",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000111578"
+    },
+    {
+        "so_no": "393195",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000123954"
+    },
+    {
+        "so_no": "393195",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000124585"
+    },
+    {
+        "so_no": "393241",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000117561"
+    },
+    {
+        "so_no": "393313",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000115525"
+    },
+    {
+        "so_no": "394963",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000115529"
+    },
+    {
+        "so_no": "394964",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000115529"
+    },
+    {
+        "so_no": "394964",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000128007"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000111578"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000118622"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000118653"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000123314"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000123951"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000123953"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000128401"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000129899"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000173459"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000186546"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100054279"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100063811"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100063815"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100067349"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100080789"
+    },
+    {
+        "so_no": "398725",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100083797"
+    },
+    {
+        "so_no": "387337",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100071185"
+    },
+    {
+        "so_no": "389038",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000135044"
+    },
+    {
+        "so_no": "389038",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100080788"
+    },
+    {
+        "so_no": "389063",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000111579"
+    },
+    {
+        "so_no": "391347",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000135044"
+    },
+    {
+        "so_no": "393208",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000111578"
+    },
+    {
+        "so_no": "393208",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000135044"
+    },
+    {
+        "so_no": "393208",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000173528"
+    },
+    {
+        "so_no": "393256",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000111563"
+    },
+    {
+        "so_no": "393256",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000149207"
+    },
+    {
+        "so_no": "393256",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000173516"
+    },
+    {
+        "so_no": "393256",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100054269"
+    },
+    {
+        "so_no": "395017",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000118653"
+    },
+    {
+        "so_no": "395018",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000111575"
+    },
+    {
+        "so_no": "395018",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000115527"
+    },
+    {
+        "so_no": "395018",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000117561"
+    },
+    {
+        "so_no": "395018",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100073401"
+    },
+    {
+        "so_no": "398728",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100083797"
+    },
+    {
+        "so_no": "387320",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000135044"
+    },
+    {
+        "so_no": "391333",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000118654"
+    },
+    {
+        "so_no": "391333",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000135044"
+    },
+    {
+        "so_no": "391333",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100059178"
+    },
+    {
+        "so_no": "391333",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100066892"
+    },
+    {
+        "so_no": "393195",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000111578"
+    },
+    {
+        "so_no": "393195",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000123954"
+    },
+    {
+        "so_no": "393195",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000124585"
+    },
+    {
+        "so_no": "393241",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000117561"
+    },
+    {
+        "so_no": "393313",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000115525"
+    },
+    {
+        "so_no": "394963",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000115529"
+    },
+    {
+        "so_no": "394964",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000115529"
+    },
+    {
+        "so_no": "394964",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000128007"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000111578"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000118622"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000118653"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000123314"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000123951"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000123953"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000128401"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000129899"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000173459"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000186546"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100054279"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100063811"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100063815"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100067349"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100080789"
+    },
+    {
+        "so_no": "398725",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100083797"
+    },
+    {
+        "so_no": "387337",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100071185"
+    },
+    {
+        "so_no": "389038",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000135044"
+    },
+    {
+        "so_no": "389038",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100080788"
+    },
+    {
+        "so_no": "389063",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000111579"
+    },
+    {
+        "so_no": "391347",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000135044"
+    },
+    {
+        "so_no": "393208",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000111578"
+    },
+    {
+        "so_no": "393208",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000135044"
+    },
+    {
+        "so_no": "393208",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000173528"
+    },
+    {
+        "so_no": "393256",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000111563"
+    },
+    {
+        "so_no": "393256",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000149207"
+    },
+    {
+        "so_no": "393256",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000173516"
+    },
+    {
+        "so_no": "393256",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100054269"
+    },
+    {
+        "so_no": "395017",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000118653"
+    },
+    {
+        "so_no": "395018",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000111575"
+    },
+    {
+        "so_no": "395018",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000115527"
+    },
+    {
+        "so_no": "395018",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000117561"
+    },
+    {
+        "so_no": "395018",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100073401"
+    },
+    {
+        "so_no": "398728",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100083797"
+    },
+    {
+        "so_no": "387320",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000135044"
+    },
+    {
+        "so_no": "391333",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000118654"
+    },
+    {
+        "so_no": "391333",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000135044"
+    },
+    {
+        "so_no": "391333",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100059178"
+    },
+    {
+        "so_no": "391333",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100066892"
+    },
+    {
+        "so_no": "393195",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000111578"
+    },
+    {
+        "so_no": "393195",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000123954"
+    },
+    {
+        "so_no": "393195",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000124585"
+    },
+    {
+        "so_no": "393241",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000117561"
+    },
+    {
+        "so_no": "393313",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000115525"
+    },
+    {
+        "so_no": "394963",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000115529"
+    },
+    {
+        "so_no": "394964",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000115529"
+    },
+    {
+        "so_no": "394964",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000128007"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000111578"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000118622"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000118653"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000123314"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000123951"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000123953"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000128401"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000129899"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000173459"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000186546"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100054279"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100063811"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100063815"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100067349"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100080789"
+    },
+    {
+        "so_no": "398725",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100083797"
+    },
+    {
+        "so_no": "389024",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000173530"
+    },
+    {
+        "so_no": "389024",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100080788"
+    },
+    {
+        "so_no": "391324",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000124585"
+    },
+    {
+        "so_no": "391324",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000173530"
+    },
+    {
+        "so_no": "393189",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000123644"
+    },
+    {
+        "so_no": "393189",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000130608"
+    },
+    {
+        "so_no": "393189",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000173459"
+    },
+    {
+        "so_no": "393189",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000173528"
+    },
+    {
+        "so_no": "393189",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000173533"
+    },
+    {
+        "so_no": "393189",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000178680"
+    },
+    {
+        "so_no": "393189",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100066892"
+    },
+    {
+        "so_no": "393189",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100066894"
+    },
+    {
+        "so_no": "393189",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100073401"
+    },
+    {
+        "so_no": "394923",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000118653"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000100167"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000111565"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000111581"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000111583"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000113497"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000113976"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000118151"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000123564"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000130608"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000135044"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000148814"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000173516"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000173517"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000173518"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000173528"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000173534"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000176652"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000178680"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000183094"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100054269"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100066891"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100066892"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100080789"
+    },
+    {
+        "so_no": "395214",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000149207"
+    },
+    {
+        "so_no": "395214",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000154101"
+    },
+    {
+        "so_no": "395214",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000154104"
+    },
+    {
+        "so_no": "389024",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000173530"
+    },
+    {
+        "so_no": "389024",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100080788"
+    },
+    {
+        "so_no": "391324",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000124585"
+    },
+    {
+        "so_no": "391324",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000173530"
+    },
+    {
+        "so_no": "393189",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000123644"
+    },
+    {
+        "so_no": "393189",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000130608"
+    },
+    {
+        "so_no": "393189",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000173459"
+    },
+    {
+        "so_no": "393189",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000173528"
+    },
+    {
+        "so_no": "393189",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000173533"
+    },
+    {
+        "so_no": "393189",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000178680"
+    },
+    {
+        "so_no": "393189",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100066892"
+    },
+    {
+        "so_no": "393189",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100066894"
+    },
+    {
+        "so_no": "393189",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100073401"
+    },
+    {
+        "so_no": "394923",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000118653"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000100167"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000111565"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000111581"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000111583"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000113497"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000113976"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000118151"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000123564"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000130608"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000135044"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000148814"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000173516"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000173517"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000173518"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000173528"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000173534"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000176652"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000178680"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000183094"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100054269"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100066891"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100066892"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100080789"
+    },
+    {
+        "so_no": "395214",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000149207"
+    },
+    {
+        "so_no": "395214",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000154101"
+    },
+    {
+        "so_no": "395214",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000154104"
+    },
+    {
+        "so_no": "387320",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000135044"
+    },
+    {
+        "so_no": "391333",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000118654"
+    },
+    {
+        "so_no": "391333",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000135044"
+    },
+    {
+        "so_no": "391333",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100059178"
+    },
+    {
+        "so_no": "391333",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100066892"
+    },
+    {
+        "so_no": "393195",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000111578"
+    },
+    {
+        "so_no": "393195",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000123954"
+    },
+    {
+        "so_no": "393195",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000124585"
+    },
+    {
+        "so_no": "393241",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000117561"
+    },
+    {
+        "so_no": "393313",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000115525"
+    },
+    {
+        "so_no": "394963",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000115529"
+    },
+    {
+        "so_no": "394964",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000115529"
+    },
+    {
+        "so_no": "394964",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000128007"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000111578"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000118622"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000118653"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000123314"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000123951"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000123953"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000128401"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000129899"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000173459"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000186546"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100054279"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100063811"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100063815"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100067349"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100080789"
+    },
+    {
+        "so_no": "398725",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100083797"
+    },
+    {
+        "so_no": "387320",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000135044"
+    },
+    {
+        "so_no": "391333",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000118654"
+    },
+    {
+        "so_no": "391333",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000135044"
+    },
+    {
+        "so_no": "391333",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100059178"
+    },
+    {
+        "so_no": "391333",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100066892"
+    },
+    {
+        "so_no": "393195",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000111578"
+    },
+    {
+        "so_no": "393195",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000123954"
+    },
+    {
+        "so_no": "393195",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000124585"
+    },
+    {
+        "so_no": "393241",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000117561"
+    },
+    {
+        "so_no": "393313",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000115525"
+    },
+    {
+        "so_no": "394963",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000115529"
+    },
+    {
+        "so_no": "394964",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000115529"
+    },
+    {
+        "so_no": "394964",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000128007"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000111578"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000118622"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000118653"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000123314"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000123951"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000123953"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000128401"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000129899"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000173459"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000186546"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100054279"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100063811"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100063815"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100067349"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100080789"
+    },
+    {
+        "so_no": "398725",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100083797"
+    },
+    {
+        "so_no": "387320",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000135044"
+    },
+    {
+        "so_no": "391333",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000118654"
+    },
+    {
+        "so_no": "391333",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000135044"
+    },
+    {
+        "so_no": "391333",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100059178"
+    },
+    {
+        "so_no": "391333",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100066892"
+    },
+    {
+        "so_no": "393195",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000111578"
+    },
+    {
+        "so_no": "393195",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000123954"
+    },
+    {
+        "so_no": "393195",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000124585"
+    },
+    {
+        "so_no": "393241",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000117561"
+    },
+    {
+        "so_no": "393313",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000115525"
+    },
+    {
+        "so_no": "394963",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000115529"
+    },
+    {
+        "so_no": "394964",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000115529"
+    },
+    {
+        "so_no": "394964",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000128007"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000111578"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000118622"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000118653"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000123314"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000123951"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000123953"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000128401"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000129899"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000173459"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000186546"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100054279"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100063811"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100063815"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100067349"
+    },
+    {
+        "so_no": "394965",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100080789"
+    },
+    {
+        "so_no": "398725",
+        "store_no": "310",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100083797"
+    },
+    {
+        "so_no": "387337",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100071185"
+    },
+    {
+        "so_no": "389038",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000135044"
+    },
+    {
+        "so_no": "389038",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100080788"
+    },
+    {
+        "so_no": "389063",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000111579"
+    },
+    {
+        "so_no": "391347",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000135044"
+    },
+    {
+        "so_no": "393208",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000111578"
+    },
+    {
+        "so_no": "393208",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000135044"
+    },
+    {
+        "so_no": "393208",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000173528"
+    },
+    {
+        "so_no": "393256",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000111563"
+    },
+    {
+        "so_no": "393256",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000149207"
+    },
+    {
+        "so_no": "393256",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000173516"
+    },
+    {
+        "so_no": "393256",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100054269"
+    },
+    {
+        "so_no": "395017",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000118653"
+    },
+    {
+        "so_no": "395018",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000111575"
+    },
+    {
+        "so_no": "395018",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000115527"
+    },
+    {
+        "so_no": "395018",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000117561"
+    },
+    {
+        "so_no": "395018",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100073401"
+    },
+    {
+        "so_no": "398728",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100083797"
+    },
+    {
+        "so_no": "387337",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100071185"
+    },
+    {
+        "so_no": "389038",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000135044"
+    },
+    {
+        "so_no": "389038",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100080788"
+    },
+    {
+        "so_no": "389063",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000111579"
+    },
+    {
+        "so_no": "391347",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000135044"
+    },
+    {
+        "so_no": "393208",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000111578"
+    },
+    {
+        "so_no": "393208",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000135044"
+    },
+    {
+        "so_no": "393208",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000173528"
+    },
+    {
+        "so_no": "393256",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000111563"
+    },
+    {
+        "so_no": "393256",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000149207"
+    },
+    {
+        "so_no": "393256",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000173516"
+    },
+    {
+        "so_no": "393256",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100054269"
+    },
+    {
+        "so_no": "395017",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000118653"
+    },
+    {
+        "so_no": "395018",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000111575"
+    },
+    {
+        "so_no": "395018",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000115527"
+    },
+    {
+        "so_no": "395018",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000117561"
+    },
+    {
+        "so_no": "395018",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100073401"
+    },
+    {
+        "so_no": "398728",
+        "store_no": "303",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100083797"
+    },
+    {
+        "so_no": "395057",
+        "store_no": "333",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000100121"
+    },
+    {
+        "so_no": "395057",
+        "store_no": "333",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000118654"
+    },
+    {
+        "so_no": "395057",
+        "store_no": "333",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000128693"
+    },
+    {
+        "so_no": "395057",
+        "store_no": "333",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000130608"
+    },
+    {
+        "so_no": "395057",
+        "store_no": "333",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000135044"
+    },
+    {
+        "so_no": "395057",
+        "store_no": "333",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000136521"
+    },
+    {
+        "so_no": "395057",
+        "store_no": "333",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000173518"
+    },
+    {
+        "so_no": "395057",
+        "store_no": "333",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000186547"
+    },
+    {
+        "so_no": "395057",
+        "store_no": "333",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000186548"
+    },
+    {
+        "so_no": "395057",
+        "store_no": "333",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000186549"
+    },
+    {
+        "so_no": "395057",
+        "store_no": "333",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000190311"
+    },
+    {
+        "so_no": "395057",
+        "store_no": "333",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100080789"
+    },
+    {
+        "so_no": "389024",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000173530"
+    },
+    {
+        "so_no": "389024",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100080788"
+    },
+    {
+        "so_no": "391324",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000124585"
+    },
+    {
+        "so_no": "391324",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000173530"
+    },
+    {
+        "so_no": "393189",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000123644"
+    },
+    {
+        "so_no": "393189",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000130608"
+    },
+    {
+        "so_no": "393189",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000173459"
+    },
+    {
+        "so_no": "393189",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000173528"
+    },
+    {
+        "so_no": "393189",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000173533"
+    },
+    {
+        "so_no": "393189",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000178680"
+    },
+    {
+        "so_no": "393189",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100066892"
+    },
+    {
+        "so_no": "393189",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100066894"
+    },
+    {
+        "so_no": "393189",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100073401"
+    },
+    {
+        "so_no": "394923",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000118653"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000100167"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000111565"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000111581"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000111583"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000113497"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000113976"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000118151"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000123564"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000130608"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000135044"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000148814"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000173516"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000173517"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000173518"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000173528"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000173534"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000176652"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000178680"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000183094"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100054269"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100066891"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100066892"
+    },
+    {
+        "so_no": "394924",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "100080789"
+    },
+    {
+        "so_no": "395214",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000149207"
+    },
+    {
+        "so_no": "395214",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000154101"
+    },
+    {
+        "so_no": "395214",
+        "store_no": "301",
+        "plan_no": "523373",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000154104"
+    },
+    {
+        "so_no": "399341",
+        "store_no": "325",
+        "plan_no": "523485",
+        "warehouse": "8",
+        "connote_status": 0,
+        "picklist_status": 0,
+        "item_no": "1000100046"
+    }
+]
