@@ -126,7 +126,7 @@ orderLines.map(orderLine => {
                                         return false
                                     }
                                     else{
-                                        if(itemPromChannels.length === loopPromCodeCount && loopEventsCount === itemLists.length) {
+                                        if(itemPromChannels.length === loopPromCodeCount && loopEventsCount === orderEvents.events.length) {
                                             orderLine.status = "97"
                                             orderLine.statusComment = "Not On Promotion"
                                             orderLine.promSource = ""
@@ -280,7 +280,7 @@ orderLines.map(orderLine => {
                                         
                                     }
                                     else{
-                                        if(itemPromChannels.length === loopPromCodeCount && loopEventsCount === itemLists.length) {
+                                        if(itemPromChannels.length === loopPromCodeCount && loopEventsCount === orderEvents.events.length) {
                                             orderLine.status = "97"
                                             orderLine.statusComment = "Not On Promotion"
                                             orderLine.promSource = ""

@@ -56,7 +56,7 @@ fs.readFile("./data-result/order-events-sorted.json", "utf8", (err, jsonString) 
         }
     })
 
-    fs.readFile("./data-test-set/same-item-id-in-all-event/orderLine-gus.json", "utf8", (err, jsonString) => {
+    fs.readFile("./data-test-set/missing-promsource/orderLine-gus.json", "utf8", (err, jsonString) => {
         if (err) {
         console.log("File read failed:", err);
         return;
@@ -71,24 +71,33 @@ fs.readFile("./data-result/order-events-sorted.json", "utf8", (err, jsonString) 
             else{
                 isBreakLoop = false;
                 let loopEventsCount = 0 
+                var isFound = false;
                 orderEvents.events.forEach(item => {
                     loopEventsCount ++
                     if(!isBreakLoop){
                         let itemLists = item.itemLists
                         //1.check itemID is equal to itemCode
                         let loopItemListCount = 0
+                        
                         itemLists.every(il => {
                             loopItemListCount ++
                             if(il.itemID === orderLine.itemCode){
+                                console.log("il.itemID", il.itemID)
+                                console.log("itemLists.length", itemLists.length)
+
+                                
                                 let itemPromChannels = il.itemPromChannels
                                 //2. check itemList.itemPromChannels.promCode
                                 let loopPromCodeCount = 0
+                                console.log("itemPromChannels.length", itemPromChannels.length)
+                                
                                 itemPromChannels.every(ipc => {
                                     loopPromCodeCount ++
                                     switch(sourceSystem){
                                         case "GUS":
                                             //In case: sourceSystem comes from GUS, we already had the promotion value
                                             if(ipc.promCode == orderLine.promotion){   
+                                                console.log("ipc.promCode", ipc.promCode)
                                                 //map  quantityOrderedAdjusted/status/statusComment
                                                 orderLine.quantityOrderedAdjusted = orderLine.quantityOrdered
                                                 orderLine.status = "01"
@@ -97,7 +106,8 @@ fs.readFile("./data-result/order-events-sorted.json", "utf8", (err, jsonString) 
                                                 isBreakLoop =true
                                                 let itemPromPricing = ipc.itemPromPricing
                                                 let loopPromPriceLUKeyCount = 0
-            
+                                                isFound = true;
+
                                                 itemPromPricing.every(ipp => {
                                                     loopPromPriceLUKeyCount++
                                                     if(ipp.promPriceLUKey === promRegions[0]["promPriceLUKey"]){
@@ -145,14 +155,17 @@ fs.readFile("./data-result/order-events-sorted.json", "utf8", (err, jsonString) 
 
                                                     return true
                                                 })
-
+                                                
+                                                console.log("ipc.promCode DONME")
                                                 return false
                                             }
                                             else{
-                                                if(itemPromChannels.length === loopPromCodeCount && loopEventsCount === itemLists.length) {
+                                                console.log("isFound", isFound)
+                                                if(itemPromChannels.length === loopPromCodeCount && loopEventsCount === orderEvents.events.length && !isFound) {
                                                     orderLine.status = "97"
                                                     orderLine.statusComment = "Not On Promotion"
                                                     orderLine.promSource = ""
+                                                    console.log("01")
                                                 }
                                             }
 
@@ -303,7 +316,7 @@ fs.readFile("./data-result/order-events-sorted.json", "utf8", (err, jsonString) 
                                                 
                                             }
                                             else{
-                                                if(itemPromChannels.length === loopPromCodeCount && loopEventsCount === itemLists.length) {
+                                                if(itemPromChannels.length === loopPromCodeCount && loopEventsCount === orderEvents.events.length) {
                                                     orderLine.status = "97"
                                                     orderLine.statusComment = "Not On Promotion"
                                                     orderLine.promSource = ""
@@ -323,6 +336,7 @@ fs.readFile("./data-result/order-events-sorted.json", "utf8", (err, jsonString) 
                                     orderLine.status = "97"
                                     orderLine.statusComment = "Not On Promotion"
                                     orderLine.promSource = ""
+                                    console.log("02")
                                 }
                             }
 
