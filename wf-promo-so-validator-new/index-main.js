@@ -73,6 +73,7 @@ orderLines.map(orderLine => {
                                         isBreakLoop =true
                                         let itemPromPricing = ipc.itemPromPricing
                                         let loopPromPriceLUKeyCount = 0
+                                        isFound = true;
     
                                         itemPromPricing.every(ipp => {
                                             loopPromPriceLUKeyCount++
